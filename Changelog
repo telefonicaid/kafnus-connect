@@ -6,7 +6,6 @@
 - Feature: DLQ support for HTTP sink (kafnus#93)
 - Feature: environment variables can now be used in sink configurations (kafnus#131, kafnus#133)
 - Fix: JDBC patch and PostGIS type support (kafnus#50, kafnus#84, kafnus#87)
-- Fix: minor fixes in Dockerfile, certificates (kafnus#70, kafnus#75, kafnus#80)
 - Upgrade PostgreSQL driver in Kafnus Connect image (kafnus#122)
 - Change: exposed Kafka configuration through Kafnus environment variables (kafnus#107)
 - Change: switched Kafka broker image from Confluent to Apache (Kafka Connect still using Confluent image) (kafnus#109)
