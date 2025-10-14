@@ -4,7 +4,6 @@
 - Feature: MongoDB sink with metadata enrichment (recvTime) (kafnus#104, kafnus#99)
 - Feature: HTTP Sink supporting GraphQL mutations and custom payloads (kafnus#90, kafnus#102, kafnus#97)
 - Feature: DLQ support for HTTP sink (kafnus#93)
-- Feature: added error sink support for HTTP (kafnus#125) and Mongo (kafnus#130) flows
 - Feature: environment variables can now be used in sink configurations (kafnus#131, kafnus#133)
 - Fix: JDBC patch and PostGIS type support (kafnus#50, kafnus#84, kafnus#87)
 - Fix: minor fixes in Dockerfile, certificates (kafnus#70, kafnus#75, kafnus#80)
