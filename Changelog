@@ -1,3 +1,7 @@
 1.0.0 (October 10th, 2025)
 
-
+- Feature: PostGIS JDBC connector with WKB geometry support and custom SMT HeaderRouter (#50, #89)
+- Fix: JDBC patch and PostGIS type support (#50, #84, #87)
+- Upgrade postgresql from 42.7.1 to 42.7.8 due to CVE-2025-49146
+- Upgrade PostgreSQL driver in Kafnus Connect image (#122)
+- Change: Kafnus Connect Docker image now uses OpenJDK 17 + Apache Kafka base instead of Confluent image (#118)
