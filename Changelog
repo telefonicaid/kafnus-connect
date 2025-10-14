@@ -1,0 +1,12 @@
+1.0.0 (October 14th, 2025)
+
+- Feature: PostGIS JDBC connector with WKB geometry support and custom SMT HeaderRouter (kafnus#50, kafnus#89)
+- Feature: MongoDB sink with metadata enrichment (recvTime) (kafnus#104, kafnus#99)
+- Feature: HTTP Sink supporting GraphQL mutations and custom payloads (kafnus#90, kafnus#102, kafnus#97)
+- Feature: DLQ support for HTTP sink (kafnus#93)
+- Feature: environment variables can now be used in sink configurations (kafnus#131, kafnus#133)
+- Fix: JDBC patch and PostGIS type support (kafnus#50, kafnus#84, kafnus#87)
+- Upgrade postgresql from 42.7.1 to 42.7.8 due to CVE-2025-49146 (kafnus#122)
+- Change: exposed Kafka configuration through Kafnus environment variables (kafnus#107)
+- Change: switched Kafka broker image from Confluent to Apache (Kafka Connect still using Confluent image) (kafnus#109)
+- Change: Kafnus Connect Docker image now uses OpenJDK 17 + Apache Kafka base instead of Confluent image (kafnus#118)
