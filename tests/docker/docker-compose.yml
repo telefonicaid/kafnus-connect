@@ -1,0 +1,125 @@
+# Copyright 2025 Telefónica Soluciones de Informática y Comunicaciones de España, S.A.U.
+# PROJECT: Kafnus
+#
+# This software and / or computer program has been developed by Telefónica Soluciones
+# de Informática y Comunicaciones de España, S.A.U (hereinafter TSOL) and is protected
+# as copyright by the applicable legislation on intellectual property.
+#
+# It belongs to TSOL, and / or its licensors, the exclusive rights of reproduction,
+# distribution, public communication and transformation, and any economic right on it,
+# all without prejudice of the moral rights of the authors mentioned above. It is expressly
+# forbidden to decompile, disassemble, reverse engineer, sublicense or otherwise transmit
+# by any means, translate or create derivative works of the software and / or computer
+# programs, and perform with respect to all or part of such programs, any type of exploitation.
+#
+# Any use of all or part of the software and / or computer program will require the
+# express written consent of TSOL. In all cases, it will be necessary to make
+# an express reference to TSOL ownership in the software and / or computer
+# program.
+#
+# Non-fulfillment of the provisions set forth herein and, in general, any violation of
+# the peaceful possession and ownership of these rights will be prosecuted by the means
+# provided in both Spanish and international law. TSOL reserves any civil or
+# criminal actions it may exercise to protect its rights.
+
+networks:
+  kafka-postgis-net:
+    external: true
+
+services:
+  kafka:
+    container_name: kafka
+    image: apache/kafka:4.1.0
+    ports:
+      - "9092:9092"
+      - "29092:29092"
+      - "29093:29093"
+    environment:
+      - KAFKA_PROCESS_ROLES=controller,broker
+      - KAFKA_NODE_ID=1
+      - CLUSTER_ID=kafka-docker-cluster-1
+      - KAFKA_CONTROLLER_QUORUM_VOTERS=1@kafka:29093
+
+      - KAFKA_LISTENERS=PLAINTEXT_HOST://0.0.0.0:9092,PLAINTEXT_DOCKER://0.0.0.0:29092,CONTROLLER://0.0.0.0:29093
+      - KAFKA_ADVERTISED_LISTENERS=PLAINTEXT_HOST://localhost:9092,PLAINTEXT_DOCKER://kafka:29092
+      - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=PLAINTEXT_HOST:PLAINTEXT,PLAINTEXT_DOCKER:PLAINTEXT,CONTROLLER:PLAINTEXT
+      - KAFKA_INTER_BROKER_LISTENER_NAME=PLAINTEXT_DOCKER
+      - KAFKA_CONTROLLER_LISTENER_NAMES=CONTROLLER
+
+      - KAFKA_AUTO_CREATE_TOPICS_ENABLE=true
+      - KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
+    networks:
+      - kafka-postgis-net
+    healthcheck:
+      test: ["CMD", "sh", "-c", "/opt/kafka/bin/kafka-broker-api-versions.sh --bootstrap-server localhost:9092 >/dev/null 2>&1"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  kafnus-connect:
+    container_name: kafnus-connect
+    image: telefonicaiot/kafnus-connect:latest
+    ports:
+      - "8083:8083"
+      - "9100:9100"
+    environment:
+      CONNECT_BOOTSTRAP_SERVERS: kafka:29092
+      CONNECT_REST_PORT: 8083
+      CONNECT_GROUP_ID: connect-cluster
+      CONNECT_CONFIG_STORAGE_TOPIC: connect-configs
+      CONNECT_OFFSET_STORAGE_TOPIC: connect-offsets
+      CONNECT_STATUS_STORAGE_TOPIC: connect-status
+      CONNECT_CONFIG_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: 1
+      CONNECT_KEY_CONVERTER: org.apache.kafka.connect.storage.StringConverter
+      CONNECT_VALUE_CONVERTER: org.apache.kafka.connect.json.JsonConverter
+      CONNECT_VALUE_CONVERTER_SCHEMAS_ENABLE: "true"
+      CONNECT_PLUGIN_PATH: "/usr/local/share/kafnus-connect/plugins"
+      CONNECT_REST_ADVERTISED_HOST_NAME: kafnus-connect
+      CONNECT_LOG4J_LOGGERS: "org.reflections=ERROR"
+      # Environment variables for sinks in tests
+      KAFNUS_TESTS_PG_HOST: iot-postgis
+      KAFNUS_TESTS_PG_PORT: "5432"
+      KAFNUS_TESTS_PG_DBNAME: tests
+      KAFNUS_TESTS_PG_USER: postgres
+      KAFNUS_TESTS_PG_PASSWORD: postgres
+      KAFNUS_TESTS_MONGO_HOST: mongo
+      KAFNUS_TESTS_MONGO_PORT: "27017"
+
+      # Monitoring
+      KAFKA_JMX_PORT: 9100
+      JMX_PROMETHEUS_PORT: 9100
+    depends_on:
+      kafka:
+        condition: service_healthy
+    networks:
+      - kafka-postgis-net
+    
+  mongo:
+    image: mongo:8.0
+    ports:
+      - "27017:27017"
+    networks:
+      - kafka-postgis-net
+  
+  iot-postgis:
+    container_name: iot-postgis
+    hostname: iot-postgis
+    # Default env variables will be used if not specify in .env
+    image: ${KAFNUS_POSTGIS_IMAGE:-postgis/postgis:15-3.3}
+    volumes:
+      - ${KAFNUS_DBPATH_POSTGIS:-/data/postgis}:/var/lib/postgresql/data
+    expose:
+      - "5432"
+    ports:
+      - "5432:5432"
+    command: postgres --shared_buffers=256MB --max_connections=500
+    environment:
+      POSTGRES_PASSWORD: ${KAFNUS_TESTS_PG_PASSWORD:-postgres}
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "250m"
+    networks:
+      - kafka-postgis-net
