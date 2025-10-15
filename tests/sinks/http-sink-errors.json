@@ -1,0 +1,30 @@
+{
+  "name": "http-sink-errors",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "topics": "sgtr_error_log",
+    "connection.url": "jdbc:postgresql://${env:KAFNUS_TESTS_PG_HOST}:${env:KAFNUS_TESTS_PG_PORT}/${env:KAFNUS_TESTS_PG_DBNAME}",
+    "connection.user": "${env:KAFNUS_TESTS_PG_USER}",
+    "connection.password": "${env:KAFNUS_TESTS_PG_PASSWORD}",
+
+    "insert.mode": "insert",
+    "table.name.format": "test.${topic}",
+    "auto.create": true,
+    "auto.evolve": false,
+
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": true,
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+
+    "transforms": "convertTimestamp",
+    "transforms.convertTimestamp.type": "org.apache.kafka.connect.transforms.TimestampConverter$Value",
+    "transforms.convertTimestamp.target.type": "Timestamp",
+    "transforms.convertTimestamp.field": "timestamp",
+    "transforms.convertTimestamp.format": "yyyy-MM-dd'T'HH:mm:ss.SSSXXX",
+
+    "errors.tolerance": "all",
+    "errors.log.enable": true,
+    "errors.log.include.messages": true
+  }
+}
