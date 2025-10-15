@@ -1,0 +1,57 @@
+[
+  {
+    "target_table": "simple_sensor",
+    "topic": "test",
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant":"2025-06-26T11:00:00.000Z",
+      "temperature": 25.0,
+      "fiwareservicepath": "/simple"
+    }
+  },
+  {
+    "target_table": "simple_sensor",
+    "topic": "test",
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant":"2025-06-26T12:00:00.000Z",
+      "temperature": 26.0,
+      "fiwareservicepath": "/simple"
+    }
+  },
+  {
+    "target_table": "simple_sensor",
+    "topic": "test_lastdata",
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant":"2025-06-26T12:00:00.000Z",
+      "temperature": 26.0,
+      "fiwareservicepath": "/simple"
+    }
+  },
+  {
+    "target_table": "simple_sensor",
+    "topic": "test_mutable",
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant":"2025-06-26T11:00:00.000Z",
+      "temperature": 25.0,
+      "fiwareservicepath": "/simple"
+    }
+  },
+  {
+    "target_table": "simple_sensor",
+    "topic": "test_mutable",
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant":"2025-06-26T12:00:00.000Z",
+      "temperature": 26.0,
+      "fiwareservicepath": "/simple"
+    }
+  }
+]
