@@ -29,7 +29,17 @@ from pathlib import Path
 from config import logger
 
 def infer_type(value):
-    """Infers the schema type based on Python type."""
+    """
+    Infer a Kafka Connect compatible schema type string from a Python value.
+
+    Returns one of: "boolean", "int32", "double", "struct", or "string".
+
+    Inputs:
+    - value: any Python object to inspect
+
+    Output:
+    - type string usable in a Kafka Connect schema field definition
+    """
     if isinstance(value, bool):
         return "boolean"
     elif isinstance(value, int):
@@ -54,125 +64,137 @@ def normalize_field(key, value):
         type_ = infer_type(val)
     return key, val, type_
 
-def build_kafnus_message(table_name, record, topic=None):
-    """
-    Builds a Kafnus Connect message with schema, payload, and target_table header.
-    Returns a dict with 'topic', 'value', and 'headers'.
-    """
-    fields = []
-    payload = {}
-
-    for key, value in record.items():
-        key, val, type_ = normalize_field(key, value)
-        fields.append({
-            "field": key,
-            "type": type_,
-            "optional": False
-        })
-        payload[key] = val
-
-    # Add recvtime if not present
-    if "recvtime" not in payload:
-        payload["recvtime"] = datetime.utcnow().isoformat() + "Z"
-        fields.append({
-            "field": "recvtime",
-            "type": "string",
-            "optional": False
-        })
-
-    schema = {"type": "struct", "fields": fields, "optional": False}
-
-    # Use the topic from input or default to a generic topic
-    actual_topic = topic or "kafnus_messages"
-
-    return {
-        "topic": actual_topic,
-        "value": {"schema": schema, "payload": payload},
-        "headers": [("target_table", table_name.encode("utf-8"))]
-    }
-
 def build_key_schema(payload, key_fields):
     """
     Builds a Kafka Connect-style key with schema + payload.
+
+    The function inspects `payload` for the given `key_fields` and constructs
+    a dictionary with the Connect `schema` (type struct and fields metadata)
+    and the corresponding `payload` containing only the key fields.
+
+    Inputs:
+    - payload: dict containing the record fields
+    - key_fields: iterable of field names that should be included in the key
+
+    Returns:
+    - dict with keys `schema` and `payload` suitable to be used as a message key,
+      or None if none of the requested key_fields are present in payload.
     """
     schema_fields = []
     key_payload = {}
-
     for field in key_fields:
         if field in payload:
-            val = payload[field]
-            _, val, type_ = normalize_field(field, val)
-            schema_fields.append({
-                "field": field,
-                "type": type_,
-                "optional": False
-            })
+            _, val, type_ = normalize_field(field, payload[field])
+            schema_fields.append({"field": field, "type": type_, "optional": False})
             key_payload[field] = val
-
     if not key_payload:
         return None
+    return {"schema": {"type": "struct", "fields": schema_fields, "optional": False}, "payload": key_payload}
 
-    return {
-        "schema": {
-            "type": "struct",
-            "fields": schema_fields,
-            "optional": False
-        },
-        "payload": key_payload
-    }
+def build_message(item):
+    """
+    Build a message object from an input descriptor.
+
+    The input `item` should be a dict describing a message to produce. Supported
+    message `type`s are `postgis` and `mongo`. The function will add a
+    `recvtime` to the record if missing, build a Kafka Connect-style value and
+    optionally a key and headers depending on the message type.
+
+    Returns a dict with keys: `topic`, `value`, `headers`, and `key`.
+    """
+    msg_type = item.get("type")
+    topic = item.get("topic")
+    record = dict(item.get("record", {}))
+
+    # Always add recvtime if it does not exist
+    if "recvtime" not in record:
+        record["recvtime"] = datetime.utcnow().isoformat() + "Z"
+
+    if msg_type == "postgis":
+        target_table = item.get("target_table")
+        if not target_table:
+            raise ValueError("Missing 'target_table' for postgis message")
+
+        # Build schema and payload for PostGIS messages
+        fields = []
+        payload = {}
+        for k, v in record.items():
+            _, val, type_ = normalize_field(k, v)
+            fields.append({"field": k, "type": type_, "optional": False})
+            payload[k] = val
+
+        schema = {"type": "struct", "fields": fields, "optional": False}
+        value = {"schema": schema, "payload": payload}
+        headers = [("target_table", target_table.encode("utf-8"))]
+        key = build_key_schema(payload, ["entityid"])  # you can add more key fields
+
+    elif msg_type == "mongo":
+        # Mongo uses database and collection outside the record
+        db = item.get("database", "sth_test")
+        collection = item.get("collection", "default_collection")
+        key = {"database": db, "collection": collection}
+
+        # The value only carries the record data + recvtime
+        value = dict(record)
+        headers = []  # NO_HEADERS
+
+    elif msg_type == "http":
+        # Por ahora skip
+        return None
+
+    else:
+        raise ValueError(f"Unknown type {msg_type}")
+
+    return {"topic": topic, "value": value, "headers": headers, "key": key}
 
 def load_input(json_path: Path):
     """
-    Loads the input JSON file and generates messages ready to send to Kafka with headers.
+    Load one or more message descriptors from a JSON file.
+
+    The file can contain a single JSON object or an array of objects. Each
+    object is passed to `build_message` and only valid messages are returned.
+
+    Input:
+    - json_path: Path to the JSON file
+
+    Output:
+    - list of message dicts suitable for `produce_messages`
     """
-    logger.debug(f"📂 Loading scenario file: {json_path}")
     with json_path.open("r", encoding="utf-8") as f:
         data = json.load(f)
-
     if not isinstance(data, list):
         data = [data]
 
     messages = []
     for item in data:
-        table = item.get("target_table")
-        if not table:
-            raise ValueError("Missing 'target_table' field in scenario item.")
-        record = item.get("record")
-        if not record:
-            raise ValueError("Missing 'record' field in scenario item.")
-        topic = item.get("topic")  # optional
-        msg = build_kafnus_message(table, record, topic=topic)
-        messages.append(msg)
+        msg = build_message(item)
+        if msg:
+            messages.append(msg)
     return messages
 
-def produce_messages(kafka_bootstrap, messages, key_fields=["entityid"]):
+
+def produce_messages(kafka_bootstrap, messages):
     """
-    Sends the generated messages to Kafka, including headers.
-    Uses Connect-style schema for both key and value.
+    Produce a list of messages to Kafka using confluent-kafka's producer.
+
+    Inputs:
+    - kafka_bootstrap: bootstrap server string or list
+    - messages: list of dicts as returned by `build_message` / `load_input`
+
+    The function serializes both key and value as JSON and logs each send.
     """
     producer = KafkaProducer(
         bootstrap_servers=kafka_bootstrap,
-        key_serializer=lambda k: json.dumps(k).encode("utf-8") if k is not None else None,
+        key_serializer=lambda k: json.dumps(k).encode("utf-8") if k else None,
         value_serializer=lambda v: json.dumps(v).encode("utf-8")
     )
 
     for msg in messages:
-        topic = msg["topic"]
-        value = msg["value"]
-        payload = value.get("payload", {})
-
-        # --- Build structured key ---
-        key = build_key_schema(payload, key_fields)
-        if not key:
-            logger.warning(f"⚠️ No key fields found for {topic}, using null key")
-
         producer.send(
-            topic,
-            key=key,
-            value=value,
+            msg["topic"],
+            key=msg.get("key"),
+            value=msg["value"],
             headers=msg.get("headers", [])
         )
-
-        logger.info(f"📤 Sent to {topic}\n   key={json.dumps(key, ensure_ascii=False)}\n   value={json.dumps(value, ensure_ascii=False)}")
-
+        logger.info(f"📤 Sent to {msg['topic']} key={json.dumps(msg.get('key'), ensure_ascii=False)} value={json.dumps(msg['value'], ensure_ascii=False)}")
     producer.flush()

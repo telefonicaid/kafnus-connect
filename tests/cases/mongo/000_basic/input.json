@@ -1,0 +1,14 @@
+[
+  {
+    "type": "mongo",
+    "topic": "test_mongo",
+    "database": "sth_test",
+    "collection": "sth_x002fmongo",
+    "record": {
+      "entityId": "Device:001",
+      "entityType": "Device",
+      "TimeInstant": "2025-06-26T11:00:00.000Z",
+      "temperature": 25.3
+    }
+  }
+]

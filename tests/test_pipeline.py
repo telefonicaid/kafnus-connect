@@ -39,6 +39,12 @@ def test_e2e_pipeline(scenario_name, expected_list, input_json, setup, multiserv
     logger.info(f"🧪 Running scenario: {scenario_name}")
     kafka_cfg = multiservice_stack["kafka"]
 
+    # Step 0: Description
+    scenario_dir = input_json.parent
+    desc = load_description(scenario_dir)
+    if desc:
+        logger.info(f"0. Description: {desc}")
+    # Step 0.5: Setup DB if needed
     if setup:
         execute_sql_file(setup, db_config=DEFAULT_DB_CONFIG)
 
@@ -63,6 +69,22 @@ def test_e2e_pipeline(scenario_name, expected_list, input_json, setup, multiserv
                 if not validator.validate(table, table_data["rows"]):
                     all_valid = False
                     errors.append(f"❌ PG validation failed for {table}")
+
+        elif expected_type == "mongo":
+                validator = MongoValidator()
+                try:
+                    for coll_data in expected_data:
+                        coll = coll_data["collection"]
+                        if "documents" in coll_data:
+                            if not validator.validate(coll, coll_data["documents"]):
+                                all_valid = False
+                                errors.append(f"❌ Mongo validation failed in {coll}")
+                        if "absent" in coll_data:
+                            if not validator.validate_absent(coll, coll_data["absent"]):
+                                all_valid = False
+                                errors.append(f"❌ Mongo forbidden docs in {coll}")
+                finally:
+                    validator.close()
 
         elif expected_type == "http":
             validator = HttpValidator()

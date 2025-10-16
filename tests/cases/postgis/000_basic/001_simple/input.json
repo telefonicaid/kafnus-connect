@@ -1,55 +1,65 @@
 [
   {
+    "type": "postgis",
     "target_table": "simple_sensor",
     "topic": "test",
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
-      "timeinstant":"2025-06-26T11:00:00.000Z",
+      "timeinstant": "2025-06-26T11:00:00.000Z",
+      "recvtime": "2025-06-26T11:00:00.000Z",
       "temperature": 25.0,
       "fiwareservicepath": "/simple"
     }
   },
   {
+    "type": "postgis",
     "target_table": "simple_sensor",
     "topic": "test",
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
-      "timeinstant":"2025-06-26T12:00:00.000Z",
+      "timeinstant": "2025-06-26T12:00:00.000Z",
+      "recvtime": "2025-06-26T12:00:00.000Z",
       "temperature": 26.0,
       "fiwareservicepath": "/simple"
     }
   },
   {
+    "type": "postgis",
     "target_table": "simple_sensor_lastdata",
     "topic": "test_lastdata",
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
-      "timeinstant":"2025-06-26T12:00:00.000Z",
+      "timeinstant": "2025-06-26T12:00:00.000Z",
+      "recvtime": "2025-06-26T12:00:00.000Z",
       "temperature": 26.0,
       "fiwareservicepath": "/simple"
     }
   },
   {
+    "type": "postgis",
     "target_table": "simple_sensor_mutable",
     "topic": "test_mutable",
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
-      "timeinstant":"2025-06-26T11:00:00.000Z",
+      "timeinstant": "2025-06-26T11:00:00.000Z",
+      "recvtime": "2025-06-26T11:00:00.000Z",
       "temperature": 25.0,
       "fiwareservicepath": "/simple"
     }
   },
   {
+    "type": "postgis",
     "target_table": "simple_sensor_mutable",
     "topic": "test_mutable",
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
-      "timeinstant":"2025-06-26T12:00:00.000Z",
+      "timeinstant": "2025-06-26T12:00:00.000Z",
+      "recvtime": "2025-06-26T12:00:00.000Z",
       "temperature": 26.0,
       "fiwareservicepath": "/simple"
     }
