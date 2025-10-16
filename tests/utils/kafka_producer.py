@@ -91,6 +91,36 @@ def build_kafnus_message(table_name, record, topic=None):
         "headers": [("target_table", table_name.encode("utf-8"))]
     }
 
+def build_key_schema(payload, key_fields):
+    """
+    Builds a Kafka Connect-style key with schema + payload.
+    """
+    schema_fields = []
+    key_payload = {}
+
+    for field in key_fields:
+        if field in payload:
+            val = payload[field]
+            _, val, type_ = normalize_field(field, val)
+            schema_fields.append({
+                "field": field,
+                "type": type_,
+                "optional": False
+            })
+            key_payload[field] = val
+
+    if not key_payload:
+        return None
+
+    return {
+        "schema": {
+            "type": "struct",
+            "fields": schema_fields,
+            "optional": False
+        },
+        "payload": key_payload
+    }
+
 def load_input(json_path: Path):
     """
     Loads the input JSON file and generates messages ready to send to Kafka with headers.
@@ -115,15 +145,34 @@ def load_input(json_path: Path):
         messages.append(msg)
     return messages
 
-def produce_messages(kafka_bootstrap, messages):
+def produce_messages(kafka_bootstrap, messages, key_fields=["entityid"]):
     """
     Sends the generated messages to Kafka, including headers.
+    Uses Connect-style schema for both key and value.
     """
     producer = KafkaProducer(
         bootstrap_servers=kafka_bootstrap,
+        key_serializer=lambda k: json.dumps(k).encode("utf-8") if k is not None else None,
         value_serializer=lambda v: json.dumps(v).encode("utf-8")
     )
+
     for msg in messages:
-        producer.send(msg["topic"], value=msg["value"], headers=msg["headers"])
-        logger.info(f"📤 Sent to {msg['topic']} with headers {msg['headers']}: {json.dumps(msg['value'], ensure_ascii=False)}")
+        topic = msg["topic"]
+        value = msg["value"]
+        payload = value.get("payload", {})
+
+        # --- Build structured key ---
+        key = build_key_schema(payload, key_fields)
+        if not key:
+            logger.warning(f"⚠️ No key fields found for {topic}, using null key")
+
+        producer.send(
+            topic,
+            key=key,
+            value=value,
+            headers=msg.get("headers", [])
+        )
+
+        logger.info(f"📤 Sent to {topic}\n   key={json.dumps(key, ensure_ascii=False)}\n   value={json.dumps(value, ensure_ascii=False)}")
+
     producer.flush()

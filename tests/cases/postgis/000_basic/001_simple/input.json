@@ -22,7 +22,7 @@
     }
   },
   {
-    "target_table": "simple_sensor",
+    "target_table": "simple_sensor_lastdata",
     "topic": "test_lastdata",
     "record": {
       "entityid": "Sensor1",
@@ -33,7 +33,7 @@
     }
   },
   {
-    "target_table": "simple_sensor",
+    "target_table": "simple_sensor_mutable",
     "topic": "test_mutable",
     "record": {
       "entityid": "Sensor1",
@@ -44,7 +44,7 @@
     }
   },
   {
-    "target_table": "simple_sensor",
+    "target_table": "simple_sensor_mutable",
     "topic": "test_mutable",
     "record": {
       "entityid": "Sensor1",
