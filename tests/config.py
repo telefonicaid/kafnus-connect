@@ -49,6 +49,7 @@ def setup_test_logger(name="kafnus-tests"):
     """
     Initializes and returns a structured logger for test execution.
     Supports standard log levels: DEBUG, INFO, WARN, ERROR, FATAL.
+    Also silences noisy external libraries (Kafka, urllib3, etc.)
     """
     level_map = {
         "DEBUG": logging.DEBUG,
@@ -63,12 +64,28 @@ def setup_test_logger(name="kafnus-tests"):
     raw_level = os.getenv("KAFNUS_TESTS_LOG_LEVEL", "INFO").upper()
     log_level = level_map.get(raw_level, logging.INFO)
 
+    # --- Configure main app logger ---
     logging.basicConfig(
         level=log_level,
         format="time=%(asctime)s | lvl=%(levelname)s | comp=KAFNUS-TESTS | op=%(name)s:%(filename)s[%(lineno)d]:%(funcName)s | msg=%(message)s",
         handlers=[logging.StreamHandler()]
     )
 
-    return logging.getLogger(name)
+    logger = logging.getLogger(name)
+
+    # --- Silence noisy external libraries ---
+    noisy_libs = [
+        "kafka",          # kafka-python internals
+        "urllib3",        # requests, etc.
+        "asyncio",        # testcontainers async loop
+        "faker.factory",  # sometimes used in tests
+        "aiohttp.access"
+    ]
+    for lib in noisy_libs:
+        logging.getLogger(lib).setLevel(logging.WARNING)
+        logging.getLogger(lib).propagate = False
+
+    return logger
+
 
 logger = setup_test_logger()
