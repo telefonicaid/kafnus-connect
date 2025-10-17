@@ -1,0 +1,18 @@
+{
+  "type": "postgis",
+  "target_table": "types_zone",
+  "topic": "test",
+  "record": {
+    "entityid": "ZoneJsonTypes",
+    "entitytype": "Zone",
+    "timeinstant": "2025-07-23T14:00:00.000Z",
+    "recvtime": "2025-07-23T14:00:00.000Z",
+    "str_col": "hello world",
+    "number_col": 123.456,
+    "bool_col": true,
+    "null_col": { "value": null, "optional": true },
+    "obj_col": {"a": 1, "b": "two"},
+    "array_col": [1, "two", false],
+    "fiwareservicepath": "/types"
+  }
+}
