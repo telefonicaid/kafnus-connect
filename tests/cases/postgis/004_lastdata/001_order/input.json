@@ -2,7 +2,7 @@
   {
     "type": "postgis",
     "target_table": "order_sensor",
-    "topic": "test",
+    "topic": "test_lastdata",
     "record": {
       "entityid": "Sensor3",
       "entitytype": "Sensor",
@@ -15,7 +15,7 @@
   {
     "type": "postgis",
     "target_table": "order_sensor",
-    "topic": "test",
+    "topic": "test_lastdata",
     "record": {
       "entityid": "Sensor3",
       "entitytype": "Sensor",
@@ -28,7 +28,7 @@
   {
     "type": "postgis",
     "target_table": "order_sensor",
-    "topic": "test",
+    "topic": "test_lastdata",
     "record": {
       "entityid": "Sensor3",
       "entitytype": "Sensor",

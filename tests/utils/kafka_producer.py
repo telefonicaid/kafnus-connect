@@ -153,6 +153,17 @@ def build_message(item):
         if not target_table:
             raise ValueError("Missing 'target_table' for postgis message")
 
+        # Build key and headers
+        key = build_key_schema(record, ["entityid"])
+        headers = [("target_table", target_table.encode("utf-8"))]
+
+        # Check for delete flag
+        is_delete = item.pop("delete", False)
+        if is_delete:
+            # Build an empty schema with payload null for delete
+            value = None
+            return {"topic": topic, "value": value, "headers": headers, "key": key}
+
         # Build schema and payload for PostGIS messages
         fields = []
         payload = {}
@@ -167,21 +178,15 @@ def build_message(item):
 
         schema = {"type": "struct", "fields": fields, "optional": False}
         value = {"schema": schema, "payload": payload}
-        headers = [("target_table", target_table.encode("utf-8"))]
-        key = build_key_schema(payload, ["entityid"])
 
     elif msg_type == "mongo":
-        # Mongo uses database and collection outside the record
         db = item.get("database", "sth_test")
         collection = item.get("collection", "default_collection")
         key = {"database": db, "collection": collection}
-
-        # The value only carries the record data + recvtime
         value = dict(record)
-        headers = []  # NO_HEADERS
+        headers = []
 
     elif msg_type == "http":
-        # Por ahora skip
         return None
 
     else:
@@ -227,8 +232,10 @@ def produce_messages(kafka_bootstrap, messages):
     """
     producer = KafkaProducer(
         bootstrap_servers=kafka_bootstrap,
-        key_serializer=lambda k: json.dumps(k).encode("utf-8") if k else None,
-        value_serializer=lambda v: json.dumps(v).encode("utf-8")
+        # If key is None -> return None (tombstone-like key behavior); otherwise dump JSON bytes
+        key_serializer=lambda k: None if k is None else json.dumps(k, ensure_ascii=False).encode("utf-8"),
+        # Very important for delete case: if value is None, no serialization is done
+        value_serializer=lambda v: None if v is None else json.dumps(v, ensure_ascii=False).encode("utf-8")
     )
 
     for msg in messages:

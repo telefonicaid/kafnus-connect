@@ -1,0 +1,35 @@
+[
+  {
+    "type": "postgis",
+    "target_table": "delete_sensor_lastdata",
+    "topic": "test_lastdata",
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant": "2025-06-26T11:00:00.000Z",
+      "temperature": 21.0,
+      "fiwareservicepath": "/delete"
+    }
+  },
+  {
+    "type": "postgis",
+    "target_table": "delete_sensor_lastdata",
+    "topic": "test_lastdata",
+    "record": {
+      "entityid": "Sensor2",
+      "entitytype": "Sensor",
+      "timeinstant": "2025-06-26T12:00:00.000Z",
+      "temperature": 22.0,
+      "fiwareservicepath": "/delete"
+    }
+  },
+  {
+    "type": "postgis",
+    "target_table": "delete_sensor_lastdata",
+    "topic": "test_lastdata",
+    "delete": true,
+    "record": {
+      "entityid": "Sensor1"
+    }
+  }
+]
