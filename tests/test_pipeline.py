@@ -63,12 +63,17 @@ def test_e2e_pipeline(scenario_name, expected_list, input_json, setup, multiserv
         expected_data = load_scenario(expected_json, as_expected=True)
 
         if expected_type == "pg":
-            validator = PostgisValidator(DEFAULT_DB_CONFIG)
-            for table_data in expected_data:
-                table = table_data["table"]
-                if not validator.validate(table, table_data["rows"]):
-                    all_valid = False
-                    errors.append(f"❌ PG validation failed for {table}")
+                validator = PostgisValidator(DEFAULT_DB_CONFIG)
+                for table_data in expected_data:
+                    table = table_data["table"]
+                    if "rows" in table_data:
+                        if not validator.validate(table, table_data["rows"]):
+                            all_valid = False
+                            errors.append(f"❌ PG validation failed in table {table}")
+                    if "absent" in table_data:
+                        if not validator.validate_absent(table, table_data["absent"]):
+                            all_valid = False
+                            errors.append(f"❌ PG forbidden rows in table {table}")
 
         elif expected_type == "mongo":
                 validator = MongoValidator()
