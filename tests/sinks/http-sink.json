@@ -1,0 +1,25 @@
+{
+  "name": "http-sink",
+  "config": {
+    "connector.class": "io.aiven.kafka.connect.http.HttpSinkConnector",
+    "tasks.max": "1",
+    "topics": "sgtr_http",
+    "http.url": "http://172.17.0.1:3333",
+    "http.authorization.type": "none",
+    "http.headers.content.type": "application/json",
+    "batching.enabled": false,
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "key.converter.schemas.enable": false,
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": false,
+
+    "errors.tolerance": "all",
+    "errors.deadletterqueue.topic.name": "raw_errors",
+    "errors.deadletterqueue.context.headers.enable": true,
+    "errors.deadletterqueue.topic.replication.factor": "1",
+    "errors.log.enable": false,
+    "errors.log.include.messages": false,
+    "max.retries": "0",
+    "retry.backoff.ms": "0"
+  }
+}

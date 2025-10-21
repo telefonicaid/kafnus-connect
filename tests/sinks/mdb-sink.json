@@ -1,0 +1,29 @@
+{
+  "name": "mongo-sink",
+  "config": {
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "tasks.max": "1",
+    
+    "topics": "test_mongo",
+
+    "connection.uri": "mongodb://${env:KAFNUS_TESTS_MONGO_HOST}:${env:KAFNUS_TESTS_MONGO_PORT}",
+    "database": "dummy",
+    "collection": "dummy",
+
+    "namespace.mapper": "com.mongodb.kafka.connect.sink.namespace.mapping.FieldPathNamespaceMapper",
+    "namespace.mapper.key.database.field": "database",
+    "namespace.mapper.key.collection.field": "collection",
+
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": false,
+
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": false,
+
+    "errors.tolerance": "all",
+    "errors.deadletterqueue.topic.name": "mongo_error_log",
+    "errors.deadletterqueue.context.headers.enable": true,
+    "errors.deadletterqueue.topic.replication.factor": "1",
+    "errors.deadletterqueue.topic.partitions": "1"
+  }
+}
