@@ -184,6 +184,102 @@ The sink connectors are defined under the `sinks/` directory and are responsible
 
 ---
 
+## 🔁 Retry & Failure Handling Configuration
+
+Kafnus Connect sink connectors use a combination of **error-handling parameters** and **connection retry settings** to determine how they behave when SQL operations fail or when the database becomes temporarily unavailable.
+
+### ⚠️ SQL-Level Errors → No Retries (Direct DLQ)
+
+The JDBC sink is configured **not to retry** SQL processing errors such as:
+
+* missing tables or schema mismatch,
+* invalid column types,
+* malformed SQL statements.
+
+This behavior is controlled by:
+
+```json
+"errors.tolerance": "all",
+"errors.deadletterqueue.topic.name": "raw_errors",
+"errors.deadletterqueue.context.headers.enable": "true",
+"errors.deadletterqueue.topic.replication.factor": "1",
+"errors.log.enable": "true",
+"errors.log.include.messages": "true",
+"max.retries": "0",
+"retry.backoff.ms": "0"
+```
+
+With `max.retries = 0`, **SQL write failures are not retried at all**.
+Instead, the failing record is immediately published to the **Dead Letter Queue (DLQ)** topic (`raw_errors`), where it will later be inserted into the PostGIS *errors* table by the dedicated DLQ sink.
+
+This ensures that structural or schema-related issues do not stall the connector.
+
+---
+
+### 🔌 Database Connectivity Errors → Limited Retries
+
+Connectivity-related failures (e.g., database down, network outage) are handled separately through the following parameters:
+
+```json
+"connection.attempts": "10",
+"connection.backoff.ms": "10000"
+```
+
+This means:
+
+* The connector will try to re-establish the JDBC connection **10 times**.
+* The time between retries is **10 seconds**.
+* The maximum recovery window is therefore approximately:
+
+```
+10 attempts × 10 seconds = ~100 seconds total
+```
+
+If the database remains unavailable **longer than this time window**, the sink **task transitions to `FAILED` state**.
+
+### ❗ Important Limitation: Tasks Do NOT Auto-Recover
+
+Kafka Connect **does not automatically restart FAILED tasks**, even when the database becomes available again.
+
+This behavior is confirmed and discussed in:
+
+* **Related Issue:** [https://github.com/telefonicaid/kafnus-connect/issues/10](https://github.com/telefonicaid/kafnus-connect/issues/10)
+* **PR / Test Discussion (DB Outage Recovery):** internal Kafnus Connect PR referenced in Issue #10
+
+In this scenario:
+
+* The **connector** remains in `RUNNING` state (misleading).
+* The **task** enters `FAILED` state.
+* The task **never restarts automatically**, and data ingestion stops silently.
+
+This is a known limitation of Kafka Connect and the JDBC Sink connector.
+
+---
+
+### 📝 Summary
+
+| Failure Type                                     | Retried?                    | Outcome                                                      |
+| ------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
+| **SQL errors** (missing table, bad schema, etc.) | ❌ No                        | Record sent to `raw_errors` DLQ immediately                  |
+| **DB connectivity < 100s outage**                | ✅ Yes                       | Connector recovers normally                                  |
+| **DB connectivity > 100s outage**                | ❌ No (exceeds retry window) | Task enters `FAILED` and stays down until manually restarted |
+
+---
+
+### 📌 Why This Matters
+
+Due to the retry window defined by:
+
+```
+connection.attempts × connection.backoff.ms
+```
+
+any outage exceeding this threshold results in a **permanent stoppage of data persistence** unless manually mitigated.
+
+This behavior is a key part of the design discussion in the Kafnus Connect Issues & PRs and is addressed by the resilience tests added in the project.
+
+---
+
 ## ▶️ Registering Connectors (it will be updated)
 
 From the `sinks/` directory, register each connector using `curl`:
