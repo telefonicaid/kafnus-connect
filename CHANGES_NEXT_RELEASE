@@ -1,0 +1,1 @@
+- Fix Openjdk (minor) version to 17.0.1 in Dockerfile

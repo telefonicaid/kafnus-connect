@@ -22,7 +22,7 @@
 # provided in both Spanish and international law. TSOL reserves any civil or
 # criminal actions it may exercise to protect its rights.
 
-FROM openjdk:17-jdk-slim
+FROM openjdk:17.0.1-jdk-slim
 
 ARG KAFKA_VERSION=4.1.0
 ARG SCALA_VERSION=2.13
