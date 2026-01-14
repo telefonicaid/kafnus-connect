@@ -24,96 +24,209 @@
  * criminal actions it may exercise to protect its rights.
  */
 
-
 /**
- * Kafka Connect SMT (Single Message Transformation) for routing records to client-specific topics
- * using a header that indicates the destination table.
+ * Kafka Connect SMT (Single Message Transformation) that dynamically routes records
+ * to SQL tables based on a configured SQL datamodel and NGSI metadata headers.
  *
- * This custom SMT is designed for multi-tenant environments where each client has many tables,
- * potentially resulting in thousands of destination tables. Instead of creating a Kafka topic per table,
- * the strategy here is to:
+ * The transformation computes the destination schema and table name at runtime,
+ * rewrites the Kafka record topic to "schema.table", and relies on the JDBC Sink
+ * connector to use ${topic} as the final table name.
  *
- * - Use a limited number of topics per client, typically one per data flow (e.g., "historic", "lastdata", etc.).
- * - Include a message header (e.g., `target_table`) that specifies the final destination table.
- * - Dynamically rewrite the record’s topic name using a configured prefix (usually the client name) and
- *   the table name from the header, allowing the sink connector to route records to the correct table.
+ * Unlike the previous approach based on a precomputed `target_table` header, this
+ * SMT encapsulates all SQL datamodel logic internally. Upstream components only
+ * provide base metadata (fiware-service, fiware-servicepath, entityType), and do
+ * not need to be aware of the physical SQL layout.
  *
- * For example, if the Kafnus Connect sink is configured with:
- * - `"table.name.format": "test.${topic}"` (where `test` is the client name)
- * - Header: `target_table = users`
+ * The SQL layout is selected using the `datamodel` configuration parameter.
  *
- * Then this SMT will change the record topic to `users`, and the sink connector will insert the record
- * into the `test.users` table.
+ * Supported datamodels:
  *
- * Configuration parameters:
- * - `header.key` (required): Name of the header containing the destination table (e.g., `target_table`).
- * - `topic.prefix` (optional): Prefix to be applied to the target topic (e.g., the client name).
+ * - dm-by-entity-type-database
+ *     Schema: fiware-service
+ *     Table : fiware-servicepath_entityType
  *
- * Behavior:
- * - If the specified header is present and non-null, the record’s topic is rewritten accordingly.
- * - If the header is missing or empty, the record remains unchanged.
+ * - dm-by-fixed-entity-type-database-schema
+ *     Schema: fiware-servicepath
+ *     Table : entityType
  *
- * This SMT is ideal for client-multi-table architectures where topic explosion is undesirable.
- * It enables clean, dynamic routing with minimal topic creation and integrates seamlessly with
- * sink connectors that support topic-based table naming.
+ * Required headers (always expected from upstream producers):
+ *
+ * - fiware-service
+ * - fiware-servicepath
+ * - entityType
+ * - entityId (currently unused, reserved for future datamodels)
+ * - suffix (optional, added to table name if needed)
+ *
+ * Configuration:
+ *
+ * Minimal configuration:
+ *
+ *   transforms=HeaderRouter
+ *   transforms.HeaderRouter.type=com.telefonica.HeaderRouter
+ *   transforms.HeaderRouter.datamodel=dm-by-entity-type-database
+ *
+ * Optional overrides:
+ *
+ * - default.schema
+ *     Forces a fixed schema for all records, overriding the datamodel.
+ *
+ * - headers.*
+ *     Each logical value (service, servicepath, entitytype, entityid, suffix) can be
+ *     resolved either from a header or from a fixed value:
+ *
+ *     * If not configured, the default header is used.
+ *     * If configured and a header with that name exists, that header is used.
+ *     * If configured and no such header exists, the configured value is used
+ *       as a fixed literal.
+ *
+ * This allows mixing dynamic metadata with fixed values, enabling both
+ * multi-tenant and single-tenant deployments with the same SMT.
+ *
+ * If a required value cannot be resolved for the selected datamodel, the SMT
+ * throws a ConfigException and error handling is delegated to Kafka Connect.
  */
-
-
 
 package com.telefonica;
 
 import org.apache.kafka.common.config.ConfigDef;
+import org.apache.kafka.common.config.ConfigException;
 import org.apache.kafka.connect.connector.ConnectRecord;
 import org.apache.kafka.connect.transforms.Transformation;
 import org.apache.kafka.connect.transforms.util.SimpleConfig;
+import org.apache.kafka.connect.header.Headers;
 
 import java.util.Map;
 
 public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<R> {
 
-    public static final String HEADER_KEY_CONFIG = "header.key";
-    public static final String TOPIC_PREFIX_CONFIG = "topic.prefix";
+    // === Config keys ===
+    public static final String DATAMODEL_CONFIG = "datamodel";
+    public static final String DEFAULT_SCHEMA_CONFIG = "default.schema";
+
+    public static final String HEADER_SERVICE_CONFIG = "headers.service";
+    public static final String HEADER_SERVICEPATH_CONFIG = "headers.servicepath";
+    public static final String HEADER_ENTITYTYPE_CONFIG = "headers.entitytype";
+    public static final String HEADER_ENTITYID_CONFIG = "headers.entityid";
+    public static final String HEADER_SUFFIX_CONFIG = "headers.suffix";
+    public static final String FIXED_SUFFIX_CONFIG = "suffix";
+
+    // === Datamodels ===
+    public static final String DM_BY_ENTITY_TYPE_DATABASE = "dm-by-entity-type-database";
+    public static final String DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA = "dm-by-fixed-entity-type-database-schema";
 
     private static final ConfigDef CONFIG_DEF = new ConfigDef()
-        .define(HEADER_KEY_CONFIG, ConfigDef.Type.STRING, ConfigDef.Importance.HIGH, "Header key to use for routing")
-        .define(TOPIC_PREFIX_CONFIG, ConfigDef.Type.STRING, "", ConfigDef.Importance.LOW, "Prefix for target topic");
+        .define(DATAMODEL_CONFIG, ConfigDef.Type.STRING, ConfigDef.Importance.HIGH,
+                "SQL datamodel used to build schema and table names")
+        .define(DEFAULT_SCHEMA_CONFIG, ConfigDef.Type.STRING, null,
+                ConfigDef.Importance.MEDIUM, "Fallback schema if none is resolved")
+        .define(HEADER_SERVICE_CONFIG, ConfigDef.Type.STRING, null,
+                ConfigDef.Importance.HIGH, "Service header name or fixed value")
+        .define(HEADER_SERVICEPATH_CONFIG, ConfigDef.Type.STRING, null,
+                ConfigDef.Importance.HIGH, "ServicePath header name or fixed value")
+        .define(HEADER_ENTITYTYPE_CONFIG, ConfigDef.Type.STRING, null,
+                ConfigDef.Importance.HIGH, "EntityType header name or fixed value")
+        .define(HEADER_ENTITYID_CONFIG, ConfigDef.Type.STRING, null,
+                ConfigDef.Importance.LOW, "EntityId header name or fixed value")
+        .define(HEADER_SUFFIX_CONFIG, ConfigDef.Type.STRING, "suffix",
+                ConfigDef.Importance.LOW, "Header containing flow/table suffix")
+        .define(FIXED_SUFFIX_CONFIG, ConfigDef.Type.STRING, null,
+                ConfigDef.Importance.LOW, "Fixed suffix to override header value if provided");
 
-    private String headerKey;
-    private String topicPrefix;
+    // === Runtime config ===
+    private String datamodel;
+    private String defaultSchema;
+
+    private String serviceHeader;
+    private String servicePathHeader;
+    private String entityTypeHeader;
+    private String entityIdHeader;
+    private String headerSuffix;
+    private String fixedSuffix;
+
+    private String resolveValue(Headers headers, String fixedValue, String headerName) {
+        if (fixedValue != null) return fixedValue;
+
+        return getHeaderValue(headers, headerName);
+    }
 
     @Override
     public void configure(Map<String, ?> configs) {
         SimpleConfig config = new SimpleConfig(CONFIG_DEF, configs);
-        this.headerKey = config.getString(HEADER_KEY_CONFIG);
-        this.topicPrefix = config.getString(TOPIC_PREFIX_CONFIG);
+        this.datamodel = config.getString(DATAMODEL_CONFIG);
+        this.defaultSchema = config.getString(DEFAULT_SCHEMA_CONFIG);
+
+        this.serviceHeader = config.getString(HEADER_SERVICE_CONFIG);
+        this.servicePathHeader = config.getString(HEADER_SERVICEPATH_CONFIG);
+        this.entityTypeHeader = config.getString(HEADER_ENTITYTYPE_CONFIG);
+        this.entityIdHeader = config.getString(HEADER_ENTITYID_CONFIG);
+        this.headerSuffix = config.getString(HEADER_SUFFIX_CONFIG);
+        this.fixedSuffix = config.getString(FIXED_SUFFIX_CONFIG);
     }
 
     @Override
     public R apply(R record) {
-        if (record.headers() == null) return record;
+        Headers headers = record.headers();
+        if (headers == null) return record;
 
-        String newTopic = null;
-        if (record.headers().lastWithName(headerKey) != null) {
-            Object headerValue = record.headers().lastWithName(headerKey).value();
-            if (headerValue != null) {
-                newTopic = topicPrefix + headerValue.toString();
-            }
+        String service = resolveValue(headers, null, serviceHeader);
+        String servicePath = resolveValue(headers, null, servicePathHeader);
+        String entityType = resolveValue(headers, null, entityTypeHeader);
+
+        String schema;
+        String table;
+
+        switch (datamodel) {
+            case DM_BY_ENTITY_TYPE_DATABASE:
+                schema = require(service, "fiware-service");
+                table = require(servicePath, "fiware-servicepath") + "_" + require(entityType, "entityType");
+                break;
+            case DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA:
+                schema = require(servicePath, "fiware-servicepath");
+                table = require(entityType, "entityType");
+                break;
+            default:
+                throw new ConfigException("Unsupported datamodel: " + datamodel);
         }
 
-        if (newTopic != null && !newTopic.isEmpty()) {
-            return record.newRecord(
-                newTopic,
-                record.kafkaPartition(),
-                record.keySchema(),
-                record.key(),
-                record.valueSchema(),
-                record.value(),
-                record.timestamp(),
-                record.headers()
-            );
+        // Resolver sufijo
+        String suffix = resolveValue(headers, fixedSuffix, headerSuffix);
+        if (suffix == null) suffix = "";
+        table = table + suffix;
+
+        if ((schema == null || schema.isEmpty()) && defaultSchema != null) {
+            schema = defaultSchema;
         }
 
-        return record;
+        if (schema == null || schema.isEmpty()) {
+            throw new ConfigException("Schema could not be resolved for datamodel " + datamodel);
+        }
+
+        String newTopic = schema + "." + table;
+
+        return record.newRecord(
+            newTopic,
+            record.kafkaPartition(),
+            record.keySchema(),
+            record.key(),
+            record.valueSchema(),
+            record.value(),
+            record.timestamp(),
+            headers
+        );
+    }
+
+    private String getHeaderValue(Headers headers, String headerName) {
+        if (headerName == null) return null;
+        if (headers.lastWithName(headerName) == null) return null;
+        Object value = headers.lastWithName(headerName).value();
+        return value != null ? value.toString() : null;
+    }
+
+    private String require(String value, String name) {
+        if (value == null || value.isEmpty()) {
+            throw new ConfigException("Required header missing or empty: " + name);
+        }
+        return value;
     }
 
     @Override
