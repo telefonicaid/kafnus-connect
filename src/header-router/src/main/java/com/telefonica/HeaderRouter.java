@@ -113,6 +113,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     // === Datamodels ===
     public static final String DM_BY_ENTITY_TYPE_DATABASE = "dm-by-entity-type-database";
     public static final String DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA = "dm-by-fixed-entity-type-database-schema";
+    public static final String DM_POSTGIS_ERRORS = "dm-postgis-errors";
 
     private static final ConfigDef CONFIG_DEF = new ConfigDef()
         .define(DATAMODEL_CONFIG, ConfigDef.Type.STRING, ConfigDef.Importance.HIGH,
@@ -188,6 +189,10 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
             case DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA:
                 schema = require(servicePath, "fiware-servicepath");
                 table = require(entityType, "entityType");
+                break;
+            case DM_POSTGIS_ERRORS:
+                schema = require(service, "fiware-service");
+                table = require(service, "fiware-service") + "_error_log";
                 break;
             default:
                 throw new ConfigException("Unsupported datamodel: " + datamodel);
