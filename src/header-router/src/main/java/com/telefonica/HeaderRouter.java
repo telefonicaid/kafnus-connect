@@ -156,10 +156,15 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
         this.defaultSchema = config.getString(DEFAULT_SCHEMA_CONFIG);
 
         this.serviceHeader = config.getString(HEADER_SERVICE_CONFIG);
+        if (this.serviceHeader == null) this.serviceHeader = "fiware-service";
         this.servicePathHeader = config.getString(HEADER_SERVICEPATH_CONFIG);
+        if (this.servicePathHeader == null) this.servicePathHeader = "fiware-servicepath";
         this.entityTypeHeader = config.getString(HEADER_ENTITYTYPE_CONFIG);
+        if (this.entityTypeHeader == null) this.entityTypeHeader = "entityType";
         this.entityIdHeader = config.getString(HEADER_ENTITYID_CONFIG);
+        if (this.entityIdHeader == null) this.entityIdHeader = "entityId";
         this.headerSuffix = config.getString(HEADER_SUFFIX_CONFIG);
+        if (this.headerSuffix == null) this.headerSuffix = "suffix";
         this.fixedSuffix = config.getString(FIXED_SUFFIX_CONFIG);
     }
 
