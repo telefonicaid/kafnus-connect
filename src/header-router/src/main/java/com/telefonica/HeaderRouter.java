@@ -144,10 +144,12 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     private String headerSuffix;
     private String fixedSuffix;
 
-    private String resolveValue(Headers headers, String fixedValue, String headerName) {
-        if (fixedValue != null) return fixedValue;
 
-        return getHeaderValue(headers, headerName);
+    private String resolveValue(Headers headers, String headerOrLiteral) {
+        if (headerOrLiteral == null) return null;
+        String fromHeader = getHeaderValue(headers, headerOrLiteral);
+        if (fromHeader != null) return fromHeader;
+            return headerOrLiteral;
     }
 
     @Override
@@ -174,9 +176,9 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
         Headers headers = record.headers();
         if (headers == null) return record;
 
-        String service = resolveValue(headers, null, serviceHeader);
-        String servicePath = resolveValue(headers, null, servicePathHeader);
-        String entityType = resolveValue(headers, null, entityTypeHeader);
+        String service = resolveValue(headers, serviceHeader);
+        String servicePath = resolveValue(headers, servicePathHeader);
+        String entityType = resolveValue(headers, entityTypeHeader);
 
         String schema;
         String table;
@@ -198,9 +200,10 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
                 throw new ConfigException("Unsupported datamodel: " + datamodel);
         }
 
-        // Resolver sufijo
-        String suffix = resolveValue(headers, fixedSuffix, headerSuffix);
-        if (suffix == null) suffix = "";
+        String suffix = fixedSuffix != null
+            ? fixedSuffix
+            : getHeaderValue(headers, headerSuffix);  // returns null if missing
+        if (suffix == null) suffix = "";              // normalize null to empty string
         table = table + suffix;
 
         if ((schema == null || schema.isEmpty()) && defaultSchema != null) {
