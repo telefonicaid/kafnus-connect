@@ -3,7 +3,7 @@
     "type": "mongo",
     "topic": "test_mongo",
     "database": "sth_test",
-    "collection": "sth_x002fmongo",
+    "collection": "sth_/mongo",
     "record": {
       "entityId": "Device:001",
       "entityType": "Device",

@@ -1,7 +1,6 @@
 [
   {
     "type": "postgis",
-    "target_table": "order_sensor",
     "topic": "test_lastdata",
     "record": {
       "entityid": "Sensor3",
@@ -10,11 +9,17 @@
       "recvtime": "2025-06-26T12:10:00.000Z",
       "temperature": 23.0,
       "fiwareservicepath": "/order"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "order",
+      "entityType": "sensor",
+      "entityId": "Sensor3",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "order_sensor",
     "topic": "test_lastdata",
     "record": {
       "entityid": "Sensor3",
@@ -23,11 +28,17 @@
       "recvtime": "2025-06-26T12:20:00.000Z",
       "temperature": 24.0,
       "fiwareservicepath": "/order"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "order",
+      "entityType": "sensor",
+      "entityId": "Sensor3",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "order_sensor",
     "topic": "test_lastdata",
     "record": {
       "entityid": "Sensor3",
@@ -36,11 +47,17 @@
       "recvtime": "2025-06-26T12:30:00.000Z",
       "temperature": 25.0,
       "fiwareservicepath": "/order"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "order",
+      "entityType": "sensor",
+      "entityId": "Sensor3",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "order_sensor_lastdata",
     "topic": "test_lastdata",
     "record": {
       "entityid": "Sensor3",
@@ -49,6 +66,13 @@
       "recvtime": "2025-06-26T12:30:00.000Z",
       "temperature": 25.0,
       "fiwareservicepath": "/order"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "order",
+      "entityType": "sensor",
+      "entityId": "Sensor3",
+      "suffix": "_lastdata"
     }
   }
 ]
