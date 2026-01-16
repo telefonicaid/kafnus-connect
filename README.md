@@ -27,12 +27,18 @@ Kafnus Connect consumes processed NGSI events from Kafka topics (produced by [Ka
 ```
 Kafka (processed topics)
        │
+  Header Router (datamodels)
+       │ 
        ▼
   Kafnus Connect (Kafka Connect)
    ├─ JDBC Sink (PostGIS)
    ├─ MongoDB Sink
    └─ HTTP Sink
 ```
+
+The HeaderRouter SMT is responsible for dynamically resolving the destination
+**database schema and table name** at runtime based on NGSI headers and a
+configurable SQL datamodel, removing any SQL layout logic from upstream producers.
 
 Each connector can be independently configured via environment variables or `connect-distributed.properties`.  
 Custom SMTs can be chained to transform headers or message formats before persistence.

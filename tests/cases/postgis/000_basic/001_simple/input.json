@@ -1,8 +1,14 @@
 [
   {
     "type": "postgis",
-    "target_table": "simple_sensor",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": ""
+    },
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
@@ -14,8 +20,14 @@
   },
   {
     "type": "postgis",
-    "target_table": "simple_sensor",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": ""
+    },
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
@@ -27,8 +39,14 @@
   },
   {
     "type": "postgis",
-    "target_table": "simple_sensor_lastdata",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_lastdata"
+    },
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
@@ -40,8 +58,14 @@
   },
   {
     "type": "postgis",
-    "target_table": "simple_sensor_mutable",
-    "topic": "test_mutable",
+    "topic": "smc_test_mutable_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_mutable"
+    },
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
@@ -53,8 +77,14 @@
   },
   {
     "type": "postgis",
-    "target_table": "simple_sensor_mutable",
-    "topic": "test_mutable",
+    "topic": "smc_test_mutable_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_mutable"
+    },
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",

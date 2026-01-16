@@ -3,13 +3,13 @@
   "config": {
     "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
     "tasks.max": "1",
-    "topics": "sgtr_error_log",
+    "topics": "smc_sgtr_error_log_processed",
     "connection.url": "jdbc:postgresql://${env:KAFNUS_TESTS_PG_HOST}:${env:KAFNUS_TESTS_PG_PORT}/${env:KAFNUS_TESTS_PG_DBNAME}",
     "connection.user": "${env:KAFNUS_TESTS_PG_USER}",
     "connection.password": "${env:KAFNUS_TESTS_PG_PASSWORD}",
 
     "insert.mode": "insert",
-    "table.name.format": "test.${topic}",
+    "table.name.format": "${topic}",
     "auto.create": true,
     "auto.evolve": false,
 
@@ -17,7 +17,12 @@
     "value.converter.schemas.enable": true,
     "key.converter": "org.apache.kafka.connect.json.JsonConverter",
 
-    "transforms": "convertTimestamp",
+    "transforms": "HeaderRouter,convertTimestamp",
+
+    "transforms.HeaderRouter.type": "com.telefonica.HeaderRouter",
+    "transforms.HeaderRouter.datamodel": "dm-postgis-errors",
+    "transforms.HeaderRouter.headers.service": "test",
+
     "transforms.convertTimestamp.type": "org.apache.kafka.connect.transforms.TimestampConverter$Value",
     "transforms.convertTimestamp.target.type": "Timestamp",
     "transforms.convertTimestamp.field": "timestamp",

@@ -149,13 +149,20 @@ def build_message(item):
         record["recvtime"] = datetime.utcnow().isoformat() + "Z"
 
     if msg_type == "postgis":
-        target_table = item.get("target_table")
-        if not target_table:
-            raise ValueError("Missing 'target_table' for postgis message")
+        input_headers = item.get("headers")
+        if not input_headers:
+            raise ValueError("Missing 'headers' for postgis message")
 
-        # Build key and headers
+        # Build key from record
         key = build_key_schema(record, ["entityid"])
-        headers = [("target_table", target_table.encode("utf-8"))]
+        
+        # Convert headers to Kafka Connect format (list of tuples with bytes values)
+        headers = []
+        for header_name, header_value in input_headers.items():
+            if isinstance(header_value, str):
+                headers.append((header_name, header_value.encode("utf-8")))
+            else:
+                headers.append((header_name, str(header_value).encode("utf-8")))
 
         # Check for delete flag
         is_delete = item.pop("delete", False)

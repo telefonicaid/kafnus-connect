@@ -1,7 +1,6 @@
 {
   "type": "postgis",
-  "target_table": "types_zone",
-  "topic": "test",
+  "topic": "smc_test_historic_processed",
   "record": {
     "entityid": "ZoneJsonTypes",
     "entitytype": "Zone",
@@ -10,9 +9,26 @@
     "str_col": "hello world",
     "number_col": 123.456,
     "bool_col": true,
-    "null_col": { "value": null, "optional": true },
-    "obj_col": {"a": 1, "b": "two"},
-    "array_col": [1, "two", false],
+    "null_col": {
+      "value": null,
+      "optional": true
+    },
+    "obj_col": {
+      "a": 1,
+      "b": "two"
+    },
+    "array_col": [
+      1,
+      "two",
+      false
+    ],
     "fiwareservicepath": "/types"
+  },
+  "headers": {
+    "fiware-service": "test",
+    "fiware-servicepath": "types",
+    "entityType": "zone",
+    "entityId": "Zonejsontypes",
+    "suffix": ""
   }
 }

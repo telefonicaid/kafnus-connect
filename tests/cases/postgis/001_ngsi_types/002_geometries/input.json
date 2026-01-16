@@ -1,8 +1,7 @@
 [
   {
     "type": "postgis",
-    "target_table": "parking_zone",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-Point",
       "entitytype": "Zone",
@@ -12,19 +11,28 @@
       "location": {
         "value": {
           "type": "Point",
-          "coordinates": [-1.7038, 1.4168]
+          "coordinates": [
+            -1.7038,
+            1.4168
+          ]
         },
         "type": "geo:json"
       },
       "zone": "Zone-Point",
       "zip": "12345",
       "fiwareservicepath": "/parking"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "entityType": "zone",
+      "entityId": "Zone-point",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "parking_zone",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-Polygon",
       "entitytype": "Zone",
@@ -35,23 +43,43 @@
         "type": "geo:json",
         "value": {
           "type": "Polygon",
-          "coordinates": [[
-            [-1.7040, 1.4168],
-            [-1.7030, 1.4175],
-            [-1.7020, 1.4162],
-            [-1.7040, 1.4168]
-          ]]
+          "coordinates": [
+            [
+              [
+                -1.704,
+                1.4168
+              ],
+              [
+                -1.703,
+                1.4175
+              ],
+              [
+                -1.702,
+                1.4162
+              ],
+              [
+                -1.704,
+                1.4168
+              ]
+            ]
+          ]
         }
       },
       "zone": "Zone-Polygon",
       "zip": "12345",
       "fiwareservicepath": "/parking"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "entityType": "zone",
+      "entityId": "Zone-polygon",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "parking_zone",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-LineString",
       "entitytype": "Zone",
@@ -62,8 +90,14 @@
         "value": {
           "type": "LineString",
           "coordinates": [
-            [-1.7038, 1.4168],
-            [-1.7028, 1.4178]
+            [
+              -1.7038,
+              1.4168
+            ],
+            [
+              -1.7028,
+              1.4178
+            ]
           ]
         },
         "type": "geo:json"
@@ -71,12 +105,18 @@
       "zone": "Zone-LineString",
       "zip": "12345",
       "fiwareservicepath": "/parking"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "entityType": "zone",
+      "entityId": "Zone-linestring",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "parking_zone",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-MultiPoint",
       "entitytype": "Zone",
@@ -87,8 +127,14 @@
         "value": {
           "type": "MultiPoint",
           "coordinates": [
-            [-1.7038, 1.4168],
-            [-1.7028, 1.4178]
+            [
+              -1.7038,
+              1.4168
+            ],
+            [
+              -1.7028,
+              1.4178
+            ]
           ]
         },
         "type": "geo:json"
@@ -96,12 +142,18 @@
       "zone": "Zone-MultiPoint",
       "zip": "12345",
       "fiwareservicepath": "/parking"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "entityType": "zone",
+      "entityId": "Zone-multipoint",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "parking_zone",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-MultiLineString",
       "entitytype": "Zone",
@@ -113,12 +165,24 @@
           "type": "MultiLineString",
           "coordinates": [
             [
-              [-2.7038, 2.4168],
-              [-2.7028, 2.4178]
+              [
+                -2.7038,
+                2.4168
+              ],
+              [
+                -2.7028,
+                2.4178
+              ]
             ],
             [
-              [-2.7018, 2.4188],
-              [-2.7008, 2.4198]
+              [
+                -2.7018,
+                2.4188
+              ],
+              [
+                -2.7008,
+                2.4198
+              ]
             ]
           ]
         },
@@ -127,12 +191,18 @@
       "zone": "Zone-MultiLineString",
       "zip": "12345",
       "fiwareservicepath": "/parking"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "entityType": "zone",
+      "entityId": "Zone-multilinestring",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "parking_zone",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-MultiPolygon",
       "entitytype": "Zone",
@@ -144,10 +214,44 @@
           "type": "MultiPolygon",
           "coordinates": [
             [
-              [[-2.7040, -2.4168], [-2.7030, -2.4175], [-2.7020, -2.4162], [-2.7040, -2.4168]]
+              [
+                [
+                  -2.704,
+                  -2.4168
+                ],
+                [
+                  -2.703,
+                  -2.4175
+                ],
+                [
+                  -2.702,
+                  -2.4162
+                ],
+                [
+                  -2.704,
+                  -2.4168
+                ]
+              ]
             ],
             [
-              [[-2.7140, -2.4268], [-2.7130, -2.4275], [-2.7120, -2.4262], [-2.7140, -2.4268]]
+              [
+                [
+                  -2.714,
+                  -2.4268
+                ],
+                [
+                  -2.713,
+                  -2.4275
+                ],
+                [
+                  -2.712,
+                  -2.4262
+                ],
+                [
+                  -2.714,
+                  -2.4268
+                ]
+              ]
             ]
           ]
         },
@@ -156,12 +260,18 @@
       "zone": "Zone-MultiPolygon",
       "zip": "12345",
       "fiwareservicepath": "/parking"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "entityType": "zone",
+      "entityId": "Zone-multipolygon",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "parking_zone",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-Feature",
       "entitytype": "Zone",
@@ -173,7 +283,10 @@
           "type": "Feature",
           "geometry": {
             "type": "Point",
-            "coordinates": [-3.7038, 3.4168]
+            "coordinates": [
+              -3.7038,
+              3.4168
+            ]
           },
           "properties": {
             "info": "main point"
@@ -184,12 +297,18 @@
       "zone": "Zone-Feature",
       "zip": "12345",
       "fiwareservicepath": "/parking"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "entityType": "zone",
+      "entityId": "Zone-feature",
+      "suffix": ""
     }
   },
   {
     "type": "postgis",
-    "target_table": "parking_zone",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-Ignored",
       "entitytype": "Zone",
@@ -199,19 +318,36 @@
       "location": {
         "value": {
           "type": "Point",
-          "coordinates": [-4.7038, 4.4168]
+          "coordinates": [
+            -4.7038,
+            4.4168
+          ]
         },
         "type": "geo:json"
       },
       "zoneignored": {
         "value": {
           "type": "Polygon",
-          "coordinates": [[
-            [-4.7040, 4.4168],
-            [-4.7030, 4.4175],
-            [-4.7020, 4.4162],
-            [-4.7040, 4.4168]
-          ]]
+          "coordinates": [
+            [
+              [
+                -4.704,
+                4.4168
+              ],
+              [
+                -4.703,
+                4.4175
+              ],
+              [
+                -4.702,
+                4.4162
+              ],
+              [
+                -4.704,
+                4.4168
+              ]
+            ]
+          ]
         },
         "type": "geo:json",
         "metadata": {
@@ -224,6 +360,13 @@
       "zone": "Zone-Ignored",
       "zip": "12345",
       "fiwareservicepath": "/parking"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "entityType": "zone",
+      "entityId": "Zone-ignored",
+      "suffix": ""
     }
   }
 ]

@@ -1,35 +1,53 @@
 [
   {
     "type": "postgis",
-    "target_table": "delete_sensor_lastdata",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
       "timeinstant": "2025-06-26T11:00:00.000Z",
       "temperature": 21.0,
       "fiwareservicepath": "/delete"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "delete",
+      "entityType": "sensor",
+      "entityId": "Sensor1",
+      "suffix": "_lastdata"
     }
   },
   {
     "type": "postgis",
-    "target_table": "delete_sensor_lastdata",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "record": {
       "entityid": "Sensor2",
       "entitytype": "Sensor",
       "timeinstant": "2025-06-26T12:00:00.000Z",
       "temperature": 22.0,
       "fiwareservicepath": "/delete"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "delete",
+      "entityType": "sensor",
+      "entityId": "Sensor2",
+      "suffix": "_lastdata"
     }
   },
   {
     "type": "postgis",
-    "target_table": "delete_sensor_lastdata",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "delete": true,
     "record": {
       "entityid": "Sensor1"
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "delete",
+      "entityType": "sensor",
+      "entityId": "Sensor1",
+      "suffix": "_lastdata"
     }
   }
 ]
