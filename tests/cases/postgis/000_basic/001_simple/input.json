@@ -64,7 +64,7 @@
       "fiware-servicepath": "simple",
       "entityType": "sensor",
       "entityId": "sensor1",
-      "suffix": "_lastdata"
+      "suffix": "_mutable"
     },
     "record": {
       "entityid": "Sensor1",
@@ -83,7 +83,7 @@
       "fiware-servicepath": "simple",
       "entityType": "sensor",
       "entityId": "sensor1",
-      "suffix": "_lastdata"
+      "suffix": "_mutable"
     },
     "record": {
       "entityid": "Sensor1",
