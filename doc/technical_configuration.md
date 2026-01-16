@@ -143,19 +143,159 @@ Used in:
 
 > Example local test endpoint; replace according to environment.
 
+---
+
 ### 4. Custom SMT – HeaderRouter
 
 Path: `plugins/header-router`
 
-A Java-based Single Message Transform (SMT) implemented in `HeaderRouter.java`. It rewrites the topic name based on a Kafka record header (e.g. `target_table`) set by Kafnus NGSI.
+`HeaderRouter` is a custom Kafka Connect **Single Message Transform (SMT)** that dynamically computes the **destination schema and table name** for sink connectors based on NGSI metadata and a configurable SQL datamodel.
 
-#### SMT Configuration Example
+This SMT centralizes all SQL routing logic inside Kafka Connect, removing the need for upstream components to precompute physical table names.
+
+---
+
+### 🔧 Core Configuration
+
+Minimal required configuration:
 
 ```json
 "transforms": "HeaderRouter",
 "transforms.HeaderRouter.type": "com.telefonica.HeaderRouter",
-"transforms.HeaderRouter.header.key": "target_table"
+"transforms.HeaderRouter.datamodel": "dm-by-entity-type-database"
 ```
+
+The resolved destination is written to the Kafka Connect topic name, allowing standard JDBC Sink configuration using:
+
+```json
+"table.name.format": "${topic}"
+```
+
+---
+
+### 🧩 Supported SQL Datamodels
+
+#### `dm-by-entity-type-database`
+
+| Element | Value                           |
+| ------- | ------------------------------- |
+| Schema  | `fiware-service`                |
+| Table   | `fiware-servicepath_entityType` |
+
+---
+
+#### `dm-by-fixed-entity-type-database-schema`
+
+| Element | Value                |
+| ------- | -------------------- |
+| Schema  | `fiware-servicepath` |
+| Table   | `entityType`         |
+
+---
+
+#### `dm-postgis-errors`
+
+| Element | Value                        |
+| ------- | ---------------------------- |
+| Schema  | `fiware-service`             |
+| Table   | `<fiware-service>_error_log` |
+
+This datamodel is intended for JDBC sinks consuming error or DLQ topics.
+
+#### `dm-http-errors`
+
+| Element | Value                        |
+| ------- | ---------------------------- |
+| Schema  | `fiware-service`             |
+| Table   | `<fiware-service>_error_log` |
+
+This datamodel may evolve and is used specifically for HTTP error flows. Currently, it is designed to override the schema using `"transforms.HeaderRouter.headers.schema": "<SCHEMA>"`.
+
+---
+
+### 🧠 Header Resolution Logic (Dynamic vs Fixed)
+
+Each logical value used by the datamodel can be resolved flexibly.
+
+Supported logical fields:
+
+* service
+* servicepath
+* entitytype
+* entityid
+* suffix
+
+For each field:
+
+1. If the configuration value matches an existing Kafka header → header value is used
+2. If no such header exists → the configuration value is treated as a **fixed literal**
+3. If no configuration is provided → default NGSI headers are used
+
+Default NGSI header names:
+
+| Logical field | Default header       |
+| ------------- | -------------------- |
+| service       | `fiware-service`     |
+| servicepath   | `fiware-servicepath` |
+| entitytype    | `entityType`         |
+| entityid      | `entityId`           |
+| suffix        | `suffix`             |
+| schema        | `schema`             |
+
+This allows mixing **multi-tenant dynamic routing** with **static single-tenant deployments**.
+
+---
+
+### ➕ Optional Table Suffix
+
+A suffix can be appended to the resolved table name:
+
+* Dynamically via a Kafka header (`suffix` by default)
+* Or statically via configuration
+
+Configuration example:
+
+```json
+"transforms.HeaderRouter.suffix": "_historic"
+```
+
+If neither a header nor a fixed value is present, the suffix safely defaults to an empty string.
+
+---
+
+### 🧭 Schema Override (`headers.schema`)
+
+The `headers.schema` parameter acts as a **hard override** for the resolved schema.
+
+**Behavior:**
+
+* If `headers.schema` is configured → it is **always used as the destination schema**
+* If not configured → the schema resolved by the selected datamodel is used
+
+Example:
+
+```json
+"transforms.HeaderRouter.datamodel": "dm-postgis-errors",
+"transforms.HeaderRouter.headers.schema": "test"
+```
+
+Resulting destination:
+
+```
+test.<fiware-service>_error_log
+```
+
+This is especially useful in test environments or deployments where the physical database schema must remain fixed.
+
+---
+
+### ⚠️ Validation & Errors
+
+* Required values are validated per datamodel
+* Missing mandatory metadata results in clear `ConfigException`s
+* Error handling and retries are delegated to Kafka Connect mechanisms (DLQ, retries, task failure)
+
+---
 
 ### Other Detected Plugins
 
