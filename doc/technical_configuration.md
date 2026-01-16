@@ -200,7 +200,7 @@ This behavior is controlled by:
 
 ```json
 "errors.tolerance": "all",
-"errors.deadletterqueue.topic.name": "raw_errors",
+"errors.deadletterqueue.topic.name": "smc_raw_errors",
 "errors.deadletterqueue.context.headers.enable": "true",
 "errors.deadletterqueue.topic.replication.factor": "1",
 "errors.log.enable": "true",
@@ -210,7 +210,7 @@ This behavior is controlled by:
 ```
 
 With `max.retries = 0`, **SQL write failures are not retried at all**.
-Instead, the failing record is immediately published to the **Dead Letter Queue (DLQ)** topic (`raw_errors`), where it will later be inserted into the PostGIS *errors* table by the dedicated DLQ sink.
+Instead, the failing record is immediately published to the **Dead Letter Queue (DLQ)** topic (`smc_raw_errors`), where it will later be inserted into the PostGIS *errors* table by the dedicated DLQ sink.
 
 This ensures that structural or schema-related issues do not stall the connector.
 
@@ -260,7 +260,7 @@ This is a known limitation of Kafka Connect and the JDBC Sink connector.
 
 | Failure Type                                     | Retried?                    | Outcome                                                      |
 | ------------------------------------------------ | --------------------------- | ------------------------------------------------------------ |
-| **SQL errors** (missing table, bad schema, etc.) | ❌ No                        | Record sent to `raw_errors` DLQ immediately                  |
+| **SQL errors** (missing table, bad schema, etc.) | ❌ No                        | Record sent to `smc_raw_errors` DLQ immediately                  |
 | **DB connectivity < 100s outage**                | ✅ Yes                       | Connector recovers normally                                  |
 | **DB connectivity > 100s outage**                | ❌ No (exceeds retry window) | Task enters `FAILED` and stays down until manually restarted |
 

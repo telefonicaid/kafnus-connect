@@ -1,7 +1,7 @@
 [
   {
     "type": "mongo",
-    "topic": "test_mongo",
+    "topic": "smc_test_mongo_processed",
     "database": "sth_test",
     "collection": "sth_/mongo",
     "record": {

@@ -1,7 +1,7 @@
 [
   {
     "type": "postgis",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "record": {
       "entityid": "Sensor1",
       "entitytype": "Sensor",
@@ -19,7 +19,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "record": {
       "entityid": "Sensor2",
       "entitytype": "Sensor",
@@ -37,15 +37,15 @@
   },
   {
     "type": "postgis",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "delete": true,
     "record": {
       "entityid": "Sensor1"
     },
     "headers": {
       "fiware-service": "test",
-      "fiware-servicepath": "",
-      "entityType": "",
+      "fiware-servicepath": "delete",
+      "entityType": "sensor",
       "entityId": "Sensor1",
       "suffix": "_lastdata"
     }

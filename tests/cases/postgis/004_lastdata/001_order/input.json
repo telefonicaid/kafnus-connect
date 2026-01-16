@@ -1,7 +1,7 @@
 [
   {
     "type": "postgis",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "record": {
       "entityid": "Sensor3",
       "entitytype": "Sensor",
@@ -20,7 +20,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "record": {
       "entityid": "Sensor3",
       "entitytype": "Sensor",
@@ -39,7 +39,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "record": {
       "entityid": "Sensor3",
       "entitytype": "Sensor",
@@ -58,7 +58,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test_lastdata",
+    "topic": "smc_test_lastdata_processed",
     "record": {
       "entityid": "Sensor3",
       "entitytype": "Sensor",

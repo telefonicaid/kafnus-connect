@@ -1,7 +1,7 @@
 [
   {
     "type": "postgis",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-Point",
       "entitytype": "Zone",
@@ -32,7 +32,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-Polygon",
       "entitytype": "Zone",
@@ -79,7 +79,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-LineString",
       "entitytype": "Zone",
@@ -116,7 +116,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-MultiPoint",
       "entitytype": "Zone",
@@ -153,7 +153,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-MultiLineString",
       "entitytype": "Zone",
@@ -202,7 +202,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-MultiPolygon",
       "entitytype": "Zone",
@@ -271,7 +271,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-Feature",
       "entitytype": "Zone",
@@ -308,7 +308,7 @@
   },
   {
     "type": "postgis",
-    "topic": "test",
+    "topic": "smc_test_historic_processed",
     "record": {
       "entityid": "Zone-Ignored",
       "entitytype": "Zone",

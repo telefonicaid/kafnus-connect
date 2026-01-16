@@ -1,6 +1,6 @@
 {
   "type": "postgis",
-  "topic": "test",
+  "topic": "smc_test_historic_processed",
   "record": {
     "entityid": "ZoneJsonTypes",
     "entitytype": "Zone",

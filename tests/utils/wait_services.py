@@ -201,11 +201,11 @@ def wait_for_kafnus_ngsi(kafka_bootstrap="kafka:9092", timeout=300):
 
     # Map input -> expected output
     flows = {
-        "raw_mongo": "init_mongo",
-        "raw_historic": "init",
-        "raw_lastdata": "init_lastdata",
-        "raw_mutable": "init_mutable",
-        "raw_errors": "init_error_log",
+        "smc_raw_mongo": "init_mongo",
+        "smc_raw_historic": "init",
+        "smc_raw_lastdata": "init_lastdata",
+        "smc_raw_mutable": "init_mutable",
+        "smc_raw_errors": "init_error_log",
         "raw_sgtr": "sgtr_http"
     }
 
@@ -257,7 +257,7 @@ def wait_for_kafnus_ngsi(kafka_bootstrap="kafka:9092", timeout=300):
     }
 
     # Topics that reuse the shared NGSI message
-    ngsi_inputs = ["raw_historic", "raw_lastdata", "raw_mutable", "raw_mongo"]
+    ngsi_inputs = ["smc_raw_historic", "smc_raw_lastdata", "smc_raw_mutable", "smc_raw_mongo"]
 
     # Common headers required for routing
     headers = [
@@ -281,15 +281,15 @@ def wait_for_kafnus_ngsi(kafka_bootstrap="kafka:9092", timeout=300):
         ("__connect.errors.topic", b"init"),
         ("__connect.errors.exception.message", b"init message when starting tests"),
         ("__connect.errors.connector.name", b"init"),
-        ("target_table", b"init")
+        ("fiware-service", b"init")
     ]
     producer.produce(
-        "raw_errors",
+        "smc_raw_errors",
         key=error_msg["key"],
         value=json.dumps(error_msg["value"]),
         headers=error_headers
     )
-    logger.debug(f"➡️ Sent initial error message to raw_errors with headers {error_headers}")
+    logger.debug(f"➡️ Sent initial error message to smc_raw_errors with headers {error_headers}")
 
     # SGTR flow separately
     sgtr_headers = [
@@ -337,10 +337,10 @@ def wait_for_kafnus_ngsi(kafka_bootstrap="kafka:9092", timeout=300):
                 logger.debug(f"✅ Got message from {topic}: {val}")
 
                 # Minimal validations per flow
-                if topic == flows["raw_errors"]:
+                if topic == flows["smc_raw_errors"]:
                     if "payload" in val and "error" in val["payload"]:
                         processed[topic] = True
-                elif topic == flows["raw_mongo"]:
+                elif topic == flows["smc_raw_mongo"]:
                     if "entityId" in val:
                         processed[topic] = True
                 elif topic == flows["raw_sgtr"]:
