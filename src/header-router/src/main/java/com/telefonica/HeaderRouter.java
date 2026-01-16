@@ -101,7 +101,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
 
     // === Config keys ===
     public static final String DATAMODEL_CONFIG = "datamodel";
-    public static final String DEFAULT_SCHEMA_CONFIG = "default.schema";
+    public static final String HEADER_SCHEMA_CONFIG = "headers.schema";
 
     public static final String HEADER_SERVICE_CONFIG = "headers.service";
     public static final String HEADER_SERVICEPATH_CONFIG = "headers.servicepath";
@@ -114,11 +114,12 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     public static final String DM_BY_ENTITY_TYPE_DATABASE = "dm-by-entity-type-database";
     public static final String DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA = "dm-by-fixed-entity-type-database-schema";
     public static final String DM_POSTGIS_ERRORS = "dm-postgis-errors";
+    public static final String DM_HTTP_ERRORS = "dm-http-errors";
 
     private static final ConfigDef CONFIG_DEF = new ConfigDef()
         .define(DATAMODEL_CONFIG, ConfigDef.Type.STRING, ConfigDef.Importance.HIGH,
                 "SQL datamodel used to build schema and table names")
-        .define(DEFAULT_SCHEMA_CONFIG, ConfigDef.Type.STRING, null,
+        .define(HEADER_SCHEMA_CONFIG, ConfigDef.Type.STRING, null,
                 ConfigDef.Importance.MEDIUM, "Fallback schema if none is resolved")
         .define(HEADER_SERVICE_CONFIG, ConfigDef.Type.STRING, null,
                 ConfigDef.Importance.HIGH, "Service header name or fixed value")
@@ -135,7 +136,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
 
     // === Runtime config ===
     private String datamodel;
-    private String defaultSchema;
+    private String headerSchema;
 
     private String serviceHeader;
     private String servicePathHeader;
@@ -156,7 +157,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     public void configure(Map<String, ?> configs) {
         SimpleConfig config = new SimpleConfig(CONFIG_DEF, configs);
         this.datamodel = config.getString(DATAMODEL_CONFIG);
-        this.defaultSchema = config.getString(DEFAULT_SCHEMA_CONFIG);
+        this.headerSchema = config.getString(HEADER_SCHEMA_CONFIG);
 
         this.serviceHeader = config.getString(HEADER_SERVICE_CONFIG);
         if (this.serviceHeader == null) this.serviceHeader = "fiware-service";
@@ -196,6 +197,10 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
                 schema = require(service, "fiware-service");
                 table = require(service, "fiware-service") + "_error_log";
                 break;
+            case DM_HTTP_ERRORS:
+                schema = require(service, "fiware-service");
+                table = require(service, "fiware-service") + "_error_log";
+                break;
             default:
                 throw new ConfigException("Unsupported datamodel: " + datamodel);
         }
@@ -206,8 +211,9 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
         if (suffix == null) suffix = "";              // normalize null to empty string
         table = table + suffix;
 
-        if ((schema == null || schema.isEmpty()) && defaultSchema != null) {
-            schema = defaultSchema;
+        // default.schema acts as an explicit override if configured
+        if (headerSchema != null && !headerSchema.isEmpty()) {
+            schema = headerSchema;
         }
 
         if (schema == null || schema.isEmpty()) {
