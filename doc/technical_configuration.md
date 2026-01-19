@@ -420,6 +420,155 @@ This behavior is a key part of the design discussion in the Kafnus Connect Issue
 
 ---
 
+## 📦 JDBC Sink Batch Processing Configuration
+
+Kafnus Connect relies on the **Confluent JDBC Sink Connector** for persisting NGSI data into PostGIS.
+By default, this connector uses **Prepared Statements** and **internal batching mechanics** to efficiently insert records in bulk.
+
+Batching behavior is a critical aspect of performance and resilience under high-throughput scenarios and is explicitly validated by the batching tests (`test_jdbc_batch_backlog.py`, `test_jdbc_batch_errors.py`) in [Kafnus tests](https://github.com/telefonicaid/kafnus).
+
+---
+
+### 🔢 `batch.size`
+
+The most important parameter controlling JDBC batch behavior is:
+
+```json
+"batch.size": "3000"
+```
+
+**Definition**
+Specifies the maximum number of records the JDBC sink will attempt to batch together into a single database insert operation, when possible.
+
+**Properties:**
+
+| Property    | Value   |
+| ----------- | ------- |
+| Type        | `int`   |
+| Default     | `3000`  |
+| Valid Range | `0 … ∞` |
+| Importance  | Medium  |
+
+**Behavior:**
+
+* Records are accumulated in memory until `batch.size` is reached
+* The batch is then flushed as a single JDBC operation
+* If fewer records are available, a smaller batch is flushed
+* Setting `batch.size = 0` disables batching entirely (not recommended)
+
+---
+
+### ⚠️ Interaction with Kafka Consumer Polling
+
+A critical (and often overlooked) detail is that **batching is constrained by Kafka consumer polling**.
+
+> ❗ If the Kafka consumer retrieves fewer records than `batch.size`, the effective batch size is reduced.
+
+This means:
+
+```text
+effective_batch_size = min(batch.size, consumer.max.poll.records)
+```
+
+If:
+
+```json
+batch.size = 3000
+consumer.max.poll.records = 500
+```
+
+➡️ **Batching will never exceed 500 records**, even though `batch.size` is higher.
+
+---
+
+### 🔧 Configuring `consumer.max.poll.records`
+
+Kafka Connect workers define a global default for consumer polling:
+
+```properties
+consumer.max.poll.records
+```
+
+If this value is **lower than `batch.size`**, full batching will be lost.
+
+To override this **per connector**, the JDBC sink supports:
+
+```json
+"consumer.override.max.poll.records": "3000"
+```
+
+This ensures that the connector can actually retrieve enough records in a single poll to form a full batch.
+
+**Recommended configuration pattern:**
+
+```json
+"batch.size": "3000",
+"consumer.override.max.poll.records": "3000"
+```
+
+This configuration guarantees that batching behaves as intended.
+
+---
+
+### 🧪 Relation to Batching Tests
+
+The batching tests included in this project (`test_jdbc_batch_backlog.py` and `test_jdbc_batch_errors.py`) are explicitly designed to validate this behavior:
+
+* A backlog significantly larger than `batch.size` is accumulated while services are stopped
+* When Kafnus Connect starts:
+
+  * Records are consumed in chunks
+  * JDBC inserts are executed in batches
+  * Processing continues until a **sentinel entity** is observed
+* Mixed batches containing **valid and invalid records** are handled gracefully:
+
+  * Valid rows are persisted
+  * Invalid rows are routed to the DLQ
+  * Batch processing continues without stalling
+
+These tests implicitly confirm that:
+
+* JDBC batching is enabled and effective
+* Partial failures inside a batch do not block progress
+* Batch size configuration is compatible with Kafka consumer settings
+
+---
+
+### 📈 Performance Considerations
+
+Choosing an appropriate `batch.size` involves trade-offs:
+
+| Batch Size | Effect                                        |
+| ---------- | --------------------------------------------- |
+| Too small  | Increased JDBC overhead, lower throughput     |
+| Too large  | Higher memory usage, longer transaction times |
+| Balanced   | Optimal throughput and stability              |
+
+For PostGIS sinks, a batch size of **3000** has proven to be a good default under typical workloads and is used consistently across tests.
+
+---
+
+### 📝 Summary
+
+| Aspect           | Recommendation                                             |
+| ---------------- | ---------------------------------------------------------- |
+| Enable batching  | Use default JDBC behavior                                  |
+| Batch size       | `3000` (default)                                           |
+| Consumer polling | Match `consumer.override.max.poll.records` to `batch.size` |
+| Error handling   | Combine batching with DLQ (`errors.tolerance=all`)         |
+| Validation       | Covered by batching and error-injection tests              |
+
+---
+
+### 🔗 References
+
+* Confluent JDBC Sink – Overview
+  [https://docs.confluent.io/kafka-connectors/jdbc/current/sink-connector/overview.html](https://docs.confluent.io/kafka-connectors/jdbc/current/sink-connector/overview.html)
+* Confluent JDBC Sink – Configuration Options
+  [https://docs.confluent.io/kafka-connectors/jdbc/current/sink-connector/sink_config_options.html](https://docs.confluent.io/kafka-connectors/jdbc/current/sink-connector/sink_config_options.html)
+
+---
+
 ## ▶️ Registering Connectors (it will be updated)
 
 From the `sinks/` directory, register each connector using `curl`:
