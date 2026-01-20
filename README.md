@@ -71,7 +71,9 @@ Integration and end-to-end testing are performed from the [Kafnus NGSI](https://
 
 ## 🧰 Configuration & Extensions
 
-- Custom SMTs are available in `src/header-router/`.
+- Custom SMTs are available in `src/kafnus-connect-smt/` covering JDBC and MongoDB sinks:
+  - `HeaderRouter`: dynamic SQL routing for JDBC (schema/table resolution)
+  - `MongoNamespacePrefix`: MongoDB database/collection prefixing
 - New sinks can be added by extending the base image and adding plugins under `/usr/share/java/`.
 - Monitoring via **Prometheus JMX Exporter** is supported out of the box.
 

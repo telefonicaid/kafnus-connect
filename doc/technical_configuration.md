@@ -145,17 +145,21 @@ Used in:
 
 ---
 
-### 4. Custom SMT – HeaderRouter
+### 4. Custom SMTs
 
-Path: `plugins/header-router`
+Path: `src/kafnus-connect-smt/`
 
-`HeaderRouter` is a custom Kafka Connect **Single Message Transform (SMT)** that dynamically computes the **destination schema and table name** for sink connectors based on NGSI metadata and a configurable SQL datamodel.
-
-This SMT centralizes all SQL routing logic inside Kafka Connect, removing the need for upstream components to precompute physical table names.
+Kafnus includes a suite of custom Kafka Connect **Single Message Transforms (SMTs)** that encapsulate connector-specific routing and namespace resolution logic, keeping persistence configuration entirely within Kafka Connect and independent from upstream producers.
 
 ---
 
-### 🔧 Core Configuration
+#### **4.1 HeaderRouter (JDBC Sink)**
+
+`HeaderRouter` is a custom Kafka Connect **Single Message Transform (SMT)** that dynamically computes the **destination schema and table name** for JDBC sink connectors based on NGSI metadata and a configurable SQL datamodel.
+
+This SMT centralizes all SQL routing logic inside Kafka Connect, removing the need for upstream components to precompute physical table names.
+
+##### 🔧 Core Configuration
 
 Minimal required configuration:
 
@@ -173,9 +177,9 @@ The resolved destination is written to the Kafka Connect topic name, allowing st
 
 ---
 
-### 🧩 Supported SQL Datamodels
+##### 🧩 Supported SQL Datamodels
 
-#### `dm-by-entity-type-database`
+###### `dm-by-entity-type-database`
 
 | Element | Value                           |
 | ------- | ------------------------------- |
@@ -184,7 +188,7 @@ The resolved destination is written to the Kafka Connect topic name, allowing st
 
 ---
 
-#### `dm-by-fixed-entity-type-database-schema`
+###### `dm-by-fixed-entity-type-database-schema`
 
 | Element | Value                |
 | ------- | -------------------- |
@@ -193,7 +197,7 @@ The resolved destination is written to the Kafka Connect topic name, allowing st
 
 ---
 
-#### `dm-postgis-errors`
+###### `dm-postgis-errors`
 
 | Element | Value                        |
 | ------- | ---------------------------- |
@@ -202,7 +206,7 @@ The resolved destination is written to the Kafka Connect topic name, allowing st
 
 This datamodel is intended for JDBC sinks consuming error or DLQ topics.
 
-#### `dm-http-errors`
+###### `dm-http-errors`
 
 | Element | Value                        |
 | ------- | ---------------------------- |
@@ -211,9 +215,7 @@ This datamodel is intended for JDBC sinks consuming error or DLQ topics.
 
 This datamodel may evolve and is used specifically for HTTP error flows. Currently, it is designed to override the schema using `"transforms.HeaderRouter.headers.schema": "<SCHEMA>"`.
 
----
-
-### 🧠 Header Resolution Logic (Dynamic vs Fixed)
+##### 🧠 Header Resolution Logic (Dynamic vs Fixed)
 
 Each logical value used by the datamodel can be resolved flexibly.
 
@@ -244,9 +246,7 @@ Default NGSI header names:
 
 This allows mixing **multi-tenant dynamic routing** with **static single-tenant deployments**.
 
----
-
-### ➕ Optional Table Suffix
+##### ➕ Optional Table Suffix
 
 A suffix can be appended to the resolved table name:
 
@@ -261,9 +261,7 @@ Configuration example:
 
 If neither a header nor a fixed value is present, the suffix safely defaults to an empty string.
 
----
-
-### 🧭 Schema Override (`headers.schema`)
+##### 🧭 Schema Override (`headers.schema`)
 
 The `headers.schema` parameter acts as a **hard override** for the resolved schema.
 
@@ -287,13 +285,81 @@ test.<fiware-service>_error_log
 
 This is especially useful in test environments or deployments where the physical database schema must remain fixed.
 
----
-
-### ⚠️ Validation & Errors
+##### ⚠️ Validation & Errors
 
 * Required values are validated per datamodel
 * Missing mandatory metadata results in clear `ConfigException`s
 * Error handling and retries are delegated to Kafka Connect mechanisms (DLQ, retries, task failure)
+
+---
+
+#### **4.2 MongoNamespacePrefix (MongoDB Sink)**
+
+`MongoNamespacePrefix` is a custom Kafka Connect **Single Message Transform (SMT)** that handles **configurable MongoDB database and collection name prefixing**.
+
+##### Background & Rationale
+
+In kafnus, MongoDB database and collection names are dynamically resolved at runtime. However, the **MongoDB Kafka Sink connector does not support string composition** (e.g., `prefix + field`) via configuration alone. Namespace mapping (`FieldPathNamespaceMapper`) can only use **field values as-is**.
+
+Because of this limitation, any logic related to **prefixing database or collection names** must be handled **before the record reaches the MongoDB Sink connector**, in the same way that SQL routing is handled for JDBC sinks via `HeaderRouter`.
+
+##### Purpose
+
+`MongoNamespacePrefix`:
+
+* Reads the MongoDB **database** and **collection** names from Kafka record headers
+* Prepends a configurable prefix to each
+* Writes the resulting values back to the same headers
+* Leaves the Kafka topic unchanged
+
+This allows the MongoDB Sink connector to continue using:
+
+```properties
+namespace.mapper = FieldPathNamespaceMapper
+namespace.mapper.key.database.field = database
+namespace.mapper.key.collection.field = collection
+```
+
+while receiving **final, fully-resolved namespace values** with prefixes applied.
+
+##### Core Configuration
+
+Minimal required configuration:
+
+```json
+"transforms": "MongoPrefix",
+"transforms.MongoPrefix.type": "com.telefonica.MongoNamespacePrefix",
+"transforms.MongoPrefix.database.prefix": "my_prefix_",
+"transforms.MongoPrefix.collection.prefix": "my_prefix_"
+```
+
+Optional header customization (uses NGSI defaults if not specified):
+
+```json
+"transforms.MongoPrefix.headers.database": "database",
+"transforms.MongoPrefix.headers.collection": "collection"
+```
+
+##### Architecture Alignment
+
+Both `HeaderRouter` (JDBC) and `MongoNamespacePrefix` (MongoDB) follow the **same architectural principle**:
+
+| Aspect               | HeaderRouter (JDBC)                              | MongoNamespacePrefix (MongoDB)               |
+| -------------------- | ------------------------------------------------ | -------------------------------------------- |
+| Connector limitation  | JDBC needs fixed topic → table mapping           | Mongo Sink cannot compose namespace strings  |
+| Where logic lives    | Kafka Connect SMT                                | Kafka Connect SMT                            |
+| Input                | NGSI headers (service, servicepath, entitytype) | MongoDB namespace headers                    |
+| Output               | Physical SQL destination (schema.table)          | Physical MongoDB namespace                   |
+| Upstream awareness   | Not required                                     | Not required                                 |
+
+This keeps **all physical persistence logic inside Kafka Connect** and ensures consistent behavior across JDBC and MongoDB sinks.
+
+##### Validation & Errors
+
+* Required namespace values are validated at SMT initialization
+* Missing headers results in clear `ConfigException`s
+* Prefix configuration is optional; if omitted, the original headers are passed through unchanged
+* Error handling and retries are delegated to Kafka Connect mechanisms
 
 ---
 
