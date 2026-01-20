@@ -61,16 +61,16 @@ USER appuser
 WORKDIR ${KAFKA_HOME}
 
 ## -----------------------------
-## Custom SMT: HeaderRouter
+## Custom SMTs: HeaderRouter and MongoNamespacePrefix
 ## -----------------------------
 USER root
-COPY src/header-router /usr/local/build/header-router
-RUN cd /usr/local/build/header-router && \
+COPY src/kafnus-connect-smt /usr/local/build/kafnus-connect-smt
+RUN cd /usr/local/build/kafnus-connect-smt && \
     mvn clean package -DskipTests && \
-    mkdir -p ${CONNECT_PLUGIN_PATH}/header-router && \
-    cp target/header-router-1.0.0-jar-with-dependencies.jar \
-       ${CONNECT_PLUGIN_PATH}/header-router/header-router-1.0.0.jar && \
-    rm -rf /usr/local/build/header-router
+    mkdir -p ${CONNECT_PLUGIN_PATH}/kafnus-connect-smt && \
+    cp target/kafnus-connect-smt-1.0.0-jar-with-dependencies.jar \
+       ${CONNECT_PLUGIN_PATH}/kafnus-connect-smt/kafnus-connect-smt-1.0.0.jar && \
+    rm -rf /usr/local/build/kafnus-connect-smt
 USER appuser
 
 ## -----------------------------

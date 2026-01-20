@@ -31,11 +31,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.telefonica</groupId>
-  <artifactId>header-router</artifactId>
+  <artifactId>kafnus-connect-smt</artifactId>
   <version>1.0.0</version>
   <packaging>jar</packaging>
 
-  <name>HeaderRouter SMT</name>
+  <name>Kafnus Custom Kafka Connect SMTs</name>
 
   <properties>
     <java.version>17</java.version>
@@ -79,11 +79,6 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <version>3.3.0</version>
         <configuration>
-          <archive>
-            <manifest>
-              <mainClass>com.telefonica.HeaderRouter</mainClass>
-            </manifest>
-          </archive>
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>

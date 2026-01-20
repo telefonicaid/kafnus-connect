@@ -1,2 +1,3 @@
 - Fix Openjdk (minor) version to 17.0.1 in Dockerfile (#12)
 - Refactor HeaderRouter SMT to use datamodel-based dynamic schema/table routing with NGSI headers and optional suffix support (#13)
+- Add MongoNamespacePrefix SMT for configurable MongoDB database and collection name prefixing (#15)
