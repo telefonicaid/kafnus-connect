@@ -191,7 +191,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
                 table = require(servicePath, "fiware-servicepath") + "_" + require(entityType, "entityType");
                 break;
             case DM_BY_ENTITY_TYPE_DATABASE_SCHEMA:
-                schema = require(service, "fiware-servicepath");
+                schema = require(servicePath, "fiware-servicepath");
                 table = require(servicePath, "fiware-servicepath") + "_" + require(entityType, "entityType");
                 break;
             case DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA:
