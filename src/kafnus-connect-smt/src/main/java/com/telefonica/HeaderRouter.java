@@ -113,6 +113,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     // === Datamodels ===
     public static final String DM_BY_ENTITY_TYPE_DATABASE = "dm-by-entity-type-database";
     public static final String DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA = "dm-by-fixed-entity-type-database-schema";
+    public static final String DM_BY_ENTITY_TYPE_DATABASE_SCHEMA = "dm-by-entity-type-database-schema";
     public static final String DM_POSTGIS_ERRORS = "dm-postgis-errors";
     public static final String DM_HTTP_ERRORS = "dm-http-errors";
 
@@ -187,6 +188,10 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
         switch (datamodel) {
             case DM_BY_ENTITY_TYPE_DATABASE:
                 schema = require(service, "fiware-service");
+                table = require(servicePath, "fiware-servicepath") + "_" + require(entityType, "entityType");
+                break;
+            case DM_BY_ENTITY_TYPE_DATABASE_SCHEMA:
+                schema = require(service, "fiware-servicepath");
                 table = require(servicePath, "fiware-servicepath") + "_" + require(entityType, "entityType");
                 break;
             case DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA:

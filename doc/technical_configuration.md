@@ -188,6 +188,15 @@ The resolved destination is written to the Kafka Connect topic name, allowing st
 
 ---
 
+###### `dm-by-entity-type-database-schema`
+
+| Element | Value                |
+| ------- | -------------------- |
+| Schema  | `fiware-servicepath` |
+| Table   | `fiware-servicepath_entityType`         |
+
+---
+
 ###### `dm-by-fixed-entity-type-database-schema`
 
 | Element | Value                |
