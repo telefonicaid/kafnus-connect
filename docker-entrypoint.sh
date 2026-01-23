@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # Copyright 2026 Telefónica Soluciones de Informática y Comunicaciones de España, S.A.U.
 #
 # This file includes or is based on software originally developed by Confluent Inc.
