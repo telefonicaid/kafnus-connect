@@ -103,3 +103,10 @@ For deeper technical details about how Kafnus Connect is configured, built, and 
 > This repository is part of the [Kafnus ecosystem](https://github.com/telefonicaid/kafnus):
 > - [Kafnus NGSI (processing)](https://github.com/telefonicaid/kafnus)
 > - [Kafnus Connect (persistence)](https://github.com/telefonicaid/kafnus-connect)
+
+---
+
+## 👥 Contributors
+
+The list of contributors to the Kafnus-Connect project can be found in
+[`CONTRIBUTORS.md`](./CONTRIBUTORS.md).

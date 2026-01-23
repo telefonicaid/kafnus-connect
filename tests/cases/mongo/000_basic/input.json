@@ -2,8 +2,8 @@
   {
     "type": "mongo",
     "topic": "smc_test_mongo_processed",
-    "database": "sth_test",
-    "collection": "sth_/mongo",
+    "database": "test",
+    "collection": "/mongo",
     "record": {
       "entityId": "Device:001",
       "entityType": "Device",
