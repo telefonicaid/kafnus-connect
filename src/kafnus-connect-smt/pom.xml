@@ -12,12 +12,6 @@
 #
 # This software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
 # CONDITIONS OF ANY KIND, either express or implied.
-#
-# Authors:
-#  - Álvaro Vega
-#  - Gregorio Blázquez
-#  - Fermín Galán
-#  - Oriana Romero
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
