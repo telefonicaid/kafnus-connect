@@ -1,16 +1,19 @@
 # Copyright 2026 Telefónica Soluciones de Informática y Comunicaciones de España, S.A.U.
 #
-# This file includes or is based on software originally developed by Confluent Inc.
-# and has been modified by Telefónica Soluciones de Informática y Comunicaciones
-# de España, S.A.U.
+# This file is part of kafnus-connect
 #
-# Licensed under the Confluent Community License, Version 1.0.
-# You may obtain a copy of the License at:
+# kafnus-connect is free software: you can redistribute it and/or
+# modify it under the terms of the GNU Affero General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
 #
-#   http://www.confluent.io/confluent-community-license
+# kafnus-connect is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+# General Public License for more details.
 #
-# This software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-# CONDITIONS OF ANY KIND, either express or implied.
+# You should have received a copy of the GNU Affero General Public License
+# along with kafnus. If not, see http://www.gnu.org/licenses/.
 
 FROM openjdk:17.0.1-jdk-slim
 
