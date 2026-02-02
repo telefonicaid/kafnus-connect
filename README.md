@@ -1,8 +1,17 @@
+![FIWARE Incubating](https://fiware.github.io/catalogue/badges/statuses/status-incubating.svg)
+
 # 🛰️ Kafnus Connect
 
 **Kafnus Connect** is the persistence layer of the [Kafnus](https://github.com/telefonicaid/kafnus) ecosystem — a modern, Kafka-based replacement for **Cygnus** in FIWARE smart city environments.
 
 It provides ready-to-use **Kafka Connect** images with custom Single Message Transforms (SMTs) and pre-integrated sink connectors for **PostGIS**, **MongoDB**, and **HTTP endpoints**.
+
+This project is part of [FIWARE](https://www.fiware.org/). For more information
+check the FIWARE Catalogue entry for the
+[Core Context Management](https://github.com/Fiware/catalogue/tree/master/core).
+
+| :whale: [Docker Hub](https://hub.docker.com/r/telefonicaiot/kafnus-connect) |
+|---|
 
 ---
 
