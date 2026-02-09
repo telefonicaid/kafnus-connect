@@ -100,7 +100,7 @@ RUN mkdir -p ${CONNECT_PLUGIN_PATH}/mongodb && \
 RUN cd /tmp && \
     git clone https://github.com/telefonicaid/http-connector-for-apache-kafka-graphql.git && \
     cd http-connector-for-apache-kafka-graphql && \
-    git checkout version0.9.0 || true && \
+    git checkout task/add_basic_auth || true && \
     ./gradlew clean distTar && \
     mkdir -p ${CONNECT_PLUGIN_PATH}/http-connector && \
     tar xfv build/distributions/http-connector-for-apache-kafka-0.9.0.tar -C ${CONNECT_PLUGIN_PATH}/http-connector --strip-components=1 && \
