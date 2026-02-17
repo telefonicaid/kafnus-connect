@@ -138,13 +138,19 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     private String headerSuffix;
     private String fixedSuffix;
 
-
     private String resolveValue(Headers headers, String headerOrLiteral) {
         if (headerOrLiteral == null) return null;
-        String fromHeader = getHeaderValue(headers, headerOrLiteral);
-        if (fromHeader != null) return fromHeader;
-            return headerOrLiteral;
+
+        // If header exists (even if value is null), treat it as header-based resolution
+        if (headers.lastWithName(headerOrLiteral) != null) {
+            Object value = headers.lastWithName(headerOrLiteral).value();
+            return value != null ? value.toString() : "";
+        }
+
+        // Otherwise treat config as fixed literal
+        return headerOrLiteral;
     }
+
 
     @Override
     public void configure(Map<String, ?> configs) {
@@ -180,7 +186,9 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
         switch (datamodel) {
             case DM_BY_ENTITY_TYPE_DATABASE:
                 schema = require(service, "fiware-service");
-                table = require(servicePath, "fiware-servicepath") + "_" + require(entityType, "entityType");
+                // servicePath can be empty, but not null, to allow root-level entities. Normalize to empty string if null.
+                String sp = servicePath == null ? "" : servicePath;
+                table = sp + "_" + require(entityType, "entityType");
                 break;
             case DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA:
                 schema = require(servicePath, "fiware-servicepath");

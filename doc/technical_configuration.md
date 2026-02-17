@@ -186,6 +186,8 @@ The resolved destination is written to the Kafka Connect topic name, allowing st
 | Schema  | `fiware-service`                |
 | Table   | `fiware-servicepath_entityType` |
 
+> `fiware-servicepath` may be empty, as described in [this subsection](#root-servicepath-handling).
+
 ---
 
 ###### `dm-by-fixed-entity-type-database-schema`
@@ -245,6 +247,40 @@ Default NGSI header names:
 | schema        | `schema`             |
 
 This allows mixing **multi-tenant dynamic routing** with **static single-tenant deployments**.
+
+### Root ServicePath Handling
+
+When using the `dm-by-entity-type-database` datamodel:
+
+* A `fiware-servicepath` header with:
+
+  * `/`
+  * `""`
+  * `null`
+
+Is interpreted as the **root service path**.
+
+In this case, the generated table name becomes:
+
+```
+_<entityType>
+```
+
+Example:
+
+| Header value | Resulting table |
+| ------------ | --------------- |
+| `/`          | `_powermeter`   |
+| `""`         | `_powermeter`   |
+| `null`       | `_powermeter`   |
+
+This prevents incorrect fallback to the literal `"fiware-servicepath"` and avoids unintended table names such as:
+
+```
+fiware-servicepath_powermeter
+```
+
+Other datamodels remain unchanged and still require non-empty values where applicable.
 
 ##### ➕ Optional Table Suffix
 
