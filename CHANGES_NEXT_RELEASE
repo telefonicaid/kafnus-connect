@@ -1,4 +1,5 @@
 - Fix: allow empty fiware-servicepath in DM_BY_ENTITY_TYPE_DATABASE datamodel (#27)
 - Fix Openjdk (minor) version to 17.0.1 in Dockerfile (#12)
 - Refactor HeaderRouter SMT to use datamodel-based dynamic schema/table routing with NGSI headers and optional suffix support (#13)
+- Add support for secure Kafka SASL protocols (#28)
 - Add MongoNamespacePrefix SMT for configurable MongoDB database and collection name prefixing (#15)

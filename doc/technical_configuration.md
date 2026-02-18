@@ -127,6 +127,28 @@ These variables are automatically applied by the `docker-entrypoint.sh` script w
 
 This ensures that all Kafka connections (incoming and outgoing) respect the authentication settings without modifying connector definitions directly.
 
+#### ⚠️ Protect Internal Kafka Connect Topics
+
+When running Kafnus-Connect in distributed mode, Kafka Connect stores connector configurations and status information in internal Kafka topics (e.g., `connect-config`, `connect-offsets`, `connect-status`).
+
+⚠️ These topics may contain fully resolved connector configurations, including sensitive information such as:
+
+- Database credentials
+- API tokens
+- Authentication passwords
+- Connection strings
+
+For this reason:
+
+- **Do not expose these topics externally**
+- Restrict access using Kafka ACLs
+- Ensure only the Connect worker principal has read/write permissions
+- Never grant broad topic access (e.g., `User:*`) in production environments
+
+In particular, access to `connect-config` must be strictly limited, as it stores connector configurations in plain form.
+
+Securing Kafka itself (SASL + ACLs) is therefore mandatory in production deployments to prevent credential leakage via internal topics.
+
 ---
 
 ## 🧩 Kafnus Connect Plugins
