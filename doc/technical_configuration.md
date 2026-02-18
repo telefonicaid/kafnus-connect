@@ -94,6 +94,39 @@ KAFNUS_TESTS_MONGO_PORT: "27017"
 
 > ✅ These environment variables are available to all sink connectors via `${env:...}` references thanks to the `config.providers=env` setting in the Kafnus Connect distributed configuration.
 
+### 🔐 Security Configuration
+
+Kafnus Connect supports Kafka authentication via SASL. You can configure security by setting the following environment variables in your Docker Compose file:
+
+```yaml
+# Security for Connect worker
+CONNECT_SECURITY_PROTOCOL: SASL_PLAINTEXT
+CONNECT_SASL_MECHANISM: PLAIN
+CONNECT_SASL_JAAS_CONFIG: >
+  org.apache.kafka.common.security.plain.PlainLoginModule required
+  username="connect-user"
+  password="connect-pass";
+
+# Security for producers and consumers
+CONNECT_PRODUCER_SECURITY_PROTOCOL: SASL_PLAINTEXT
+CONNECT_PRODUCER_SASL_MECHANISM: PLAIN
+CONNECT_PRODUCER_SASL_JAAS_CONFIG: >
+  org.apache.kafka.common.security.plain.PlainLoginModule required
+  username="connect-user"
+  password="connect-pass";
+
+CONNECT_CONSUMER_SECURITY_PROTOCOL: SASL_PLAINTEXT
+CONNECT_CONSUMER_SASL_MECHANISM: PLAIN
+CONNECT_CONSUMER_SASL_JAAS_CONFIG: >
+  org.apache.kafka.common.security.plain.PlainLoginModule required
+  username="connect-user"
+  password="connect-pass";
+```
+
+These variables are automatically applied by the `docker-entrypoint.sh` script when starting Kafka Connect in distributed mode. If `CONNECT_SECURITY_PROTOCOL` is defined, the script appends the corresponding security and SASL configuration to `connect-distributed.properties` for the worker, producer, and consumer.
+
+This ensures that all Kafka connections (incoming and outgoing) respect the authentication settings without modifying connector definitions directly.
+
 ---
 
 ## 🧩 Kafnus Connect Plugins
@@ -709,3 +742,11 @@ docker exec -it kafka /opt/kafka/bin/kafka-console-consumer.sh
 ```
 
 Check tables in PostGIS or MongoDB after running the corresponding test input.
+
+---
+
+## 📚 Operational & Advanced Topics
+
+For complete operational guidance, multi-tenant management, and security best practices, please refer to the **Kafnus main repository**:
+
+- [Advanced Topics](https://github.com/telefonicaid/kafnus/blob/main/doc/03_advanced_topics.md) – security and operational guide.
