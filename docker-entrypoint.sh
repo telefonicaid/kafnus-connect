@@ -17,11 +17,14 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with kafnus. If not, see http://www.gnu.org/licenses/.
 
+#!/bin/bash
 set -e
 
 CONFIG_FILE="/home/appuser/config/connect-distributed.properties"
 
-cat > "${CONFIG_FILE}" <<EOF
+> "${CONFIG_FILE}"
+
+cat >> "${CONFIG_FILE}" <<EOF
 bootstrap.servers=${CONNECT_BOOTSTRAP_SERVERS:-kafka:9092}
 group.id=${CONNECT_GROUP_ID:-connect-cluster}
 
@@ -44,23 +47,25 @@ rest.advertised.host.name=${CONNECT_REST_ADVERTISED_HOST_NAME:-kafnus-connect}
 
 config.providers=env
 config.providers.env.class=org.apache.kafka.common.config.provider.EnvVarConfigProvider
+EOF
 
 # Security (optional)
 if [ -n "${CONNECT_SECURITY_PROTOCOL}" ]; then
-cat >> "${CONFIG_FILE}" <<EOF
+    cat >> "${CONFIG_FILE}" <<EOF
 
 security.protocol=${CONNECT_SECURITY_PROTOCOL}
 sasl.mechanism=${CONNECT_SASL_MECHANISM}
 sasl.jaas.config=${CONNECT_SASL_JAAS_CONFIG}
 
-producer.security.protocol=${CONNECT_PRODUCER_SECURITY_PROTOCOL}
-producer.sasl.mechanism=${CONNECT_PRODUCER_SASL_MECHANISM}
-producer.sasl.jaas.config=${CONNECT_PRODUCER_SASL_JAAS_CONFIG}
+producer.security.protocol=${CONNECT_PRODUCER_SECURITY_PROTOCOL:-${CONNECT_SECURITY_PROTOCOL}}
+producer.sasl.mechanism=${CONNECT_PRODUCER_SASL_MECHANISM:-${CONNECT_SASL_MECHANISM}}
+producer.sasl.jaas.config=${CONNECT_PRODUCER_SASL_JAAS_CONFIG:-${CONNECT_SASL_JAAS_CONFIG}}
 
-consumer.security.protocol=${CONNECT_CONSUMER_SECURITY_PROTOCOL}
-consumer.sasl.mechanism=${CONNECT_CONSUMER_SASL_MECHANISM}
-consumer.sasl.jaas.config=${CONNECT_CONSUMER_SASL_JAAS_CONFIG}
+consumer.security.protocol=${CONNECT_CONSUMER_SECURITY_PROTOCOL:-${CONNECT_SECURITY_PROTOCOL}}
+consumer.sasl.mechanism=${CONNECT_CONSUMER_SASL_MECHANISM:-${CONNECT_SASL_MECHANISM}}
+consumer.sasl.jaas.config=${CONNECT_CONSUMER_SASL_JAAS_CONFIG:-${CONNECT_SASL_JAAS_CONFIG}}
 EOF
+fi
 
 echo ">> Starting Kafka Connect with config:"
 cat "${CONFIG_FILE}"
