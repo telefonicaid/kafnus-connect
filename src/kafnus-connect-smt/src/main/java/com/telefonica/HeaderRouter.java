@@ -30,7 +30,9 @@
  * provide base metadata (fiware-service, fiware-servicepath, entityType), and do
  * not need to be aware of the physical SQL layout.
  *
- * The SQL layout is selected using the `datamodel` configuration parameter.
+ * The SQL layout is selected dynamically. It can be overridden per-record using
+ * the `fiware-datamodel` header. If the header is absent or empty, the SMT falls back
+ * to the connector configuration. If neither is defined, a default datamodel is used.
  *
  * Supported datamodels:
  *
@@ -41,11 +43,24 @@
  * - dm-by-fixed-entity-type-database-schema
  *     Schema: fiware-servicepath
  *     Table : entityType
- *
+ * 
+ * - dm-by-entity-type-database-schema
+ *     Schema: fiware-servicepath
+ *     Table : fiware-servicepath_entityType
+ * 
+ * - dm-postgis-errors
+ *     Schema: fiware-service
+ *     Table : fiware-service_error_log
+ * 
+ * - dm-http-errors
+ *     Schema: fiware-service
+ *     Table : fiware-service_error_log
+ *     
  * Required headers (always expected from upstream producers):
  *
  * - fiware-service
  * - fiware-servicepath
+ * - fiware-datamodel (if not empty, overrides datamodel selection)
  * - entityType
  * - entityId (currently unused, reserved for future datamodels)
  * - suffix (optional, added to table name if needed)
@@ -89,13 +104,14 @@ import org.apache.kafka.connect.transforms.util.SimpleConfig;
 import org.apache.kafka.connect.header.Headers;
 
 import java.util.Map;
+import java.util.Set;
 
 public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<R> {
 
     // === Config keys ===
-    public static final String DATAMODEL_CONFIG = "datamodel";
     public static final String HEADER_SCHEMA_CONFIG = "headers.schema";
 
+    public static final String HEADER_DATAMODEL_CONFIG = "headers.datamodel";
     public static final String HEADER_SERVICE_CONFIG = "headers.service";
     public static final String HEADER_SERVICEPATH_CONFIG = "headers.servicepath";
     public static final String HEADER_ENTITYTYPE_CONFIG = "headers.entitytype";
@@ -106,12 +122,20 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     // === Datamodels ===
     public static final String DM_BY_ENTITY_TYPE_DATABASE = "dm-by-entity-type-database";
     public static final String DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA = "dm-by-fixed-entity-type-database-schema";
+    public static final String DM_BY_ENTITY_TYPE_DATABASE_SCHEMA = "dm-by-entity-type-database-schema";
     public static final String DM_POSTGIS_ERRORS = "dm-postgis-errors";
     public static final String DM_HTTP_ERRORS = "dm-http-errors";
+    private static final Set<String> SUPPORTED_DATAMODELS = Set.of(
+        DM_BY_ENTITY_TYPE_DATABASE,
+        DM_BY_ENTITY_TYPE_DATABASE_SCHEMA,
+        DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA,
+        DM_POSTGIS_ERRORS,
+        DM_HTTP_ERRORS
+    );
 
     private static final ConfigDef CONFIG_DEF = new ConfigDef()
-        .define(DATAMODEL_CONFIG, ConfigDef.Type.STRING, ConfigDef.Importance.HIGH,
-                "SQL datamodel used to build schema and table names")
+        .define(HEADER_DATAMODEL_CONFIG, ConfigDef.Type.STRING, "fiware-datamodel",
+                ConfigDef.Importance.MEDIUM, "Header containing the dynamic datamodel override")
         .define(HEADER_SCHEMA_CONFIG, ConfigDef.Type.STRING, null,
                 ConfigDef.Importance.MEDIUM, "Fallback schema if none is resolved")
         .define(HEADER_SERVICE_CONFIG, ConfigDef.Type.STRING, null,
@@ -131,6 +155,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     private String datamodel;
     private String headerSchema;
 
+    private String headerDatamodel;
     private String serviceHeader;
     private String servicePathHeader;
     private String entityTypeHeader;
@@ -151,13 +176,30 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
         return headerOrLiteral;
     }
 
+    private String resolveDatamodel(Headers headers) {
+
+        String headerValue = getHeaderValue(headers, headerDatamodel);
+
+        String candidate =
+            (headerValue != null && !headerValue.trim().isEmpty())
+                ? headerValue
+                : (datamodel != null && !headerValue.trim().isEmpty()
+                    ? datamodel
+                    : DM_BY_ENTITY_TYPE_DATABASE);
+
+        if (!SUPPORTED_DATAMODELS.contains(candidate)) {
+            throw new ConfigException("Unsupported datamodel override: " + candidate);
+        }
+
+        return candidate;
+    }
 
     @Override
     public void configure(Map<String, ?> configs) {
         SimpleConfig config = new SimpleConfig(CONFIG_DEF, configs);
-        this.datamodel = config.getString(DATAMODEL_CONFIG);
         this.headerSchema = config.getString(HEADER_SCHEMA_CONFIG);
 
+        this.headerDatamodel = config.getString(HEADER_DATAMODEL_CONFIG);
         this.serviceHeader = config.getString(HEADER_SERVICE_CONFIG);
         if (this.serviceHeader == null) this.serviceHeader = "fiware-service";
         this.servicePathHeader = config.getString(HEADER_SERVICEPATH_CONFIG);
@@ -183,12 +225,21 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
         String schema;
         String table;
 
-        switch (datamodel) {
+        String effectiveDatamodel = resolveDatamodel(headers);
+        if (!SUPPORTED_DATAMODELS.contains(effectiveDatamodel)) {
+            throw new ConfigException("Unsupported datamodel override: " + effectiveDatamodel);
+        }
+
+        switch (effectiveDatamodel) {
             case DM_BY_ENTITY_TYPE_DATABASE:
                 schema = require(service, "fiware-service");
                 // servicePath can be empty, but not null, to allow root-level entities. Normalize to empty string if null.
                 String sp = servicePath == null ? "" : servicePath;
                 table = sp + "_" + require(entityType, "entityType");
+                break;
+            case DM_BY_ENTITY_TYPE_DATABASE_SCHEMA:
+                schema = require(servicePath, "fiware-servicepath");
+                table = require(servicePath, "fiware-servicepath") + "_" + require(entityType, "entityType");
                 break;
             case DM_BY_FIXED_ENTITY_TYPE_DATABASE_SCHEMA:
                 schema = require(servicePath, "fiware-servicepath");
