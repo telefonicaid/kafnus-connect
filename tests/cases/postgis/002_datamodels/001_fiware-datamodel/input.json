@@ -1,0 +1,102 @@
+[
+  {
+    "type": "postgis",
+    "topic": "smc_test_historic_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": ""
+    },
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant": "2025-06-26T11:00:00.000Z",
+      "recvtime": "2025-06-26T11:00:00.000Z",
+      "temperature": 25.0,
+      "fiwareservicepath": "/simple"
+    }
+  },
+  {
+    "type": "postgis",
+    "topic": "smc_test_historic_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": ""
+    },
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant": "2025-06-26T12:00:00.000Z",
+      "recvtime": "2025-06-26T12:00:00.000Z",
+      "temperature": 26.0,
+      "fiwareservicepath": "/simple"
+    }
+  },
+  {
+    "type": "postgis",
+    "topic": "smc_test_lastdata_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_lastdata"
+    },
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant": "2025-06-26T12:00:00.000Z",
+      "recvtime": "2025-06-26T12:00:00.000Z",
+      "temperature": 26.0,
+      "fiwareservicepath": "/simple"
+    }
+  },
+  {
+    "type": "postgis",
+    "topic": "smc_test_mutable_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_mutable"
+    },
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant": "2025-06-26T11:00:00.000Z",
+      "recvtime": "2025-06-26T11:00:00.000Z",
+      "temperature": 25.0,
+      "fiwareservicepath": "/simple"
+    }
+  },
+  {
+    "type": "postgis",
+    "topic": "smc_test_mutable_processed",
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_mutable"
+    },
+    "record": {
+      "entityid": "Sensor1",
+      "entitytype": "Sensor",
+      "timeinstant": "2025-06-26T12:00:00.000Z",
+      "recvtime": "2025-06-26T12:00:00.000Z",
+      "temperature": 26.0,
+      "fiwareservicepath": "/simple"
+    }
+  }
+]

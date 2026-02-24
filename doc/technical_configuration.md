@@ -232,6 +232,32 @@ The resolved destination is written to the Kafka Connect topic name, allowing st
 
 ---
 
+##### 🔁 Dynamic Datamodel Resolution
+
+The SQL datamodel can be resolved dynamically per record.
+
+Resolution order:
+
+1. If the Kafka header `fiware-datamodel` exists and is not empty → it overrides everything
+2. Otherwise, if `transforms.HeaderRouter.datamodel` is configured → it is used
+3. Otherwise → the default `dm-by-entity-type-database` is applied
+
+This enables:
+
+- Per-notification routing control
+- Mixed datamodel deployments within a single connector
+- Backward compatibility with static configurations
+
+Example header override:
+
+```text
+fiware-datamodel: dm-by-fixed-entity-type-database-schema
+```
+
+If the header is present but empty (`""`), it is ignored and fallback resolution applies.
+
+---
+
 ##### 🧩 Supported SQL Datamodels
 
 ###### `dm-by-entity-type-database`
@@ -242,6 +268,17 @@ The resolved destination is written to the Kafka Connect topic name, allowing st
 | Table   | `fiware-servicepath_entityType` |
 
 > `fiware-servicepath` may be empty, as described in [this subsection](#root-servicepath-handling).
+
+---
+
+###### `dm-by-entity-type-database-schema`
+
+| Element | Value                           |
+| ------- | ------------------------------- |
+| Schema  | `fiware-servicepath`            |
+| Table   | `fiware-servicepath_entityType` |
+
+> This model isolates data by service path at schema level.
 
 ---
 
@@ -381,6 +418,7 @@ This is especially useful in test environments or deployments where the physical
 * Required values are validated per datamodel
 * Missing mandatory metadata results in clear `ConfigException`s
 * Error handling and retries are delegated to Kafka Connect mechanisms (DLQ, retries, task failure)
+* Unsupported `fiware-datamodel` header values trigger a `ConfigException`. Only explicitly supported datamodels are allowed
 
 ---
 
