@@ -61,8 +61,8 @@ COPY src/kafnus-connect-smt /usr/local/build/kafnus-connect-smt
 RUN cd /usr/local/build/kafnus-connect-smt && \
     mvn clean package -DskipTests && \
     mkdir -p ${CONNECT_PLUGIN_PATH}/kafnus-connect-smt && \
-    cp target/kafnus-connect-smt-1.0.0-jar-with-dependencies.jar \
-       ${CONNECT_PLUGIN_PATH}/kafnus-connect-smt/kafnus-connect-smt-1.0.0.jar && \
+    cp target/kafnus-connect-smt-1.1.0-jar-with-dependencies.jar \
+       ${CONNECT_PLUGIN_PATH}/kafnus-connect-smt/kafnus-connect-smt-1.1.0.jar && \
     rm -rf /usr/local/build/kafnus-connect-smt
 USER appuser
 
