@@ -5,6 +5,7 @@
 - Fix: allow empty fiware-servicepath in DM_BY_ENTITY_TYPE_DATABASE datamodel (#27)
 - Fix: Openjdk (minor) version to 17.0.1 in Dockerfile (#12)
 - Fix: use version 0.9.0 with basic auth for http connector (#17)
+- Release and use kafnus-connect-smt-1.1.0 version
 - Refactor: HeaderRouter SMT now supports dynamic datamodel resolution via `fiware-datamodel` header with NGSI headers and optional suffix support (#31)
 - Refactor: HeaderRouter SMT to use datamodel-based dynamic schema/table routing with NGSI headers and optional suffix support (#13)
 
