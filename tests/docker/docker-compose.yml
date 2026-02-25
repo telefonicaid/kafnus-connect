@@ -75,7 +75,7 @@ services:
       CONNECT_REST_ADVERTISED_HOST_NAME: kafnus-connect
       CONNECT_LOG4J_LOGGERS: "org.reflections=ERROR"
       # Environment variables for sinks in tests
-      KAFNUS_TESTS_PG_HOST: iot-postgis
+      KAFNUS_TESTS_PG_HOST: postgis
       KAFNUS_TESTS_PG_PORT: "5432"
       KAFNUS_TESTS_PG_DBNAME: tests
       KAFNUS_TESTS_PG_USER: postgres
@@ -99,9 +99,9 @@ services:
     networks:
       - kafka-postgis-net
   
-  iot-postgis:
-    container_name: iot-postgis
-    hostname: iot-postgis
+  postgis:
+    container_name: postgis
+    hostname: postgis
     # Default env variables will be used if not specify in .env
     image: ${KAFNUS_POSTGIS_IMAGE:-postgis/postgis:15-3.3}
     volumes:
