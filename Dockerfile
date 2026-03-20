@@ -77,7 +77,7 @@ RUN cd /tmp && \
     git checkout task/upgrade_10_9_2 || true && \
     mvn clean package -DskipTests -Dcheckstyle.skip=true && \
     mkdir -p ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc && \
-    cp target/kafka-connect-jdbc-10.8.4.jar ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc/ && \
+    cp target/kafka-connect-jdbc-10.9.2.jar ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc/ && \
     rm -rf /tmp/kafka-connect-jdbc-postgis
 
 ## PostgreSQL JDBC Driver
