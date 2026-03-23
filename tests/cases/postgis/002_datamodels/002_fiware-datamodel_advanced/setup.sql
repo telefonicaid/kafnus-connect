@@ -20,24 +20,24 @@
 CREATE SCHEMA IF NOT EXISTS simple;
 CREATE SCHEMA IF NOT EXISTS testdatamodel;
 
-DROP TABLE IF EXISTS simple.simple_sensor;
-CREATE TABLE IF NOT EXISTS simple.simple_sensor (
+DROP TABLE IF EXISTS simple.simple_sensor_lastdata;
+CREATE TABLE IF NOT EXISTS simple.simple_sensor_lastdata (
     recvtime TIMESTAMPTZ NOT NULL DEFAULT now(),
     fiwareservicepath TEXT,
     entityid TEXT,
     entitytype TEXT,
     timeinstant TIMESTAMPTZ,
     temperature DOUBLE PRECISION,
-    CONSTRAINT simple_sensor_pkey PRIMARY KEY (entityid)
+    CONSTRAINT simple_sensor_lastdata_pkey PRIMARY KEY (entityid)
 );
 
-DROP TABLE IF EXISTS testdatamodel.simple_sensor;
-CREATE TABLE IF NOT EXISTS testdatamodel.simple_sensor (
+DROP TABLE IF EXISTS testdatamodel.simple_sensor_lastdata;
+CREATE TABLE IF NOT EXISTS testdatamodel.simple_sensor_lastdata (
     recvtime TIMESTAMPTZ NOT NULL DEFAULT now(),
     fiwareservicepath TEXT,
     entityid TEXT,
     entitytype TEXT,
     timeinstant TIMESTAMPTZ,
     temperature DOUBLE PRECISION,
-    CONSTRAINT testdatamodel_simple_sensor_pkey PRIMARY KEY (entityid)
+    CONSTRAINT testdatamodel_simple_sensor_lastdata_pkey PRIMARY KEY (entityid)
 );
