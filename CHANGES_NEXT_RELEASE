@@ -1,2 +1,3 @@
+- Upgrade kafka-connect-jdbc for postgis from 10.8.4 to 10.9.2
 - Upgrade Dockerfile for use kafka 4.2.0 
 - Fix: HeaderRouter now correctly falls back to the sink-configured datamodel when the fiware-datamodel header is missing or empty (#38)
