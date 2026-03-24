@@ -109,6 +109,7 @@ import java.util.Set;
 public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<R> {
 
     // === Config keys ===
+    public static final String DATAMODEL_CONFIG = "datamodel";
     public static final String HEADER_SCHEMA_CONFIG = "headers.schema";
 
     public static final String HEADER_DATAMODEL_CONFIG = "headers.datamodel";
@@ -134,6 +135,8 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     );
 
     private static final ConfigDef CONFIG_DEF = new ConfigDef()
+        .define(DATAMODEL_CONFIG, ConfigDef.Type.STRING, DM_BY_ENTITY_TYPE_DATABASE,
+            ConfigDef.Importance.HIGH, "Default datamodel when header override is missing/empty")
         .define(HEADER_DATAMODEL_CONFIG, ConfigDef.Type.STRING, "fiware-datamodel",
                 ConfigDef.Importance.MEDIUM, "Header containing the dynamic datamodel override")
         .define(HEADER_SCHEMA_CONFIG, ConfigDef.Type.STRING, null,
@@ -177,13 +180,12 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
     }
 
     private String resolveDatamodel(Headers headers) {
-
         String headerValue = getHeaderValue(headers, headerDatamodel);
 
         String candidate =
             (headerValue != null && !headerValue.trim().isEmpty())
                 ? headerValue
-                : (datamodel != null && !headerValue.trim().isEmpty()
+                : (datamodel != null && !datamodel.trim().isEmpty()
                     ? datamodel
                     : DM_BY_ENTITY_TYPE_DATABASE);
 
@@ -199,6 +201,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
         SimpleConfig config = new SimpleConfig(CONFIG_DEF, configs);
         this.headerSchema = config.getString(HEADER_SCHEMA_CONFIG);
 
+        this.datamodel = config.getString(DATAMODEL_CONFIG);
         this.headerDatamodel = config.getString(HEADER_DATAMODEL_CONFIG);
         this.serviceHeader = config.getString(HEADER_SERVICE_CONFIG);
         if (this.serviceHeader == null) this.serviceHeader = "fiware-service";
@@ -254,7 +257,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
                 table = require(service, "fiware-service") + "_error_log";
                 break;
             default:
-                throw new ConfigException("Unsupported datamodel: " + datamodel);
+                throw new ConfigException("Unsupported datamodel: " + effectiveDatamodel);
         }
 
         String suffix = fixedSuffix != null
@@ -269,7 +272,7 @@ public class HeaderRouter<R extends ConnectRecord<R>> implements Transformation<
         }
 
         if (schema == null || schema.isEmpty()) {
-            throw new ConfigException("Schema could not be resolved for datamodel " + datamodel);
+            throw new ConfigException("Schema could not be resolved for datamodel " + effectiveDatamodel);
         }
 
         String newTopic = schema + "." + table;

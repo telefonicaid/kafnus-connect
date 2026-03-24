@@ -1,0 +1,6 @@
+Advanced test case for fiware-datamodel precedence in HeaderRouter:
+- If `fiware-datamodel` header is missing, use connector config datamodel.
+- If `fiware-datamodel` header is present, override connector config.
+It validates persistence to:
+- <servicepath>.<servicepath>_<entityType> for dm-by-entity-type-database-schema
+- <service>.<servicepath>_<entityType> for dm-by-entity-type-database
