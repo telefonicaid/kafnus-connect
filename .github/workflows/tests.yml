@@ -29,6 +29,36 @@ on:
       - main
 
 jobs:
+  smt-unit-tests:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      - name: Run SMT unit tests with coverage
+        run: mvn -B -f src/kafnus-connect-smt/pom.xml clean verify
+
+      - name: Upload JaCoCo report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: src/kafnus-connect-smt/target/site/jacoco/
+
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          file: src/kafnus-connect-smt/target/site/jacoco/jacoco.xml
+          format: jacoco
+
   e2e-tests:
     runs-on: ubuntu-24.04
  

@@ -76,6 +76,10 @@ docker run -d   --name kafnus-connect   -e CONNECT_BOOTSTRAP_SERVERS=kafka:9092 
 
 Integration and end-to-end testing are performed from the [Kafnus NGSI](https://github.com/telefonicaid/kafnus) repository, where complete data flow scenarios are executed using **Testcontainers**.
 
+This repository also includes his own python tests (similar to Kafnus tests) and unit tests for the custom Java SMTs in [src/kafnus-connect-smt/src/test/java](src/kafnus-connect-smt/src/test/java), executed with Maven and JUnit 5.
+
+Coverage is generated with JaCoCo for this SMT module and published to Coveralls from CI. This coverage reflects SMT unit tests (Java), while functional validation of the complete pipeline remains in the Python E2E suite.
+
 ---
 
 ## 🧰 Configuration & Extensions
