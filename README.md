@@ -1,4 +1,5 @@
 ![FIWARE Incubating](https://fiware.github.io/catalogue/badges/statuses/status-incubating.svg)
+[![Coverage Status](https://coveralls.io/repos/github/telefonicaid/kafnus-connect/badge.svg?branch=main)](https://coveralls.io/github/telefonicaid/kafnus-connect?branch=main)
 
 # 🛰️ Kafnus Connect
 
