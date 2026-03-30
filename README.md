@@ -1,6 +1,8 @@
 ![FIWARE Incubating](https://fiware.github.io/catalogue/badges/statuses/status-incubating.svg)
 [![Coverage Status](https://coveralls.io/repos/github/telefonicaid/kafnus-connect/badge.svg?branch=main)](https://coveralls.io/github/telefonicaid/kafnus-connect?branch=main)
 
+Coverage badge scope: custom Java SMT unit tests only (HeaderRouter and MongoNamespacePrefix).
+
 # 🛰️ Kafnus Connect
 
 **Kafnus Connect** is the persistence layer of the [Kafnus](https://github.com/telefonicaid/kafnus) ecosystem — a modern, Kafka-based replacement for **Cygnus** in FIWARE smart city environments.
