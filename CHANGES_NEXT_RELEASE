@@ -3,3 +3,4 @@
 - Upgrade Dockerfile for use kafka 4.2.0 
 - Upgrade mongo connect dep from 2.0.1 to 2.1.0
 - Fix: HeaderRouter now correctly falls back to the sink-configured datamodel when the fiware-datamodel header is missing or empty (#38)
+- Upgrade kafka connect api and transport dependencies form 3.6.1 to 4.2.0
