@@ -86,8 +86,8 @@ RUN curl -fsSL https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.8/p
 
 ## MongoDB Kafka Connector (MongoDB official version - full jar)
 RUN mkdir -p ${CONNECT_PLUGIN_PATH}/mongodb && \
-    curl -fsSL https://repo1.maven.org/maven2/org/mongodb/kafka/mongo-kafka-connect/2.0.1/mongo-kafka-connect-2.0.1-all.jar \
-      -o ${CONNECT_PLUGIN_PATH}/mongodb/mongo-kafka-connect-2.0.1-all.jar
+    curl -fsSL https://repo1.maven.org/maven2/org/mongodb/kafka/mongo-kafka-connect/2.0.1/mongo-kafka-connect-2.1.0-all.jar \
+      -o ${CONNECT_PLUGIN_PATH}/mongodb/mongo-kafka-connect-2.1.0-all.jar
 
 ## HTTP Connector (telefonicaid fork)
 RUN cd /tmp && \
