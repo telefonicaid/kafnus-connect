@@ -81,8 +81,8 @@ RUN cd /tmp && \
     rm -rf /tmp/kafka-connect-jdbc-postgis
 
 ## PostgreSQL JDBC Driver
-RUN curl -fsSL https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.8/postgresql-42.7.8.jar \
-    -o ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc/postgresql-42.7.8.jar
+RUN curl -fsSL https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.9/postgresql-42.7.9.jar \
+    -o ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc/postgresql-42.7.9.jar
 
 ## MongoDB Kafka Connector (MongoDB official version - full jar)
 RUN mkdir -p ${CONNECT_PLUGIN_PATH}/mongodb && \
