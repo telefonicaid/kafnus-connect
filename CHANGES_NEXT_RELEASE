@@ -1,7 +1,1 @@
-- Upgrade postgresql from 42.7.8 to 42.7.9
-- Upgrade kafka-connect-jdbc for postgis from 10.8.4 to 10.9.2
-- Upgrade Dockerfile for use kafka 4.2.0 
-- Upgrade mongo connect dep from 2.0.1 to 2.1.0
-- Fix: HeaderRouter now correctly falls back to the sink-configured datamodel when the fiware-datamodel header is missing or empty (#38)
-- Upgrade kafka connect api and transport dependencies form 3.6.1 to 4.2.0
-- Upgrade http connector version for version0.9.0_basic to version0.9.0_basicv2
+
