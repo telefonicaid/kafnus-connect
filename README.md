@@ -102,6 +102,29 @@ For deeper technical details about how Kafnus Connect is configured, built, and 
 
 👉 See [Technical Configuration Guide](./doc/technical_configuration.md)
 
+
+---
+
+## 🛠️ Logging
+
+There is a way to change log level of kafnus-connect using logger API.
+
+For example to change from default (info) to debug some clases related with http connector like HttpSinkTask, AbstractHttpSender, BasicAuthHttpSender you can use: 
+
+```
+curl -s -X PUT -H "Content-Type: application/json" \
+  http://localhost:8083/admin/loggers/io.aiven.kafka.connect.http.HttpSinkTask \
+  -d '{"level":"DEBUG"}' | jq
+
+curl -s -X PUT -H "Content-Type: application/json" \
+  http://localhost:8083/admin/loggers/io.aiven.kafka.connect.http.sender.AbstractHttpSender \
+  -d '{"level":"DEBUG"}' | jq
+
+curl -s -X PUT -H "Content-Type: application/json" \
+  http://localhost:8083/admin/loggers/io.aiven.kafka.connect.http.sender.BasicAuthHttpSender \
+  -d '{"level":"DEBUG"}' | jq
+```
+
 ---
 
 ## 📚 Documentation
