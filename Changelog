@@ -1,3 +1,7 @@
+1.3.0 (April 30th, 2026)
+
+- Upgrade http connector version for version0.9.0_basicv2 to version0.9.0_basicv3 (#47)
+
 1.2.0 (April 14th, 2026)
 
 - Fix: HeaderRouter now correctly falls back to the sink-configured datamodel when the fiware-datamodel header is missing or empty (#38)
