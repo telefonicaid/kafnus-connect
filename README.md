@@ -125,6 +125,14 @@ curl -s -X PUT -H "Content-Type: application/json" \
   -d '{"level":"DEBUG"}' | jq
 ```
 
+To change from default (info) to debug clases related with jdbc connector: 
+
+```
+curl -s -X PUT -H "Content-Type: application/json" \
+http://localhost:8083/admin/loggers/io.confluent.connect.jdbc.sink.JdbcSinkTask \
+  -d '{"level":"DEBUG"}' | jq
+``` 
+
 ---
 
 ## 📚 Documentation
