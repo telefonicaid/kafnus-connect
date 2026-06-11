@@ -764,6 +764,24 @@ For PostGIS sinks, a batch size of **3000** has proven to be a good default unde
 
 ---
 
+## ⏱️ Conditional Upserts with `updateIfNewerField`
+
+For JDBC sinks using `insert.mode=upsert`, the optional parameter:
+
+```json
+"updateIfNewerField": "recvtime/timeinstant"
+```
+
+prevents existing rows from being updated with older data.
+
+When configured, the connector only performs the update if the incoming value is **greater than or equal to** the value already stored in the database.
+
+If the field specified in `updateIfNewerField` is not present in the incoming record, the upsert is executed normally without applying the freshness check.
+
+This feature is typically used by *lastdata* flows to avoid overwriting newer observations with stale data.
+
+---
+
 ## ▶️ Registering Connectors (it will be updated)
 
 From the `sinks/` directory, register each connector using `curl`:
