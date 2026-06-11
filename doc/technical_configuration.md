@@ -769,7 +769,8 @@ For PostGIS sinks, a batch size of **3000** has proven to be a good default unde
 For JDBC sinks using `insert.mode=upsert`, the optional parameter:
 
 ```json
-"updateIfNewerField": "recvtime"
+"updateIfNewerField": "recvtime/timeinstant"
+```
 
 prevents existing rows from being updated with older data.
 
