@@ -770,7 +770,6 @@ For JDBC sinks using `insert.mode=upsert`, the optional parameter:
 
 ```json
 "updateIfNewerField": "recvtime"
-````
 
 prevents existing rows from being updated with older data.
 
