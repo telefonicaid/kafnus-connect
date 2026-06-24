@@ -1,3 +1,10 @@
+1.4.0 (Jun 24th, 2026)
+
+- Update: JDBC upsert now allows updates when `updateIfNewerField` has the same value (`>=` instead of `>`), and skips the freshness check when the field is missing in the incoming record (telefonicaid/kafka-connect-jdbc-postgis#260)
+- Upgrade kafka-connect-jdbc for postgis from 10.9.2 to 10.9.3 (#50)
+- Fix: Remove Docker container log directory to prevent duplicate logs (#58)
+
+
 1.3.0 (April 30th, 2026)
 
 - Upgrade http connector version for version0.9.0_basicv2 to version0.9.0_basicv3 (#47)
