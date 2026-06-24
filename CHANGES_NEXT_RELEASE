@@ -1,0 +1,1 @@
+- Fix: Remove Docker container log directory to prevent duplicate logs (#58)

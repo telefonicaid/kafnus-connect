@@ -110,8 +110,6 @@ RUN mkdir -p /home/appuser/jmx_exporter && \
 ## Config directory for Kafka Connect
 ## -----------------------------
 RUN mkdir -p /home/appuser/config
-ENV LOG_DIR=/home/appuser/logs
-RUN mkdir -p ${LOG_DIR}
 
 ## Fix Java 17 + cgroups v2 issue
 ENV JAVA_TOOL_OPTIONS="-XX:+UnlockExperimentalVMOptions -XX:-UseContainerSupport"
