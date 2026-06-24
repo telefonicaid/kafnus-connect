@@ -161,6 +161,42 @@ Kafnus Connect plugins are automatically built into the Docker image and placed 
 
 This directory is **populated automatically** during the Docker build using the logic defined in the [Dockerfile](Dockerfile).
 
+### 🔄 Plugin Upgrade Behavior
+
+Kafka Connect stores connector definitions, status, and offsets in its internal Kafka topics:
+
+- `connect-configs`
+- `connect-offsets`
+- `connect-status`
+
+Because of this, connector configurations are not stored inside the Kafnus Connect container itself.
+
+When upgrading the Kafnus Connect image (for example, to deploy a newer version of a plugin such as the JDBC Sink fork), existing connectors are automatically restored when the worker starts, provided that:
+
+- The Kafka cluster remains available
+- The internal Kafka Connect topics are preserved
+- The connector class name remains unchanged
+- Connector configuration remains compatible with the new plugin version
+
+This means that, in normal upgrade scenarios:
+
+1. Stop the existing Kafnus Connect container
+2. Deploy the new Kafnus Connect image
+3. Start the worker again
+
+Existing connectors will be recovered automatically from Kafka and their tasks will be recreated using the updated plugin code.
+
+No connector re-registration or recreation is required.
+
+> ⚠️ Connector recreation may be required if a plugin upgrade introduces incompatible configuration changes or renames the connector class.
+
+This behavior was validated during Kafnus Connect upgrade testing by:
+- Creating and running JDBC sink connectors with a previous image version
+- Producing data successfully
+- Upgrading the Kafnus Connect image
+- Verifying that connectors were automatically restored
+- Confirming that data continued to be processed using the updated plugin implementation
+
 ### 1. JDBC Plugin for PostGIS
 
 Includes:
@@ -764,7 +800,25 @@ For PostGIS sinks, a batch size of **3000** has proven to be a good default unde
 
 ---
 
-## ▶️ Registering Connectors (it will be updated)
+## ⏱️ Conditional Upserts with `updateIfNewerField`
+
+For JDBC sinks using `insert.mode=upsert`, the optional parameter:
+
+```json
+"updateIfNewerField": "recvtime/timeinstant"
+```
+
+prevents existing rows from being updated with older data.
+
+When configured, the connector only performs the update if the incoming value is **greater than or equal to** the value already stored in the database.
+
+If the field specified in `updateIfNewerField` is not present in the incoming record, the upsert is executed normally without applying the freshness check.
+
+This feature is typically used by *lastdata* flows to avoid overwriting newer observations with stale data.
+
+---
+
+## ▶️ Registering Connectors
 
 From the `sinks/` directory, register each connector using `curl`:
 
