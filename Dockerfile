@@ -17,7 +17,7 @@
 
 FROM openjdk:17.0.2-jdk-slim
 
-ARG KAFKA_VERSION=4.2.0
+ARG KAFKA_VERSION=4.3.1
 ARG SCALA_VERSION=2.13
 ENV KAFKA_HOME=/opt/kafka
 ENV CONNECT_PLUGIN_PATH=/usr/local/share/kafnus-connect/plugins
