@@ -33,13 +33,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ## -----------------------------
 ## Download Kafka (official distribution)
 ## -----------------------------
-RUN mkdir -p /opt && \
-    touch /opt/test.txt && \
-    ls -l /opt && \
-    cd /opt && \
-    curl -fsSL "https://archive.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz" \
-      -o /tmp/kafka.tgz && \
-    tar -xzf /tmp/kafka.tgz -C /opt && \
+RUN mkdir -p /tmp/kafka_extract && \
+    curl -fsSL \
+    "https://downloads.apache.org/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz" \
+-o /tmp/kafka.tgz && \
+    tar -xzf /tmp/kafka.tgz -C /tmp/kafka_extract && \
+    mv /tmp/kafka_extract/kafka_${SCALA_VERSION}-${KAFKA_VERSION} /opt/ && \
     ln -s /opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION} ${KAFKA_HOME} && \
     rm /tmp/kafka.tgz
 
