@@ -15,8 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with kafnus. If not, see http://www.gnu.org/licenses/.
 
-FROM eclipse-temurin:17.0.19_10-jdk
-
+FROM eclipse-temurin:17.0.19_10-jdk-jammy
 
 ARG KAFKA_VERSION=4.3.1
 ARG SCALA_VERSION=2.13
@@ -33,11 +32,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 ## -----------------------------
 ## Download Kafka (official distribution)
 ## -----------------------------
-RUN mkdir -p /opt && \
-    cd /opt && \
-    curl -fsSL "https://downloads.apache.org/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz" \
-      -o /tmp/kafka.tgz && \
-    tar -xzf /tmp/kafka.tgz -C /opt && \
+RUN mkdir -p /tmp/kafka_extract && \
+    curl -fsSL \
+    "https://downloads.apache.org/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz" \
+-o /tmp/kafka.tgz && \
+    tar -xzf /tmp/kafka.tgz -C /tmp/kafka_extract && \
+    mv /tmp/kafka_extract/kafka_${SCALA_VERSION}-${KAFKA_VERSION} /opt/ && \
     ln -s /opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION} ${KAFKA_HOME} && \
     rm /tmp/kafka.tgz
 
