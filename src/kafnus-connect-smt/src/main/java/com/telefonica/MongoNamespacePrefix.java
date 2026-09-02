@@ -18,7 +18,7 @@
 */
 
 /**
- * Kafka Connect SMT that prepends a configurable prefix to MongoDB database
+ * Kafka Connect SMT that prepends configurable prefixes to MongoDB database
  * and collection names stored in the record key.
  *
  * The transformation expects schemaless JSON keys containing the fields
@@ -45,6 +45,8 @@ public class MongoNamespacePrefix<R extends ConnectRecord<R>> implements Transfo
 
     // === Config keys ===
     public static final String PREFIX_CONFIG = "prefix";
+    public static final String DATABASE_PREFIX_CONFIG = "dbname.prefix";
+    public static final String COLLECTION_PREFIX_CONFIG = "collection.prefix";
 
     private static final String DATABASE_FIELD = "database";
     private static final String COLLECTION_FIELD = "collection";
@@ -53,21 +55,48 @@ public class MongoNamespacePrefix<R extends ConnectRecord<R>> implements Transfo
         .define(
             PREFIX_CONFIG,
             ConfigDef.Type.STRING,
-            ConfigDef.NO_DEFAULT_VALUE,
+            null,
+            ConfigDef.Importance.MEDIUM,
+            "Legacy shared prefix to prepend to MongoDB database and collection names"
+        )
+        .define(
+            DATABASE_PREFIX_CONFIG,
+            ConfigDef.Type.STRING,
+            null,
             ConfigDef.Importance.HIGH,
-            "Prefix to prepend to MongoDB database and collection names"
+            "Prefix to prepend to the MongoDB database name"
+        )
+        .define(
+            COLLECTION_PREFIX_CONFIG,
+            ConfigDef.Type.STRING,
+            null,
+            ConfigDef.Importance.HIGH,
+            "Prefix to prepend to the MongoDB collection name"
         );
 
     // === Runtime config ===
-    private String prefix;
+    private String databasePrefix;
+    private String collectionPrefix;
 
     @Override
     public void configure(Map<String, ?> configs) {
         SimpleConfig config = new SimpleConfig(CONFIG_DEF, configs);
-        this.prefix = config.getString(PREFIX_CONFIG);
 
-        if (prefix == null || prefix.isEmpty()) {
-            throw new ConfigException("MongoNamespacePrefix SMT requires a non-empty 'prefix' configuration");
+        String sharedPrefix = normalizePrefix(config.getString(PREFIX_CONFIG));
+        this.databasePrefix = firstNonEmpty(
+            normalizePrefix(config.getString(DATABASE_PREFIX_CONFIG)),
+            sharedPrefix
+        );
+        this.collectionPrefix = firstNonEmpty(
+            normalizePrefix(config.getString(COLLECTION_PREFIX_CONFIG)),
+            sharedPrefix
+        );
+
+        if (databasePrefix == null || collectionPrefix == null) {
+            throw new ConfigException(
+                "MongoNamespacePrefix SMT requires non-empty 'dbname.prefix' and 'collection.prefix' "
+                    + "configurations, or the legacy shared 'prefix' fallback"
+            );
         }
     }
 
@@ -100,13 +129,13 @@ public class MongoNamespacePrefix<R extends ConnectRecord<R>> implements Transfo
 
         boolean modified = false;
 
-        if (!database.startsWith(prefix)) {
-            database = prefix + database;
+        if (!database.startsWith(databasePrefix)) {
+            database = databasePrefix + database;
             modified = true;
         }
 
-        if (!collection.startsWith(prefix)) {
-            collection = prefix + collection;
+        if (!collection.startsWith(collectionPrefix)) {
+            collection = collectionPrefix + collection;
             modified = true;
         }
 
@@ -139,5 +168,22 @@ public class MongoNamespacePrefix<R extends ConnectRecord<R>> implements Transfo
     @Override
     public void close() {
         // Nothing to close
+    }
+
+    private static String normalizePrefix(String prefix) {
+        if (prefix == null) {
+            return null;
+        }
+
+        String trimmed = prefix.trim();
+        if (trimmed.isEmpty()) {
+            return null;
+        }
+
+        return trimmed;
+    }
+
+    private static String firstNonEmpty(String primary, String fallback) {
+        return primary != null ? primary : fallback;
     }
 }
