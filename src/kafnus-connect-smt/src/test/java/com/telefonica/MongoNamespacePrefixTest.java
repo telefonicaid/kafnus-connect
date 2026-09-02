@@ -29,6 +29,43 @@ class MongoNamespacePrefixTest {
     }
 
     @Test
+    void shouldUseSplitPrefixesWhenConfigured() {
+        MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
+        smt.configure(Map.of(
+            "dbname.prefix", "db_",
+            "collection.prefix", "col_"
+        ));
+
+        Map<String, Object> key = new HashMap<>();
+        key.put("database", "test");
+        key.put("collection", "simple");
+
+        SinkRecord out = smt.apply(newRecord(key));
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> outKey = (Map<String, Object>) out.key();
+        assertEquals("db_test", outKey.get("database"));
+        assertEquals("col_simple", outKey.get("collection"));
+    }
+
+    @Test
+    void shouldUseLegacySharedPrefixAsFallback() {
+        MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
+        smt.configure(Map.of("prefix", "sth_"));
+
+        Map<String, Object> key = new HashMap<>();
+        key.put("database", "test");
+        key.put("collection", "simple");
+
+        SinkRecord out = smt.apply(newRecord(key));
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> outKey = (Map<String, Object>) out.key();
+        assertEquals("sth_test", outKey.get("database"));
+        assertEquals("sth_simple", outKey.get("collection"));
+    }
+
+    @Test
     void shouldReturnSameRecordWhenKeyIsNull() {
         MongoNamespacePrefix<SinkRecord> smt = newSmt("sth_");
         SinkRecord record = new SinkRecord("topic", 0, null, null, null, Map.of("v", 1), 0L);
@@ -108,6 +145,8 @@ class MongoNamespacePrefixTest {
         MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
 
         assertTrue(smt.config().names().contains("prefix"));
+        assertTrue(smt.config().names().contains("dbname.prefix"));
+        assertTrue(smt.config().names().contains("collection.prefix"));
     }
 
     private MongoNamespacePrefix<SinkRecord> newSmt(String prefix) {
