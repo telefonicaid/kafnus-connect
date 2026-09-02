@@ -472,9 +472,9 @@ Because of this limitation, any logic related to **prefixing database or collect
 
 `MongoNamespacePrefix`:
 
-* Reads the MongoDB **database** and **collection** names from Kafka record headers
-* Prepends a configurable prefix to each
-* Writes the resulting values back to the same headers
+* Reads the MongoDB **database** and **collection** names from the Kafka record key
+* Prepends configurable prefixes to each field
+* Writes the resulting values back to the same key
 * Leaves the Kafka topic unchanged
 
 This allows the MongoDB Sink connector to continue using:
@@ -494,16 +494,17 @@ Minimal required configuration:
 ```json
 "transforms": "MongoPrefix",
 "transforms.MongoPrefix.type": "com.telefonica.MongoNamespacePrefix",
-"transforms.MongoPrefix.database.prefix": "my_prefix_",
-"transforms.MongoPrefix.collection.prefix": "my_prefix_"
+"transforms.MongoPrefix.dbname.prefix": "my_db_prefix_",
+"transforms.MongoPrefix.collection.prefix": "my_collection_prefix_"
 ```
 
-Optional header customization (uses NGSI defaults if not specified):
+Legacy shared fallback, if you need to keep a single prefix for both names:
 
 ```json
-"transforms.MongoPrefix.headers.database": "database",
-"transforms.MongoPrefix.headers.collection": "collection"
+"transforms.MongoPrefix.prefix": "my_prefix_"
 ```
+
+The split keys are the recommended configuration. None of these prefix values should be null or empty.
 
 ##### Architecture Alignment
 
@@ -513,7 +514,7 @@ Both `HeaderRouter` (JDBC) and `MongoNamespacePrefix` (MongoDB) follow the **sam
 | -------------------- | ------------------------------------------------ | -------------------------------------------- |
 | Connector limitation  | JDBC needs fixed topic → table mapping           | Mongo Sink cannot compose namespace strings  |
 | Where logic lives    | Kafka Connect SMT                                | Kafka Connect SMT                            |
-| Input                | NGSI headers (service, servicepath, entitytype) | MongoDB namespace headers                    |
+| Input                | NGSI headers (service, servicepath, entitytype) | MongoDB namespace fields in the record key   |
 | Output               | Physical SQL destination (schema.table)          | Physical MongoDB namespace                   |
 | Upstream awareness   | Not required                                     | Not required                                 |
 
@@ -522,8 +523,8 @@ This keeps **all physical persistence logic inside Kafka Connect** and ensures c
 ##### Validation & Errors
 
 * Required namespace values are validated at SMT initialization
-* Missing headers results in clear `ConfigException`s
-* Prefix configuration is optional; if omitted, the original headers are passed through unchanged
+* Missing key fields result in clear `ConfigException`s from the Mongo Sink mapping layer
+* Prefix configuration is mandatory via either the split keys or the legacy shared fallback, and null or empty values are rejected
 * Error handling and retries are delegated to Kafka Connect mechanisms
 
 ---
