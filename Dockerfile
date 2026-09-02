@@ -75,15 +75,15 @@ USER appuser
 RUN cd /tmp && \
     git clone https://github.com/telefonicaid/kafka-connect-jdbc-postgis.git && \
     cd kafka-connect-jdbc-postgis && \
-    git checkout version10.9.3 || true && \
+    git checkout version10.9.7 || true && \
     mvn clean package -DskipTests -Dcheckstyle.skip=true && \
     mkdir -p ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc && \
-    cp target/kafka-connect-jdbc-10.9.3.jar ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc/ && \
+    cp target/kafka-connect-jdbc-10.9.7.jar ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc/ && \
     rm -rf /tmp/kafka-connect-jdbc-postgis
 
 ## PostgreSQL JDBC Driver
-RUN curl -fsSL https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.9/postgresql-42.7.9.jar \
-    -o ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc/postgresql-42.7.9.jar
+RUN curl -fsSL https://repo1.maven.org/maven2/org/postgresql/postgresql/42.7.12/postgresql-42.7.12.jar \
+    -o ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc/postgresql-42.7.12.jar
 
 ## MongoDB Kafka Connector (MongoDB official version - full jar)
 RUN mkdir -p ${CONNECT_PLUGIN_PATH}/mongodb && \
