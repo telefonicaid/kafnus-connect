@@ -15,44 +15,60 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class MongoNamespacePrefixTest {
 
     @Test
-    void shouldFailWhenPrefixConfigIsMissing() {
+    void shouldAllowMissingPrefixConfig() {
         MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
 
-        assertThrows(ConfigException.class, () -> smt.configure(Map.of()));
+        smt.configure(Map.of());
+
+        Map<String, Object> key = new HashMap<>();
+        key.put("database", "test");
+        key.put("collection", "simple");
+
+        SinkRecord out = smt.apply(newRecord(key));
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> outKey = (Map<String, Object>) out.key();
+        assertEquals("test", outKey.get("database"));
+        assertEquals("simple", outKey.get("collection"));
     }
 
     @Test
-    void shouldFailWhenPrefixConfigIsEmpty() {
+    void shouldAllowEmptyPrefixConfig() {
         MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
 
-        assertThrows(ConfigException.class, () -> smt.configure(Map.of("prefix", "")));
+        smt.configure(Map.of("prefix", ""));
+
+        Map<String, Object> key = new HashMap<>();
+        key.put("database", "test");
+        key.put("collection", "simple");
+
+        SinkRecord out = smt.apply(newRecord(key));
+
+        @SuppressWarnings("unchecked")
+        Map<String, Object> outKey = (Map<String, Object>) out.key();
+        assertEquals("test", outKey.get("database"));
+        assertEquals("simple", outKey.get("collection"));
     }
 
     @Test
-    void shouldFailWhenSplitPrefixConfigIsEmpty() {
+    void shouldAllowEmptySplitPrefixConfig() {
         MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
 
-        assertThrows(ConfigException.class, () -> smt.configure(Map.of(
+        smt.configure(Map.of(
             "dbname.prefix", "",
-            "collection.prefix", "col_"
-        )));
-    }
+            "collection.prefix", ""
+        ));
 
-    @Test
-    void shouldFailWhenSplitPrefixConfigContainsNull() {
-        MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
-        Map<String, Object> cfg = new HashMap<>();
-        cfg.put("dbname.prefix", null);
-        cfg.put("collection.prefix", "col_");
+        Map<String, Object> key = new HashMap<>();
+        key.put("database", "test");
+        key.put("collection", "simple");
 
-        assertThrows(ConfigException.class, () -> smt.configure(cfg));
-    }
+        SinkRecord out = smt.apply(newRecord(key));
 
-    @Test
-    void shouldFailWhenOnlyOneSplitPrefixIsConfigured() {
-        MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
-
-        assertThrows(ConfigException.class, () -> smt.configure(Map.of("dbname.prefix", "db_")));
+        @SuppressWarnings("unchecked")
+        Map<String, Object> outKey = (Map<String, Object>) out.key();
+        assertEquals("test", outKey.get("database"));
+        assertEquals("simple", outKey.get("collection"));
     }
 
     @Test
@@ -78,7 +94,7 @@ class MongoNamespacePrefixTest {
     @Test
     void shouldUseLegacySharedPrefixAsFallback() {
         MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
-        smt.configure(Map.of("prefix", "sth_"));
+        smt.configure(Map.of("prefix", "bigdata_"));
 
         Map<String, Object> key = new HashMap<>();
         key.put("database", "test");
@@ -88,13 +104,13 @@ class MongoNamespacePrefixTest {
 
         @SuppressWarnings("unchecked")
         Map<String, Object> outKey = (Map<String, Object>) out.key();
-        assertEquals("sth_test", outKey.get("database"));
-        assertEquals("sth_simple", outKey.get("collection"));
+        assertEquals("bigdata_test", outKey.get("database"));
+        assertEquals("bigdata_simple", outKey.get("collection"));
     }
 
     @Test
     void shouldReturnSameRecordWhenKeyIsNull() {
-        MongoNamespacePrefix<SinkRecord> smt = newSmt("sth_");
+        MongoNamespacePrefix<SinkRecord> smt = newSmt("bigdata_");
         SinkRecord record = new SinkRecord("topic", 0, null, null, null, Map.of("v", 1), 0L);
 
         SinkRecord out = smt.apply(record);
@@ -104,7 +120,7 @@ class MongoNamespacePrefixTest {
 
     @Test
     void shouldFailWhenKeyIsNotMap() {
-        MongoNamespacePrefix<SinkRecord> smt = newSmt("sth_");
+        MongoNamespacePrefix<SinkRecord> smt = newSmt("bigdata_");
         SinkRecord record = new SinkRecord("topic", 0, null, "not-a-map", null, Map.of("v", 1), 0L);
 
         assertThrows(ConfigException.class, () -> smt.apply(record));
@@ -112,7 +128,7 @@ class MongoNamespacePrefixTest {
 
     @Test
     void shouldReturnSameRecordWhenRequiredFieldsAreMissing() {
-        MongoNamespacePrefix<SinkRecord> smt = newSmt("sth_");
+        MongoNamespacePrefix<SinkRecord> smt = newSmt("bigdata_");
         Map<String, Object> key = new HashMap<>();
         key.put("database", "test");
 
@@ -124,7 +140,7 @@ class MongoNamespacePrefixTest {
 
     @Test
     void shouldPrefixBothDatabaseAndCollectionWhenNeeded() {
-        MongoNamespacePrefix<SinkRecord> smt = newSmt("sth_");
+        MongoNamespacePrefix<SinkRecord> smt = newSmt("bigdata_");
         Map<String, Object> originalKey = new HashMap<>();
         originalKey.put("database", "test");
         originalKey.put("collection", "simple");
@@ -133,18 +149,18 @@ class MongoNamespacePrefixTest {
 
         @SuppressWarnings("unchecked")
         Map<String, Object> outKey = (Map<String, Object>) out.key();
-        assertEquals("sth_test", outKey.get("database"));
-        assertEquals("sth_simple", outKey.get("collection"));
+        assertEquals("bigdata_test", outKey.get("database"));
+        assertEquals("bigdata_simple", outKey.get("collection"));
         assertEquals("test", originalKey.get("database"));
         assertEquals("simple", originalKey.get("collection"));
     }
 
     @Test
     void shouldNotModifyRecordWhenBothFieldsAlreadyPrefixed() {
-        MongoNamespacePrefix<SinkRecord> smt = newSmt("sth_");
+        MongoNamespacePrefix<SinkRecord> smt = newSmt("bigdata_");
         Map<String, Object> key = new HashMap<>();
-        key.put("database", "sth_test");
-        key.put("collection", "sth_simple");
+        key.put("database", "bigdata_test");
+        key.put("collection", "bigdata_simple");
 
         SinkRecord record = newRecord(key);
         SinkRecord out = smt.apply(record);
@@ -154,17 +170,17 @@ class MongoNamespacePrefixTest {
 
     @Test
     void shouldPrefixOnlyMissingFieldWhenPartiallyPrefixed() {
-        MongoNamespacePrefix<SinkRecord> smt = newSmt("sth_");
+        MongoNamespacePrefix<SinkRecord> smt = newSmt("bigdata_");
         Map<String, Object> key = new HashMap<>();
-        key.put("database", "sth_test");
+        key.put("database", "bigdata_test");
         key.put("collection", "simple");
 
         SinkRecord out = smt.apply(newRecord(key));
 
         @SuppressWarnings("unchecked")
         Map<String, Object> outKey = (Map<String, Object>) out.key();
-        assertEquals("sth_test", outKey.get("database"));
-        assertEquals("sth_simple", outKey.get("collection"));
+        assertEquals("bigdata_test", outKey.get("database"));
+        assertEquals("bigdata_simple", outKey.get("collection"));
     }
 
     @Test
