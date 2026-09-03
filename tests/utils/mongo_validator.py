@@ -24,7 +24,7 @@ import logging
 logging.getLogger("pymongo").setLevel(logging.WARNING)
 
 class MongoValidator:
-    def __init__(self, uri="mongodb://localhost:27017", db_name="sth_test"):
+    def __init__(self, uri="mongodb://localhost:27017", db_name="sth_db_test"):
         self.client = MongoClient(uri)
         self.db = self.client[db_name]
 

@@ -180,7 +180,7 @@ def build_message(item):
         value = {"schema": schema, "payload": payload}
 
     elif msg_type == "mongo":
-        db = item.get("database", "sth_test")
+        db = item.get("database", "sth_db_test")
         collection = item.get("collection", "default_collection")
         key = {"database": db, "collection": collection}
         value = dict(record)
