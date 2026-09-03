@@ -504,7 +504,7 @@ Legacy shared fallback, if you need to keep a single prefix for both names:
 "transforms.MongoPrefix.prefix": "my_prefix_"
 ```
 
-The split keys are the recommended configuration. None of these prefix values should be null or empty.
+The split keys are the recommended configuration. If a prefix is omitted or left empty, it is treated as an empty string and the field is left unchanged.
 
 ##### Architecture Alignment
 
