@@ -29,6 +29,33 @@ class MongoNamespacePrefixTest {
     }
 
     @Test
+    void shouldFailWhenSplitPrefixConfigIsEmpty() {
+        MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
+
+        assertThrows(ConfigException.class, () -> smt.configure(Map.of(
+            "dbname.prefix", "",
+            "collection.prefix", "col_"
+        )));
+    }
+
+    @Test
+    void shouldFailWhenSplitPrefixConfigContainsNull() {
+        MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
+        Map<String, Object> cfg = new HashMap<>();
+        cfg.put("dbname.prefix", null);
+        cfg.put("collection.prefix", "col_");
+
+        assertThrows(ConfigException.class, () -> smt.configure(cfg));
+    }
+
+    @Test
+    void shouldFailWhenOnlyOneSplitPrefixIsConfigured() {
+        MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
+
+        assertThrows(ConfigException.class, () -> smt.configure(Map.of("dbname.prefix", "db_")));
+    }
+
+    @Test
     void shouldUseSplitPrefixesWhenConfigured() {
         MongoNamespacePrefix<SinkRecord> smt = new MongoNamespacePrefix<>();
         smt.configure(Map.of(
