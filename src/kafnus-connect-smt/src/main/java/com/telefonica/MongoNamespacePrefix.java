@@ -55,21 +55,21 @@ public class MongoNamespacePrefix<R extends ConnectRecord<R>> implements Transfo
         .define(
             PREFIX_CONFIG,
             ConfigDef.Type.STRING,
-            null,
+            "",
             ConfigDef.Importance.MEDIUM,
             "Legacy shared prefix to prepend to MongoDB database and collection names"
         )
         .define(
             DATABASE_PREFIX_CONFIG,
             ConfigDef.Type.STRING,
-            null,
+            "",
             ConfigDef.Importance.HIGH,
             "Prefix to prepend to the MongoDB database name"
         )
         .define(
             COLLECTION_PREFIX_CONFIG,
             ConfigDef.Type.STRING,
-            null,
+            "",
             ConfigDef.Importance.HIGH,
             "Prefix to prepend to the MongoDB collection name"
         );
@@ -92,12 +92,6 @@ public class MongoNamespacePrefix<R extends ConnectRecord<R>> implements Transfo
             sharedPrefix
         );
 
-        if (databasePrefix == null || collectionPrefix == null) {
-            throw new ConfigException(
-                "MongoNamespacePrefix SMT requires non-empty 'dbname.prefix' and 'collection.prefix' "
-                    + "configurations, or the legacy shared 'prefix' fallback"
-            );
-        }
     }
 
     @Override
@@ -172,18 +166,13 @@ public class MongoNamespacePrefix<R extends ConnectRecord<R>> implements Transfo
 
     private static String normalizePrefix(String prefix) {
         if (prefix == null) {
-            return null;
+            return "";
         }
 
-        String trimmed = prefix.trim();
-        if (trimmed.isEmpty()) {
-            return null;
-        }
-
-        return trimmed;
+        return prefix.trim();
     }
 
     private static String firstNonEmpty(String primary, String fallback) {
-        return primary != null ? primary : fallback;
+        return primary.isEmpty() ? fallback : primary;
     }
 }
