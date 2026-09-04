@@ -1,3 +1,4 @@
-- Upgrade Dockerfile for use kafka 4.3.1
-- Upgrade Dockerfile for use eclipse-temurin:17.0.19_10-jdk-jammy instead of openjdk:17.0.1
-- Upgrade kafka-connect-jdbc for postgis from 10.9.3 to 10.9.7
+- Add: MongoDB sink connectors now supports split database and collection prefix configuration in MongoNamespacePrefix, backward compatible with the legacy transforms.MongoPrefix.prefix setting (#52)
+- Upgrade Dockerfile for use kafka 4.3.1 (#62)
+- Upgrade Dockerfile for use eclipse-temurin:17.0.19_10-jdk-jammy instead of openjdk:17.0.1 (#61)
+- Upgrade kafka-connect-jdbc for postgis from 10.9.3 to 10.9.7 (#64)
