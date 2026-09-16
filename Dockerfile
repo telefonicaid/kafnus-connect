@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with kafnus. If not, see http://www.gnu.org/licenses/.
 
-FROM eclipse-temurin:17.0.19_10-jdk-jammy
+FROM eclipse-temurin:17.0.20_8-jdk-noble
 
 ARG KAFKA_VERSION=4.3.1
 ARG SCALA_VERSION=2.13
