@@ -75,7 +75,7 @@ USER appuser
 RUN cd /tmp && \
     git clone https://github.com/telefonicaid/kafka-connect-jdbc-postgis.git && \
     cd kafka-connect-jdbc-postgis && \
-    git checkout version10.9.7 || true && \
+    git checkout version10.9.7_update || true && \
     mvn clean package -DskipTests -Dcheckstyle.skip=true && \
     mkdir -p ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc && \
     cp target/kafka-connect-jdbc-10.9.7.jar ${CONNECT_PLUGIN_PATH}/kafka-connect-jdbc/ && \
