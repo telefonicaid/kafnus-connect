@@ -15,7 +15,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with kafnus. If not, see http://www.gnu.org/licenses/.
 
-from kafka import KafkaProducer
+from confluent_kafka import Producer
 from datetime import datetime
 import json
 from pathlib import Path
@@ -134,6 +134,9 @@ def build_message(item):
     Returns a dict with keys: `topic`, `value`, `headers`, and `key`.
     """
     msg_type = item.get("type")
+    if msg_type == "raw":
+        return build_raw_message(item)
+
     topic = item.get("topic")
     record = dict(item.get("record", {}))
 
@@ -194,6 +197,42 @@ def build_message(item):
 
     return {"topic": topic, "value": value, "headers": headers, "key": key}
 
+def build_raw_message(item):
+    """
+    Build a message exactly as recorded from the Kafnus NGSI processed topics
+    (see record_processed.py in the Kafnus repository), with no schema inference.
+
+    The input `item` has:
+    - topic
+    - key / value: parsed JSON payload, or null for no key / a tombstone
+    - key_raw / value_raw: instead of key / value, a payload that is not JSON,
+      sent as is
+    - headers: dict, or list of [name, value] pairs when a name is repeated
+
+    Returns a dict with keys: `topic`, `value`, `headers`, and `key`.
+    Raw payloads are returned as bytes so they are not JSON serialized again.
+    """
+    def payload(field):
+        if field + "_raw" in item:
+            return item[field + "_raw"].encode("utf-8")
+        return item.get(field)
+
+    raw_headers = item.get("headers") or {}
+    if isinstance(raw_headers, dict):
+        raw_headers = raw_headers.items()
+    headers = [(k, v.encode("utf-8") if v is not None else None) for k, v in raw_headers]
+
+    return {"topic": item["topic"], "value": payload("value"), "headers": headers, "key": payload("key")}
+
+def serialize(data):
+    """
+    Serialize a key or value: None stays None (no key / tombstone), bytes are
+    sent as is and anything else is dumped as JSON.
+    """
+    if data is None or isinstance(data, bytes):
+        return data
+    return json.dumps(data, ensure_ascii=False).encode("utf-8")
+
 def load_input(json_path: Path):
     """
     Load one or more message descriptors from a JSON file.
@@ -222,28 +261,25 @@ def load_input(json_path: Path):
 
 def produce_messages(kafka_bootstrap, messages):
     """
-    Produce a list of messages to Kafka using kafka-python's KafkaProducer.
+    Produce a list of messages to Kafka using confluent-kafka's Producer.
+    It supports headers with null values, which Kafnus NGSI does send.
 
     Inputs:
-    - kafka_bootstrap: bootstrap server string or list
+    - kafka_bootstrap: bootstrap server string
     - messages: list of dicts as returned by `build_message` / `load_input`
 
     The function serializes both key and value as JSON and logs each send.
     """
-    producer = KafkaProducer(
-        bootstrap_servers=kafka_bootstrap,
-        # If key is None -> return None (tombstone-like key behavior); otherwise dump JSON bytes
-        key_serializer=lambda k: None if k is None else json.dumps(k, ensure_ascii=False).encode("utf-8"),
-        # Very important for delete case: if value is None, no serialization is done
-        value_serializer=lambda v: None if v is None else json.dumps(v, ensure_ascii=False).encode("utf-8")
-    )
+    producer = Producer({"bootstrap.servers": kafka_bootstrap})
 
     for msg in messages:
-        producer.send(
+        # Very important for delete case: if value is None, no serialization is done
+        key, value = serialize(msg.get("key")), serialize(msg["value"])
+        producer.produce(
             msg["topic"],
-            key=msg.get("key"),
-            value=msg["value"],
+            key=key,
+            value=value,
             headers=msg.get("headers", [])
         )
-        logger.info(f"📤 Sent to {msg['topic']} key={json.dumps(msg.get('key'), ensure_ascii=False)} value={json.dumps(msg['value'], ensure_ascii=False)}")
+        logger.info(f"📤 Sent to {msg['topic']} key={key.decode('utf-8') if key else None} value={value.decode('utf-8') if value else None}")
     producer.flush()
