@@ -35,3 +35,6 @@ replay_pid*
 
 # .env files
 *.env
+
+# E2E coverage (JaCoCo agent and execution data)
+tests/coverage/
