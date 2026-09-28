@@ -1,0 +1,1514 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "timeinstant": "2025-06-26T10:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "temperature": 22.5,
+        "humidity": 65.2,
+        "recvtime": "2026-09-28T09:16:55.102Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "tempsensor001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor002",
+        "timeinstant": "2025-06-26T10:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor002",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "temperature": 24.1,
+        "humidity": 58.7,
+        "recvtime": "2026-09-28T09:16:55.107Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "tempsensor002",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "timeinstant": "2025-06-26T10:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "luminosity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "status",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "entitytype": "StreetLight",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "luminosity": 850,
+        "status": "ON",
+        "recvtime": "2026-09-28T09:16:55.109Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "streetlight001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight002",
+        "timeinstant": "2025-06-26T10:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "luminosity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "status",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight002",
+        "entitytype": "StreetLight",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "luminosity": 920,
+        "status": "ON",
+        "recvtime": "2026-09-28T09:16:55.117Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "streetlight002",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "timeinstant": "2025-06-26T10:35:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:35:00.000Z",
+        "temperature": 23.1,
+        "humidity": 64.8,
+        "recvtime": "2026-09-28T09:16:55.119Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "tempsensor001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "timeinstant": "2025-06-26T10:35:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "luminosity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "status",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "entitytype": "StreetLight",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:35:00.000Z",
+        "luminosity": 875,
+        "status": "ON",
+        "recvtime": "2026-09-28T09:16:55.121Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "streetlight001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "timeinstant": "2025-06-26T10:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "temperature": 22.5,
+        "humidity": 65.2,
+        "recvtime": "2026-09-28T09:16:55.123Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "tempsensor001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor002",
+        "timeinstant": "2025-06-26T10:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor002",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "temperature": 24.1,
+        "humidity": 58.7,
+        "recvtime": "2026-09-28T09:16:55.129Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "tempsensor002",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "timeinstant": "2025-06-26T10:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "luminosity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "status",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "entitytype": "StreetLight",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "luminosity": 850,
+        "status": "ON",
+        "recvtime": "2026-09-28T09:16:55.131Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "streetlight001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight002",
+        "timeinstant": "2025-06-26T10:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "luminosity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "status",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight002",
+        "entitytype": "StreetLight",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "luminosity": 920,
+        "status": "ON",
+        "recvtime": "2026-09-28T09:16:55.132Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "streetlight002",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "timeinstant": "2025-06-26T10:35:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:35:00.000Z",
+        "temperature": 23.1,
+        "humidity": 64.8,
+        "recvtime": "2026-09-28T09:16:55.134Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "tempsensor001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "timeinstant": "2025-06-26T10:35:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "luminosity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "status",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "entitytype": "StreetLight",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:35:00.000Z",
+        "luminosity": 875,
+        "status": "ON",
+        "recvtime": "2026-09-28T09:16:55.142Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "streetlight001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "temperature": 22.5,
+        "humidity": 65.2,
+        "recvtime": "2026-09-28T09:16:55.143Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "tempsensor001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor002"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor002",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "temperature": 24.1,
+        "humidity": 58.7,
+        "recvtime": "2026-09-28T09:16:55.145Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "tempsensor002",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "luminosity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "status",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "entitytype": "StreetLight",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "luminosity": 850,
+        "status": "ON",
+        "recvtime": "2026-09-28T09:16:55.146Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "streetlight001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight002"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "luminosity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "status",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight002",
+        "entitytype": "StreetLight",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:30:00.000Z",
+        "luminosity": 920,
+        "status": "ON",
+        "recvtime": "2026-09-28T09:16:55.149Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "streetlight002",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "TempSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:35:00.000Z",
+        "temperature": 23.1,
+        "humidity": 64.8,
+        "recvtime": "2026-09-28T09:16:55.151Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "tempsensor001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "luminosity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "status",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "StreetLight001",
+        "entitytype": "StreetLight",
+        "fiwareservicepath": "/multientity",
+        "timeinstant": "2025-06-26T10:35:00.000Z",
+        "luminosity": 875,
+        "status": "ON",
+        "recvtime": "2026-09-28T09:16:55.156Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "multientity",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "streetlight001",
+      "suffix": "_lastdata"
+    }
+  }
+]

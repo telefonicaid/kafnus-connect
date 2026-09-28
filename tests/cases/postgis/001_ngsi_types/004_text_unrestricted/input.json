@@ -1,0 +1,100 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Unrestricted",
+        "timeinstant": "2025-07-23T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dangerousattr",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Unrestricted",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/unrestricted",
+        "name": "Normal Name",
+        "timeinstant": "2025-07-23T12:00:00.000Z",
+        "dangerousattr": "<script>alert('xss');</script> = 'foo'; (test)",
+        "zone": "Zone-Unrestricted",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:15.127Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "unrestricted",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_unrestricted",
+      "suffix": null
+    }
+  }
+]

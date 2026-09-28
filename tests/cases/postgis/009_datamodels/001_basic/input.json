@@ -1,0 +1,1016 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "timeinstant": "2025-06-26T11:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:18:24.265Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "timeinstant": "2025-06-26T11:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:18:24.266Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "timeinstant": "2025-06-26T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 26,
+        "recvtime": "2026-09-28T09:18:24.266Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "timeinstant": "2025-06-26T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 26,
+        "recvtime": "2026-09-28T09:18:24.267Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:18:24.513Z",
+        "error": "ERROR: duplicate key value violates unique constraint \"simple_sensor_pkey\" - Detail: Key (timeinstant, entityid)=(2025-06-26 11:00:00+00, Sensor1) already exists.  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"simple_sensor\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"temperature\",\"recvtime\") VALUES (('Sensor1')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:18:24.514Z",
+        "error": "ERROR: duplicate key value violates unique constraint \"simple_sensor_pkey\" - Detail: Key (timeinstant, entityid)=(2025-06-26 12:00:00+00, Sensor1) already exists.  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"simple_sensor\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"temperature\",\"recvtime\") VALUES (('Sensor1')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:18:24.749Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:18:24.750Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 26,
+        "recvtime": "2026-09-28T09:18:24.751Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 26,
+        "recvtime": "2026-09-28T09:18:24.751Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "timeinstant": "2025-06-26T11:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:18:24.761Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "timeinstant": "2025-06-26T11:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:18:24.762Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "timeinstant": "2025-06-26T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 26,
+        "recvtime": "2026-09-28T09:18:24.762Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "timeinstant": "2025-06-26T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/simple",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 26,
+        "recvtime": "2026-09-28T09:18:24.763Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "simple",
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "sensor",
+      "entityId": "sensor1",
+      "suffix": "_mutable"
+    }
+  }
+]

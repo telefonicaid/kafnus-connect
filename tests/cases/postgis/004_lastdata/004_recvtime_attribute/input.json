@@ -1,0 +1,70 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor299"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor299",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/recvtime",
+        "recvtime": "2025-06-26T12:45:00.000Z",
+        "temperature": 25
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "recvtime",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor299",
+      "suffix": "_lastdata"
+    }
+  }
+]

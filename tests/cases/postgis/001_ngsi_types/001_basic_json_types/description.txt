@@ -1,1 +1,1 @@
-Validates correct persistence of basic native JSON types: string, number, boolean, null, object, and array.
+Validates correct ingestion and persistence of basic native JSON types: string, number, boolean, null, object, and array.

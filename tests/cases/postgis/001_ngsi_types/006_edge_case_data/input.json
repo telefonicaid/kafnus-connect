@@ -1,0 +1,1343 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "timeinstant": "2025-06-26T18:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:00:00.000Z",
+        "zero_value": 0,
+        "empty_text": "",
+        "large_number": 9223372036854776000,
+        "special_chars": "!@#$%^&*()_+-=[]{}|;':\",./<>?",
+        "unicode_text": "Привет мир 你好世界 🌍🚀⭐",
+        "recvtime": "2026-09-28T09:17:22.179Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "timeinstant": "2025-06-26T18:00:01.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:00:01.000Z",
+        "zero_value": 0,
+        "empty_text": "",
+        "large_number": 9007199254740991,
+        "special_chars": "!@#$%^&*()_+-=[]{}|;':\",./<>?",
+        "unicode_text": "Привет мир 你好世界 🌍🚀⭐",
+        "recvtime": "2026-09-28T09:17:22.180Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase002",
+        "timeinstant": "2025-06-26T18:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase002",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:00:00.000Z",
+        "zero_value": 0,
+        "empty_text": " ",
+        "large_number": -9007199254740991,
+        "special_chars": "\\n\\t\\r\\\"\\'\\/\\\\",
+        "unicode_text": "🔥💯✨🎯🌟⚡🚀💎🎉🔊",
+        "recvtime": "2026-09-28T09:17:22.181Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase002",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "timeinstant": "2025-06-26T18:05:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:05:00.000Z",
+        "zero_value": 1e-06,
+        "empty_text": "now_not_empty",
+        "large_number": 12345,
+        "special_chars": "normal text",
+        "unicode_text": "Café naïve résumé",
+        "recvtime": "2026-09-28T09:17:22.182Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:22.442Z",
+        "error": "ERROR: bigint out of range  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"edgecase_entity_mutable\" (\"entityid\",\"timeinstant\",\"entitytype\",\"fiwareservicepath\",\"zero_value\",\"empty_text\",\"large_number\",\"special_chars\",\"unicode_text\",\"recvtime\") VALUES (('EdgeCase001')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "timeinstant": "2025-06-26T18:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:00:00.000Z",
+        "zero_value": 0,
+        "empty_text": "",
+        "large_number": 9223372036854776000,
+        "special_chars": "!@#$%^&*()_+-=[]{}|;':\",./<>?",
+        "unicode_text": "Привет мир 你好世界 🌍🚀⭐",
+        "recvtime": "2026-09-28T09:17:22.628Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "timeinstant": "2025-06-26T18:00:01.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:00:01.000Z",
+        "zero_value": 0,
+        "empty_text": "",
+        "large_number": 9007199254740991,
+        "special_chars": "!@#$%^&*()_+-=[]{}|;':\",./<>?",
+        "unicode_text": "Привет мир 你好世界 🌍🚀⭐",
+        "recvtime": "2026-09-28T09:17:22.629Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase002",
+        "timeinstant": "2025-06-26T18:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase002",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:00:00.000Z",
+        "zero_value": 0,
+        "empty_text": " ",
+        "large_number": -9007199254740991,
+        "special_chars": "\\n\\t\\r\\\"\\'\\/\\\\",
+        "unicode_text": "🔥💯✨🎯🌟⚡🚀💎🎉🔊",
+        "recvtime": "2026-09-28T09:17:22.630Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase002",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "timeinstant": "2025-06-26T18:05:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:05:00.000Z",
+        "zero_value": 1e-06,
+        "empty_text": "now_not_empty",
+        "large_number": 12345,
+        "special_chars": "normal text",
+        "unicode_text": "Café naïve résumé",
+        "recvtime": "2026-09-28T09:17:22.631Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:00:00.000Z",
+        "zero_value": 0,
+        "empty_text": "",
+        "large_number": 9223372036854776000,
+        "special_chars": "!@#$%^&*()_+-=[]{}|;':\",./<>?",
+        "unicode_text": "Привет мир 你好世界 🌍🚀⭐",
+        "recvtime": "2026-09-28T09:17:22.632Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:00:01.000Z",
+        "zero_value": 0,
+        "empty_text": "",
+        "large_number": 9007199254740991,
+        "special_chars": "!@#$%^&*()_+-=[]{}|;':\",./<>?",
+        "unicode_text": "Привет мир 你好世界 🌍🚀⭐",
+        "recvtime": "2026-09-28T09:17:22.633Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase002"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase002",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:00:00.000Z",
+        "zero_value": 0,
+        "empty_text": " ",
+        "large_number": -9007199254740991,
+        "special_chars": "\\n\\t\\r\\\"\\'\\/\\\\",
+        "unicode_text": "🔥💯✨🎯🌟⚡🚀💎🎉🔊",
+        "recvtime": "2026-09-28T09:17:22.634Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase002",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zero_value",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "empty_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "large_number",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "special_chars",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "unicode_text",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "EdgeCase001",
+        "entitytype": "entity",
+        "fiwareservicepath": "/edgecase",
+        "timeinstant": "2025-06-26T18:05:00.000Z",
+        "zero_value": 1e-06,
+        "empty_text": "now_not_empty",
+        "large_number": 12345,
+        "special_chars": "normal text",
+        "unicode_text": "Café naïve résumé",
+        "recvtime": "2026-09-28T09:17:22.634Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "edgecase",
+      "fiware-datamodel": null,
+      "entityType": "entity",
+      "entityId": "edgecase001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:22.943Z",
+        "error": "ERROR: bigint out of range  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"edgecase_entity\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"zero_value\",\"empty_text\",\"large_number\",\"special_chars\",\"unicode_text\",\"recvtime\") VALUES (('EdgeCase001')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:22.945Z",
+        "error": "ERROR: bigint out of range  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"edgecase_entity_lastdata\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"zero_value\",\"empty_text\",\"large_number\",\"special_chars\",\"unicode_text\",\"recvtime\") VALUES (('EdgeCase001')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  }
+]

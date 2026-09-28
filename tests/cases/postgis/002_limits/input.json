@@ -1,0 +1,3755 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "timeinstant": "2025-07-31T10:03:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_smallint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:03:00.000Z",
+        "value_smallint": 32767,
+        "recvtime": "2026-09-28T09:17:29.684Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_01",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "timeinstant": "2025-07-31T10:03:30.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_smallint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:03:30.000Z",
+        "value_smallint": -32768,
+        "recvtime": "2026-09-28T09:17:29.685Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_01",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "timeinstant": "2025-07-31T10:04:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_integer",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:04:00.000Z",
+        "value_integer": 2147483647,
+        "recvtime": "2026-09-28T09:17:29.686Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_02",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "timeinstant": "2025-07-31T10:04:30.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_integer",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:04:30.000Z",
+        "value_integer": -2147483648,
+        "recvtime": "2026-09-28T09:17:29.687Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_02",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "timeinstant": "2025-07-31T10:05:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_bigint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:05:00.000Z",
+        "value_bigint": 9223372030000000000,
+        "recvtime": "2026-09-28T09:17:29.687Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_03",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "timeinstant": "2025-07-31T10:05:30.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_bigint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:05:30.000Z",
+        "value_bigint": -9223372030000000000,
+        "recvtime": "2026-09-28T09:17:29.688Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_03",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "timeinstant": "2025-07-31T10:05:31.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_bigint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:05:31.000Z",
+        "value_bigint": 10000000000000000000,
+        "recvtime": "2026-09-28T09:17:29.689Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_03",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:04",
+        "timeinstant": "2025-07-31T10:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_real",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:04",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:00:00.000Z",
+        "value_real": 3.4028235e+38,
+        "recvtime": "2026-09-28T09:17:29.690Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_04",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_smallint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:03:00.000Z",
+        "value_smallint": 32767,
+        "recvtime": "2026-09-28T09:17:30.165Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_01",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_smallint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:03:30.000Z",
+        "value_smallint": -32768,
+        "recvtime": "2026-09-28T09:17:30.166Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_01",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_integer",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:04:00.000Z",
+        "value_integer": 2147483647,
+        "recvtime": "2026-09-28T09:17:30.166Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_02",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_integer",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:04:30.000Z",
+        "value_integer": -2147483648,
+        "recvtime": "2026-09-28T09:17:30.167Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_02",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_bigint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:05:00.000Z",
+        "value_bigint": 9223372030000000000,
+        "recvtime": "2026-09-28T09:17:30.168Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_03",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "timeinstant": "2025-07-31T10:03:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_smallint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:03:00.000Z",
+        "value_smallint": 32767,
+        "recvtime": "2026-09-28T09:17:30.169Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_01",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "timeinstant": "2025-07-31T10:03:30.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_smallint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:01",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:03:30.000Z",
+        "value_smallint": -32768,
+        "recvtime": "2026-09-28T09:17:30.170Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_01",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "timeinstant": "2025-07-31T10:04:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_integer",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:04:00.000Z",
+        "value_integer": 2147483647,
+        "recvtime": "2026-09-28T09:17:30.171Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_02",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "timeinstant": "2025-07-31T10:04:30.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_integer",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:02",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:04:30.000Z",
+        "value_integer": -2147483648,
+        "recvtime": "2026-09-28T09:17:30.172Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_02",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "timeinstant": "2025-07-31T10:05:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_bigint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:05:00.000Z",
+        "value_bigint": 9223372030000000000,
+        "recvtime": "2026-09-28T09:17:30.176Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_03",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "timeinstant": "2025-07-31T10:05:30.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_bigint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:05:30.000Z",
+        "value_bigint": -9223372030000000000,
+        "recvtime": "2026-09-28T09:17:30.178Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_03",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "timeinstant": "2025-07-31T10:05:31.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_bigint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:05:31.000Z",
+        "value_bigint": 10000000000000000000,
+        "recvtime": "2026-09-28T09:17:30.178Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_03",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:04",
+        "timeinstant": "2025-07-31T10:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_real",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:04",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:00:00.000Z",
+        "value_real": 3.4028235e+38,
+        "recvtime": "2026-09-28T09:17:30.179Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_04",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:05",
+        "timeinstant": "2025-07-31T10:01:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_double",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:05",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:01:00.000Z",
+        "value_double": 1e-09,
+        "recvtime": "2026-09-28T09:17:30.180Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_05",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:06",
+        "timeinstant": "2025-07-31T10:02:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_numeric",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:06",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:02:00.000Z",
+        "value_numeric": 99.99999999,
+        "recvtime": "2026-09-28T09:17:30.182Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_06",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:07",
+        "timeinstant": "2025-07-31T10:06:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "geom_point",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:07",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:06:00.000Z",
+        "geom_point": {
+          "wkb": "AQEAAAAAAAAAAIBmQAAAAAAAgFZA",
+          "srid": 4326
+        },
+        "recvtime": "2026-09-28T09:17:30.183Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_07",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:08",
+        "timeinstant": "2025-07-31T10:07:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "geom_point",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:08",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:07:00.000Z",
+        "geom_point": {
+          "wkb": "AQEAAAAAAAAAAIBmwAAAAAAAgFbA",
+          "srid": 4326
+        },
+        "recvtime": "2026-09-28T09:17:30.184Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_08",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:10",
+        "timeinstant": "2025-07-31T10:10:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "geom_polygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:10",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:10:00.000Z",
+        "geom_polygon": {
+          "wkb": "AQMAAAABAAAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAAAAAAkQAAAAAAAAABAAAAAAAAAJEAAAAAAAAAQQAAAAAAAACRAAAAAAAAAGEAAAAAAAAAkQAAAAAAAACBAAAAAAAAAJEAAAAAAAAAkQAAAAAAAACRAAAAAAAAAJEAAAAAAAAAgQAAAAAAAACRAAAAAAAAAGEAAAAAAAAAkQAAAAAAAABBAAAAAAAAAJEAAAAAAAAAAQAAAAAAAACRAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+          "srid": 4326
+        },
+        "recvtime": "2026-09-28T09:17:30.185Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_10",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:11",
+        "timeinstant": "2025-07-31T10:11:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_real",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:11",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:11:00.000Z",
+        "value_real": 1e-09,
+        "recvtime": "2026-09-28T09:17:30.186Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_11",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:12",
+        "timeinstant": "2025-07-31T10:12:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_numeric",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:12",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:12:00.000Z",
+        "value_numeric": 1e-08,
+        "recvtime": "2026-09-28T09:17:30.187Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_12",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:05",
+        "timeinstant": "2025-07-31T10:01:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_double",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:05",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:01:00.000Z",
+        "value_double": 1e-09,
+        "recvtime": "2026-09-28T09:17:30.188Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_05",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:06",
+        "timeinstant": "2025-07-31T10:02:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_numeric",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:06",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:02:00.000Z",
+        "value_numeric": 99.99999999,
+        "recvtime": "2026-09-28T09:17:30.189Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_06",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:07",
+        "timeinstant": "2025-07-31T10:06:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "geom_point",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:07",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:06:00.000Z",
+        "geom_point": {
+          "wkb": "AQEAAAAAAAAAAIBmQAAAAAAAgFZA",
+          "srid": 4326
+        },
+        "recvtime": "2026-09-28T09:17:30.190Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_07",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:08",
+        "timeinstant": "2025-07-31T10:07:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "geom_point",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:08",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:07:00.000Z",
+        "geom_point": {
+          "wkb": "AQEAAAAAAAAAAIBmwAAAAAAAgFbA",
+          "srid": 4326
+        },
+        "recvtime": "2026-09-28T09:17:30.190Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_08",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:10",
+        "timeinstant": "2025-07-31T10:10:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "geom_polygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:10",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:10:00.000Z",
+        "geom_polygon": {
+          "wkb": "AQMAAAABAAAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAAAAAAkQAAAAAAAAABAAAAAAAAAJEAAAAAAAAAQQAAAAAAAACRAAAAAAAAAGEAAAAAAAAAkQAAAAAAAACBAAAAAAAAAJEAAAAAAAAAkQAAAAAAAACRAAAAAAAAAJEAAAAAAAAAgQAAAAAAAACRAAAAAAAAAGEAAAAAAAAAkQAAAAAAAABBAAAAAAAAAJEAAAAAAAAAAQAAAAAAAACRAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+          "srid": 4326
+        },
+        "recvtime": "2026-09-28T09:17:30.191Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_10",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:11",
+        "timeinstant": "2025-07-31T10:11:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_real",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:11",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:11:00.000Z",
+        "value_real": 1e-09,
+        "recvtime": "2026-09-28T09:17:30.193Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_11",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:12",
+        "timeinstant": "2025-07-31T10:12:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_numeric",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:12",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:12:00.000Z",
+        "value_numeric": 1e-08,
+        "recvtime": "2026-09-28T09:17:30.194Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_12",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_bigint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:05:30.000Z",
+        "value_bigint": -9223372030000000000,
+        "recvtime": "2026-09-28T09:17:30.196Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_03",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_bigint",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:03",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:05:31.000Z",
+        "value_bigint": 10000000000000000000,
+        "recvtime": "2026-09-28T09:17:30.197Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_03",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:04"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_real",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:04",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:00:00.000Z",
+        "value_real": 3.4028235e+38,
+        "recvtime": "2026-09-28T09:17:30.199Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_04",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:05"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_double",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:05",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:01:00.000Z",
+        "value_double": 1e-09,
+        "recvtime": "2026-09-28T09:17:30.200Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_05",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:06"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_numeric",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:06",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:02:00.000Z",
+        "value_numeric": 99.99999999,
+        "recvtime": "2026-09-28T09:17:30.201Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_06",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:07"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "geom_point",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:07",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:06:00.000Z",
+        "geom_point": {
+          "wkb": "AQEAAAAAAAAAAIBmQAAAAAAAgFZA",
+          "srid": 4326
+        },
+        "recvtime": "2026-09-28T09:17:30.202Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_07",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:08"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "geom_point",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:08",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:07:00.000Z",
+        "geom_point": {
+          "wkb": "AQEAAAAAAAAAAIBmwAAAAAAAgFbA",
+          "srid": 4326
+        },
+        "recvtime": "2026-09-28T09:17:30.203Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_08",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:10"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "geom_polygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:10",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:10:00.000Z",
+        "geom_polygon": {
+          "wkb": "AQMAAAABAAAAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAAAAAAkQAAAAAAAAABAAAAAAAAAJEAAAAAAAAAQQAAAAAAAACRAAAAAAAAAGEAAAAAAAAAkQAAAAAAAACBAAAAAAAAAJEAAAAAAAAAkQAAAAAAAACRAAAAAAAAAJEAAAAAAAAAgQAAAAAAAACRAAAAAAAAAGEAAAAAAAAAkQAAAAAAAABBAAAAAAAAAJEAAAAAAAAAAQAAAAAAAACRAAAAAAAAAAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAGEAAAAAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+          "srid": 4326
+        },
+        "recvtime": "2026-09-28T09:17:30.205Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_10",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:11"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_real",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:11",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:11:00.000Z",
+        "value_real": 1e-09,
+        "recvtime": "2026-09-28T09:17:30.206Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_11",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:12"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "value_numeric",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor:LimitTest:12",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/limit",
+        "timeinstant": "2025-07-31T10:12:00.000Z",
+        "value_numeric": 1e-08,
+        "recvtime": "2026-09-28T09:17:30.207Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "limit",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "sensor_limittest_12",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:30.445Z",
+        "error": "ERROR: bigint out of range  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"limit_sensor_mutable\" (\"entityid\",\"timeinstant\",\"entitytype\",\"fiwareservicepath\",\"value_bigint\",\"recvtime\") VALUES (('Sensor:LimitTest:03')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:30.457Z",
+        "error": "ERROR: bigint out of range  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"limit_sensor_lastdata\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"value_bigint\",\"recvtime\") VALUES (('Sensor:LimitTest:03')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:30.458Z",
+        "error": "ERROR: bigint out of range  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"limit_sensor\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"value_bigint\",\"recvtime\") VALUES (('Sensor:LimitTest:03')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  }
+]

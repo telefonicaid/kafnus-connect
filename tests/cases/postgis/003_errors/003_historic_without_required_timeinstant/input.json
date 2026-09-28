@@ -1,0 +1,114 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "FLOW0"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "FLOW0",
+        "entitytype": "AZUL",
+        "fiwareservicepath": "/notimeinstant",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:17:42.689Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "notimeinstant",
+      "fiware-datamodel": null,
+      "entityType": "azul",
+      "entityId": "flow0",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:42.935Z",
+        "error": "ERROR: null value in column \"timeinstant\" of relation \"notimeinstant_azul\" violates not-null constraint - Detail: Failing row contains (2026-09-28 09:17:42.689+00, /notimeinstant, FLOW0, AZUL, null, 25).  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"notimeinstant_azul\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"temperature\",\"recvtime\") VALUES (('FLOW0')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  }
+]

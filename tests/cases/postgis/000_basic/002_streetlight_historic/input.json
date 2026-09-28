@@ -1,0 +1,5822 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:15:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:15:00.000Z",
+        "location": {
+          "wkb": "AQEAAABmogip25n1v11Std0E3/A/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.5,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"20 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"dynamic-color\"],\"sensors\":{\"motion\":true,\"ambient_light\":false},\"zigbee_channel\":25}",
+        "maintaineremail": "@correo.com",
+        "lumensadjustment": 15,
+        "fixturemodelid": 1,
+        "ledcount": 9,
+        "wattageconsumption": 198900,
+        "colortempkelvin": 4000.1234,
+        "beamangle": 30.75,
+        "luminousefficacy": 6500000,
+        "installationid": 10001,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\",\"STL-Nova\"]",
+        "dimminglevels": "[10,25,50,75,100]",
+        "temperaturerangek": "[2700,3000,4000,5000,6500]",
+        "recvtime": "2026-09-28T09:16:50.599Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:20:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:20:00.000Z",
+        "location": {
+          "wkb": "AQEAAABcO1ESEmnWv/YHym37BkRA",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.6,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"21 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"dynamic-color\",\"eco-mode\"],\"sensors\":{\"motion\":false,\"ambient_light\":true},\"zigbee_channel\":26}",
+        "maintaineremail": "soporte_tecnico@correo.com",
+        "lumensadjustment": 16,
+        "fixturemodelid": 12,
+        "ledcount": 98,
+        "wattageconsumption": 199000,
+        "colortempkelvin": 4100.1234,
+        "beamangle": 31.75,
+        "luminousefficacy": 6600000,
+        "installationid": 10002,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\",\"STL-Nova\",\"STL-Quantum\"]",
+        "dimminglevels": "[15,30,55,80,100]",
+        "temperaturerangek": "[2750,3100,4100,5100,6600]",
+        "recvtime": "2026-09-28T09:16:50.602Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:25:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:25:00.000Z",
+        "location": {
+          "wkb": "AQEAAABI+x9grZr1vz+rzJTW3/A/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.7,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"22 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\"],\"sensors\":{\"motion\":true,\"ambient_light\":false},\"zigbee_channel\":27}",
+        "maintaineremail": "asistencia@correo.com",
+        "lumensadjustment": 17,
+        "fixturemodelid": 123,
+        "ledcount": 987,
+        "wattageconsumption": 199100,
+        "colortempkelvin": 4200.1234,
+        "beamangle": 32.75,
+        "luminousefficacy": 6700000,
+        "installationid": 10003,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\"]",
+        "dimminglevels": "[20,35,60,85,100]",
+        "temperaturerangek": "[2800,3200,4200,5200,6700]",
+        "recvtime": "2026-09-28T09:16:50.604Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:30:00.000Z",
+        "location": {
+          "wkb": "AQEAAAC5p6s7Fpv1v7BXWHA/4PA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.8,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"23 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"dynamic-color\"],\"sensors\":{\"motion\":false,\"ambient_light\":true},\"zigbee_channel\":28}",
+        "maintaineremail": "soporte@correo.com",
+        "lumensadjustment": 18,
+        "fixturemodelid": 1234,
+        "ledcount": 9876,
+        "wattageconsumption": 199200,
+        "colortempkelvin": 4300.1234,
+        "beamangle": 33.75,
+        "luminousefficacy": 6800000,
+        "installationid": 10004,
+        "compatiblefixtures": "[\"STL-Nova\",\"STL-Quantum\"]",
+        "dimminglevels": "[25,40,65,90,100]",
+        "temperaturerangek": "[2850,3300,4300,5300,6800]",
+        "recvtime": "2026-09-28T09:16:50.607Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:35:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:35:00.000Z",
+        "location": {
+          "wkb": "AQEAAAAqVDcXf5v1vyEE5Euo4PA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.9,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"24 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"eco-mode\"],\"sensors\":{\"motion\":true,\"ambient_light\":true},\"zigbee_channel\":29}",
+        "maintaineremail": "tecnico@correo.com",
+        "lumensadjustment": 19,
+        "fixturemodelid": 12345,
+        "ledcount": 98765,
+        "wattageconsumption": 199300,
+        "colortempkelvin": 4400.1234,
+        "beamangle": 34.75,
+        "luminousefficacy": 6900000,
+        "installationid": 10005,
+        "compatiblefixtures": "[\"STL-Omega\",\"STL-Nova\"]",
+        "dimminglevels": "[30,45,70,95,100]",
+        "temperaturerangek": "[2900,3400,4400,5400,6900]",
+        "recvtime": "2026-09-28T09:16:50.609Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:40:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:40:00.000Z",
+        "location": {
+          "wkb": "AQEAAACbAMPy55v1v5KwbycR4fA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 1,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"25 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"dynamic-color\",\"eco-mode\"],\"sensors\":{\"motion\":false,\"ambient_light\":false},\"zigbee_channel\":30}",
+        "maintaineremail": "asistencia_tecnica@correo.com",
+        "lumensadjustment": 20,
+        "fixturemodelid": 123456,
+        "ledcount": 987654,
+        "wattageconsumption": 199400,
+        "colortempkelvin": 4500.1234,
+        "beamangle": 35.75,
+        "luminousefficacy": 7000000,
+        "installationid": 10006,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Quantum\"]",
+        "dimminglevels": "[35,50,75,100]",
+        "temperaturerangek": "[2950,3500,4500,5500,7000]",
+        "recvtime": "2026-09-28T09:16:50.610Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:45:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:45:00.000Z",
+        "location": {
+          "wkb": "AQEAAAAMrU7OUJz1vwNd+wJ64fA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.4,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"26 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\"],\"sensors\":{\"motion\":true,\"ambient_light\":true},\"zigbee_channel\":31}",
+        "maintaineremail": "soporte_luminica@correo.com",
+        "lumensadjustment": 21,
+        "fixturemodelid": 1234567,
+        "ledcount": 9876543,
+        "wattageconsumption": 199500,
+        "colortempkelvin": 4600.1234,
+        "beamangle": 36.75,
+        "luminousefficacy": 7100000,
+        "installationid": 10007,
+        "compatiblefixtures": "[\"STL-Omega\",\"STL-Quantum\"]",
+        "dimminglevels": "[40,55,80,100]",
+        "temperaturerangek": "[3000,3600,4600,5600,7100]",
+        "recvtime": "2026-09-28T09:16:50.612Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:50:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:50:00.000Z",
+        "location": {
+          "wkb": "AQEAAAB9WdqpuZz1v3QJh97i4fA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.3,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"27 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"dynamic-color\"],\"sensors\":{\"motion\":false,\"ambient_light\":false},\"zigbee_channel\":32}",
+        "maintaineremail": "mantenimiento@correo.com",
+        "lumensadjustment": 22,
+        "fixturemodelid": 12345678,
+        "ledcount": 98765432,
+        "wattageconsumption": 199600,
+        "colortempkelvin": 4700.1234,
+        "beamangle": 37.75,
+        "luminousefficacy": 7200000,
+        "installationid": 10008,
+        "compatiblefixtures": "[\"STL-Nova\"]",
+        "dimminglevels": "[45,60,85,100]",
+        "temperaturerangek": "[3050,3700,4700,5700,7200]",
+        "recvtime": "2026-09-28T09:16:50.613Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:55:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:55:00.000Z",
+        "location": {
+          "wkb": "AQEAAADuBWaFIp31v+W1ErpL4vA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.2,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"28 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"eco-mode\"],\"sensors\":{\"motion\":true,\"ambient_light\":false},\"zigbee_channel\":33}",
+        "maintaineremail": "soporte_iluminacion@correo.com",
+        "lumensadjustment": 23,
+        "fixturemodelid": 123456789,
+        "ledcount": 987654321,
+        "wattageconsumption": 199700,
+        "colortempkelvin": 4800.1234,
+        "beamangle": 38.75,
+        "luminousefficacy": 7300000,
+        "installationid": 10009,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\",\"STL-Nova\",\"STL-Quantum\",\"STL-Alpha\"]",
+        "dimminglevels": "[50,65,90,100]",
+        "temperaturerangek": "[3100,3800,4800,5800,7300]",
+        "recvtime": "2026-09-28T09:16:50.614Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T06:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T06:00:00.000Z",
+        "location": {
+          "wkb": "AQEAAABfsvFgi531v1ZinpW04vA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.1,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"29 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"dynamic-color\",\"eco-mode\"],\"sensors\":{\"motion\":false,\"ambient_light\":true},\"zigbee_channel\":34}",
+        "maintaineremail": "ayuda@correo.com",
+        "lumensadjustment": 24,
+        "fixturemodelid": 1234567890,
+        "ledcount": 9876543210,
+        "wattageconsumption": 199800,
+        "colortempkelvin": 4900.1234,
+        "beamangle": 39.75,
+        "luminousefficacy": 7400000,
+        "installationid": 10010,
+        "compatiblefixtures": "[\"STL-Quantum\"]",
+        "dimminglevels": "[55,70,95,100]",
+        "temperaturerangek": "[3150,3900,4900,5900,7400]",
+        "recvtime": "2026-09-28T09:16:50.616Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:15:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:15:00.000Z",
+        "location": {
+          "wkb": "AQEAAABmogip25n1v11Std0E3/A/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.5,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"20 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"dynamic-color\"],\"sensors\":{\"motion\":true,\"ambient_light\":false},\"zigbee_channel\":25}",
+        "maintaineremail": "@correo.com",
+        "lumensadjustment": 15,
+        "fixturemodelid": 1,
+        "ledcount": 9,
+        "wattageconsumption": 198900,
+        "colortempkelvin": 4000.1234,
+        "beamangle": 30.75,
+        "luminousefficacy": 6500000,
+        "installationid": 10001,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\",\"STL-Nova\"]",
+        "dimminglevels": "[10,25,50,75,100]",
+        "temperaturerangek": "[2700,3000,4000,5000,6500]",
+        "recvtime": "2026-09-28T09:16:50.618Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:20:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:20:00.000Z",
+        "location": {
+          "wkb": "AQEAAABcO1ESEmnWv/YHym37BkRA",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.6,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"21 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"dynamic-color\",\"eco-mode\"],\"sensors\":{\"motion\":false,\"ambient_light\":true},\"zigbee_channel\":26}",
+        "maintaineremail": "soporte_tecnico@correo.com",
+        "lumensadjustment": 16,
+        "fixturemodelid": 12,
+        "ledcount": 98,
+        "wattageconsumption": 199000,
+        "colortempkelvin": 4100.1234,
+        "beamangle": 31.75,
+        "luminousefficacy": 6600000,
+        "installationid": 10002,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\",\"STL-Nova\",\"STL-Quantum\"]",
+        "dimminglevels": "[15,30,55,80,100]",
+        "temperaturerangek": "[2750,3100,4100,5100,6600]",
+        "recvtime": "2026-09-28T09:16:50.619Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:25:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:25:00.000Z",
+        "location": {
+          "wkb": "AQEAAABI+x9grZr1vz+rzJTW3/A/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.7,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"22 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\"],\"sensors\":{\"motion\":true,\"ambient_light\":false},\"zigbee_channel\":27}",
+        "maintaineremail": "asistencia@correo.com",
+        "lumensadjustment": 17,
+        "fixturemodelid": 123,
+        "ledcount": 987,
+        "wattageconsumption": 199100,
+        "colortempkelvin": 4200.1234,
+        "beamangle": 32.75,
+        "luminousefficacy": 6700000,
+        "installationid": 10003,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\"]",
+        "dimminglevels": "[20,35,60,85,100]",
+        "temperaturerangek": "[2800,3200,4200,5200,6700]",
+        "recvtime": "2026-09-28T09:16:50.621Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:30:00.000Z",
+        "location": {
+          "wkb": "AQEAAAC5p6s7Fpv1v7BXWHA/4PA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.8,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"23 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"dynamic-color\"],\"sensors\":{\"motion\":false,\"ambient_light\":true},\"zigbee_channel\":28}",
+        "maintaineremail": "soporte@correo.com",
+        "lumensadjustment": 18,
+        "fixturemodelid": 1234,
+        "ledcount": 9876,
+        "wattageconsumption": 199200,
+        "colortempkelvin": 4300.1234,
+        "beamangle": 33.75,
+        "luminousefficacy": 6800000,
+        "installationid": 10004,
+        "compatiblefixtures": "[\"STL-Nova\",\"STL-Quantum\"]",
+        "dimminglevels": "[25,40,65,90,100]",
+        "temperaturerangek": "[2850,3300,4300,5300,6800]",
+        "recvtime": "2026-09-28T09:16:50.622Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:35:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:35:00.000Z",
+        "location": {
+          "wkb": "AQEAAAAqVDcXf5v1vyEE5Euo4PA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.9,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"24 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"eco-mode\"],\"sensors\":{\"motion\":true,\"ambient_light\":true},\"zigbee_channel\":29}",
+        "maintaineremail": "tecnico@correo.com",
+        "lumensadjustment": 19,
+        "fixturemodelid": 12345,
+        "ledcount": 98765,
+        "wattageconsumption": 199300,
+        "colortempkelvin": 4400.1234,
+        "beamangle": 34.75,
+        "luminousefficacy": 6900000,
+        "installationid": 10005,
+        "compatiblefixtures": "[\"STL-Omega\",\"STL-Nova\"]",
+        "dimminglevels": "[30,45,70,95,100]",
+        "temperaturerangek": "[2900,3400,4400,5400,6900]",
+        "recvtime": "2026-09-28T09:16:50.624Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:40:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:40:00.000Z",
+        "location": {
+          "wkb": "AQEAAACbAMPy55v1v5KwbycR4fA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 1,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"25 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"dynamic-color\",\"eco-mode\"],\"sensors\":{\"motion\":false,\"ambient_light\":false},\"zigbee_channel\":30}",
+        "maintaineremail": "asistencia_tecnica@correo.com",
+        "lumensadjustment": 20,
+        "fixturemodelid": 123456,
+        "ledcount": 987654,
+        "wattageconsumption": 199400,
+        "colortempkelvin": 4500.1234,
+        "beamangle": 35.75,
+        "luminousefficacy": 7000000,
+        "installationid": 10006,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Quantum\"]",
+        "dimminglevels": "[35,50,75,100]",
+        "temperaturerangek": "[2950,3500,4500,5500,7000]",
+        "recvtime": "2026-09-28T09:16:50.626Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:45:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:45:00.000Z",
+        "location": {
+          "wkb": "AQEAAAAMrU7OUJz1vwNd+wJ64fA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.4,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"26 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\"],\"sensors\":{\"motion\":true,\"ambient_light\":true},\"zigbee_channel\":31}",
+        "maintaineremail": "soporte_luminica@correo.com",
+        "lumensadjustment": 21,
+        "fixturemodelid": 1234567,
+        "ledcount": 9876543,
+        "wattageconsumption": 199500,
+        "colortempkelvin": 4600.1234,
+        "beamangle": 36.75,
+        "luminousefficacy": 7100000,
+        "installationid": 10007,
+        "compatiblefixtures": "[\"STL-Omega\",\"STL-Quantum\"]",
+        "dimminglevels": "[40,55,80,100]",
+        "temperaturerangek": "[3000,3600,4600,5600,7100]",
+        "recvtime": "2026-09-28T09:16:50.627Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:50:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:50:00.000Z",
+        "location": {
+          "wkb": "AQEAAAB9WdqpuZz1v3QJh97i4fA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.3,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"27 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"dynamic-color\"],\"sensors\":{\"motion\":false,\"ambient_light\":false},\"zigbee_channel\":32}",
+        "maintaineremail": "mantenimiento@correo.com",
+        "lumensadjustment": 22,
+        "fixturemodelid": 12345678,
+        "ledcount": 98765432,
+        "wattageconsumption": 199600,
+        "colortempkelvin": 4700.1234,
+        "beamangle": 37.75,
+        "luminousefficacy": 7200000,
+        "installationid": 10008,
+        "compatiblefixtures": "[\"STL-Nova\"]",
+        "dimminglevels": "[45,60,85,100]",
+        "temperaturerangek": "[3050,3700,4700,5700,7200]",
+        "recvtime": "2026-09-28T09:16:50.629Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T05:55:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:55:00.000Z",
+        "location": {
+          "wkb": "AQEAAADuBWaFIp31v+W1ErpL4vA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.2,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"28 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"eco-mode\"],\"sensors\":{\"motion\":true,\"ambient_light\":false},\"zigbee_channel\":33}",
+        "maintaineremail": "soporte_iluminacion@correo.com",
+        "lumensadjustment": 23,
+        "fixturemodelid": 123456789,
+        "ledcount": 987654321,
+        "wattageconsumption": 199700,
+        "colortempkelvin": 4800.1234,
+        "beamangle": 38.75,
+        "luminousefficacy": 7300000,
+        "installationid": 10009,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\",\"STL-Nova\",\"STL-Quantum\",\"STL-Alpha\"]",
+        "dimminglevels": "[50,65,90,100]",
+        "temperaturerangek": "[3100,3800,4800,5800,7300]",
+        "recvtime": "2026-09-28T09:16:50.630Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "timeinstant": "2025-01-01T06:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T06:00:00.000Z",
+        "location": {
+          "wkb": "AQEAAABfsvFgi531v1ZinpW04vA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.1,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"29 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"dynamic-color\",\"eco-mode\"],\"sensors\":{\"motion\":false,\"ambient_light\":true},\"zigbee_channel\":34}",
+        "maintaineremail": "ayuda@correo.com",
+        "lumensadjustment": 24,
+        "fixturemodelid": 1234567890,
+        "ledcount": 9876543210,
+        "wattageconsumption": 199800,
+        "colortempkelvin": 4900.1234,
+        "beamangle": 39.75,
+        "luminousefficacy": 7400000,
+        "installationid": 10010,
+        "compatiblefixtures": "[\"STL-Quantum\"]",
+        "dimminglevels": "[55,70,95,100]",
+        "temperaturerangek": "[3150,3900,4900,5900,7400]",
+        "recvtime": "2026-09-28T09:16:50.632Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:15:00.000Z",
+        "location": {
+          "wkb": "AQEAAABmogip25n1v11Std0E3/A/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.5,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"20 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"dynamic-color\"],\"sensors\":{\"motion\":true,\"ambient_light\":false},\"zigbee_channel\":25}",
+        "maintaineremail": "@correo.com",
+        "lumensadjustment": 15,
+        "fixturemodelid": 1,
+        "ledcount": 9,
+        "wattageconsumption": 198900,
+        "colortempkelvin": 4000.1234,
+        "beamangle": 30.75,
+        "luminousefficacy": 6500000,
+        "installationid": 10001,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\",\"STL-Nova\"]",
+        "dimminglevels": "[10,25,50,75,100]",
+        "temperaturerangek": "[2700,3000,4000,5000,6500]",
+        "recvtime": "2026-09-28T09:16:50.634Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:20:00.000Z",
+        "location": {
+          "wkb": "AQEAAABcO1ESEmnWv/YHym37BkRA",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.6,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"21 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"dynamic-color\",\"eco-mode\"],\"sensors\":{\"motion\":false,\"ambient_light\":true},\"zigbee_channel\":26}",
+        "maintaineremail": "soporte_tecnico@correo.com",
+        "lumensadjustment": 16,
+        "fixturemodelid": 12,
+        "ledcount": 98,
+        "wattageconsumption": 199000,
+        "colortempkelvin": 4100.1234,
+        "beamangle": 31.75,
+        "luminousefficacy": 6600000,
+        "installationid": 10002,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\",\"STL-Nova\",\"STL-Quantum\"]",
+        "dimminglevels": "[15,30,55,80,100]",
+        "temperaturerangek": "[2750,3100,4100,5100,6600]",
+        "recvtime": "2026-09-28T09:16:50.635Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:25:00.000Z",
+        "location": {
+          "wkb": "AQEAAABI+x9grZr1vz+rzJTW3/A/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.7,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"22 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\"],\"sensors\":{\"motion\":true,\"ambient_light\":false},\"zigbee_channel\":27}",
+        "maintaineremail": "asistencia@correo.com",
+        "lumensadjustment": 17,
+        "fixturemodelid": 123,
+        "ledcount": 987,
+        "wattageconsumption": 199100,
+        "colortempkelvin": 4200.1234,
+        "beamangle": 32.75,
+        "luminousefficacy": 6700000,
+        "installationid": 10003,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\"]",
+        "dimminglevels": "[20,35,60,85,100]",
+        "temperaturerangek": "[2800,3200,4200,5200,6700]",
+        "recvtime": "2026-09-28T09:16:50.638Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:30:00.000Z",
+        "location": {
+          "wkb": "AQEAAAC5p6s7Fpv1v7BXWHA/4PA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.8,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"23 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"dynamic-color\"],\"sensors\":{\"motion\":false,\"ambient_light\":true},\"zigbee_channel\":28}",
+        "maintaineremail": "soporte@correo.com",
+        "lumensadjustment": 18,
+        "fixturemodelid": 1234,
+        "ledcount": 9876,
+        "wattageconsumption": 199200,
+        "colortempkelvin": 4300.1234,
+        "beamangle": 33.75,
+        "luminousefficacy": 6800000,
+        "installationid": 10004,
+        "compatiblefixtures": "[\"STL-Nova\",\"STL-Quantum\"]",
+        "dimminglevels": "[25,40,65,90,100]",
+        "temperaturerangek": "[2850,3300,4300,5300,6800]",
+        "recvtime": "2026-09-28T09:16:50.640Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:35:00.000Z",
+        "location": {
+          "wkb": "AQEAAAAqVDcXf5v1vyEE5Euo4PA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.9,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"24 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"eco-mode\"],\"sensors\":{\"motion\":true,\"ambient_light\":true},\"zigbee_channel\":29}",
+        "maintaineremail": "tecnico@correo.com",
+        "lumensadjustment": 19,
+        "fixturemodelid": 12345,
+        "ledcount": 98765,
+        "wattageconsumption": 199300,
+        "colortempkelvin": 4400.1234,
+        "beamangle": 34.75,
+        "luminousefficacy": 6900000,
+        "installationid": 10005,
+        "compatiblefixtures": "[\"STL-Omega\",\"STL-Nova\"]",
+        "dimminglevels": "[30,45,70,95,100]",
+        "temperaturerangek": "[2900,3400,4400,5400,6900]",
+        "recvtime": "2026-09-28T09:16:50.641Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:40:00.000Z",
+        "location": {
+          "wkb": "AQEAAACbAMPy55v1v5KwbycR4fA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 1,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"25 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"dynamic-color\",\"eco-mode\"],\"sensors\":{\"motion\":false,\"ambient_light\":false},\"zigbee_channel\":30}",
+        "maintaineremail": "asistencia_tecnica@correo.com",
+        "lumensadjustment": 20,
+        "fixturemodelid": 123456,
+        "ledcount": 987654,
+        "wattageconsumption": 199400,
+        "colortempkelvin": 4500.1234,
+        "beamangle": 35.75,
+        "luminousefficacy": 7000000,
+        "installationid": 10006,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Quantum\"]",
+        "dimminglevels": "[35,50,75,100]",
+        "temperaturerangek": "[2950,3500,4500,5500,7000]",
+        "recvtime": "2026-09-28T09:16:50.643Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:45:00.000Z",
+        "location": {
+          "wkb": "AQEAAAAMrU7OUJz1vwNd+wJ64fA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.4,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"26 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\"],\"sensors\":{\"motion\":true,\"ambient_light\":true},\"zigbee_channel\":31}",
+        "maintaineremail": "soporte_luminica@correo.com",
+        "lumensadjustment": 21,
+        "fixturemodelid": 1234567,
+        "ledcount": 9876543,
+        "wattageconsumption": 199500,
+        "colortempkelvin": 4600.1234,
+        "beamangle": 36.75,
+        "luminousefficacy": 7100000,
+        "installationid": 10007,
+        "compatiblefixtures": "[\"STL-Omega\",\"STL-Quantum\"]",
+        "dimminglevels": "[40,55,80,100]",
+        "temperaturerangek": "[3000,3600,4600,5600,7100]",
+        "recvtime": "2026-09-28T09:16:50.645Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:50:00.000Z",
+        "location": {
+          "wkb": "AQEAAAB9WdqpuZz1v3QJh97i4fA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.3,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"27 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"dynamic-color\"],\"sensors\":{\"motion\":false,\"ambient_light\":false},\"zigbee_channel\":32}",
+        "maintaineremail": "mantenimiento@correo.com",
+        "lumensadjustment": 22,
+        "fixturemodelid": 12345678,
+        "ledcount": 98765432,
+        "wattageconsumption": 199600,
+        "colortempkelvin": 4700.1234,
+        "beamangle": 37.75,
+        "luminousefficacy": 7200000,
+        "installationid": 10008,
+        "compatiblefixtures": "[\"STL-Nova\"]",
+        "dimminglevels": "[45,60,85,100]",
+        "temperaturerangek": "[3050,3700,4700,5700,7200]",
+        "recvtime": "2026-09-28T09:16:50.648Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T05:55:00.000Z",
+        "location": {
+          "wkb": "AQEAAADuBWaFIp31v+W1ErpL4vA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.2,
+        "enablehistoriccommand": true,
+        "variables": "{\"duration\":\"28 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"eco-mode\"],\"sensors\":{\"motion\":true,\"ambient_light\":false},\"zigbee_channel\":33}",
+        "maintaineremail": "soporte_iluminacion@correo.com",
+        "lumensadjustment": 23,
+        "fixturemodelid": 123456789,
+        "ledcount": 987654321,
+        "wattageconsumption": 199700,
+        "colortempkelvin": 4800.1234,
+        "beamangle": 38.75,
+        "luminousefficacy": 7300000,
+        "installationid": 10009,
+        "compatiblefixtures": "[\"STL-Gamma\",\"STL-Omega\",\"STL-Nova\",\"STL-Quantum\",\"STL-Alpha\"]",
+        "dimminglevels": "[50,65,90,100]",
+        "temperaturerangek": "[3100,3800,4800,5800,7300]",
+        "recvtime": "2026-09-28T09:16:50.649Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "address",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "illuminancelevel",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "enablehistoriccommand",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "variables",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fixtureconfiguration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "maintaineremail",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "lumensadjustment",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "fixturemodelid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "ledcount",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "wattageconsumption",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "colortempkelvin",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "beamangle",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "luminousefficacy",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "installationid",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "compatiblefixtures",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "dimminglevels",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperaturerangek",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ENT-LUM-001",
+        "entitytype": "Streetlight",
+        "fiwareservicepath": "/lighting",
+        "timeinstant": "2025-01-01T06:00:00.000Z",
+        "location": {
+          "wkb": "AQEAAABfsvFgi531v1ZinpW04vA/",
+          "srid": 4326
+        },
+        "address": "Calle X, X. XXXX X, X",
+        "illuminancelevel": 0.1,
+        "enablehistoriccommand": false,
+        "variables": "{\"duration\":\"29 days\"}",
+        "fixtureconfiguration": "{\"modes\":[\"high-efficiency\",\"dynamic-color\",\"eco-mode\"],\"sensors\":{\"motion\":false,\"ambient_light\":true},\"zigbee_channel\":34}",
+        "maintaineremail": "ayuda@correo.com",
+        "lumensadjustment": 24,
+        "fixturemodelid": 1234567890,
+        "ledcount": 9876543210,
+        "wattageconsumption": 199800,
+        "colortempkelvin": 4900.1234,
+        "beamangle": 39.75,
+        "luminousefficacy": 7400000,
+        "installationid": 10010,
+        "compatiblefixtures": "[\"STL-Quantum\"]",
+        "dimminglevels": "[55,70,95,100]",
+        "temperaturerangek": "[3150,3900,4900,5900,7400]",
+        "recvtime": "2026-09-28T09:16:50.651Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "lighting",
+      "fiware-datamodel": null,
+      "entityType": "streetlight",
+      "entityId": "ent_lum_001",
+      "suffix": "_lastdata"
+    }
+  }
+]
