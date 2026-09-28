@@ -118,6 +118,43 @@
               <goal>report</goal>
             </goals>
           </execution>
+          <!-- Merge unit and E2E coverage, run with:
+               mvn verify jacoco:merge@merge-e2e jacoco:report@report-merged -->
+          <execution>
+            <id>merge-e2e</id>
+            <phase>none</phase>
+            <goals>
+              <goal>merge</goal>
+            </goals>
+            <configuration>
+              <fileSets>
+                <fileSet>
+                  <directory>${project.build.directory}</directory>
+                  <includes>
+                    <include>jacoco.exec</include>
+                  </includes>
+                </fileSet>
+                <fileSet>
+                  <directory>${project.basedir}/../../tests/coverage</directory>
+                  <includes>
+                    <include>jacoco-e2e.exec</include>
+                  </includes>
+                </fileSet>
+              </fileSets>
+              <destFile>${project.build.directory}/jacoco-merged.exec</destFile>
+            </configuration>
+          </execution>
+          <execution>
+            <id>report-merged</id>
+            <phase>none</phase>
+            <goals>
+              <goal>report</goal>
+            </goals>
+            <configuration>
+              <dataFile>${project.build.directory}/jacoco-merged.exec</dataFile>
+              <outputDirectory>${project.reporting.outputDirectory}/jacoco-merged</outputDirectory>
+            </configuration>
+          </execution>
         </executions>
       </plugin>
     </plugins>
