@@ -5,8 +5,8 @@
     "tasks.max": "1",
     "topics": "smc_sgtr_http_processed",
     "http.url": "http://172.17.0.1:3333",
-    "http.authorization.type": "none",
     "http.headers.content.type": "application/json",
+    "http.authorization.type": "none",
     "batching.enabled": false,
     "key.converter": "org.apache.kafka.connect.storage.StringConverter",
     "key.converter.schemas.enable": false,
@@ -19,7 +19,9 @@
     "errors.deadletterqueue.topic.replication.factor": "1",
     "errors.log.enable": false,
     "errors.log.include.messages": false,
-    "max.retries": "0",
-    "retry.backoff.ms": "0"
+    "max.retries": "1",
+    "retry.backoff.ms": "500",
+    "http.timeout": "30",
+    "consumer.override.max.poll.records": "1"
   }
 }
