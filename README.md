@@ -81,6 +81,12 @@ Integration and end-to-end testing are performed from the [Kafnus NGSI](https://
 
 This repository also includes his own python tests (similar to Kafnus tests) and unit tests for the custom Java SMTs in [src/kafnus-connect-smt/src/test/java](src/kafnus-connect-smt/src/test/java), executed with Maven and JUnit 5.
 
+The scenarios under [tests/cases](tests/cases) mirror the Kafnus functional tests (same paths, `expected_*.json`, `setup.sql` and `description.txt`), but their `input.json` holds the exact messages Kafnus NGSI publishes to the processed topics for that scenario (`"type": "raw"`), recorded from a Kafnus run. This way they check the contract between both components without running Orion or Kafnus NGSI. When the Kafnus NGSI output changes, record the scenarios again and copy them over the existing ones.
+
+Scenarios removed from Kafnus must be deleted here by hand. Scenarios specific to Kafnus Connect can still be written by hand with the `postgis` and `mongo` message types.
+
+HTTP scenarios need the Kafnus Connect container to reach the HTTP mock started by pytest on the host (`172.17.0.1:3333`), so a host firewall must allow it.
+
 Coverage is generated with JaCoCo for this SMT module and published to Coveralls from CI. It merges the SMT unit tests (Java) with the Python E2E suite: when `KAFNUS_TESTS_COVERAGE=true`, the E2E tests attach the JaCoCo agent to the Kafnus Connect container and write the execution data to `tests/coverage/jacoco-e2e.exec` when the stack stops.
 
 To get the merged report locally (Maven must run with JDK 17, as the image does: JaCoCo silently ignores execution data when class files differ, and other JDKs compile different bytes):
