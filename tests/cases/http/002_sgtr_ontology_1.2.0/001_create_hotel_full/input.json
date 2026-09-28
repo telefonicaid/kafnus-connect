@@ -1,0 +1,38 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_sgtr_http_processed",
+    "key": null,
+    "value": {
+      "query": "\n            mutation {\n                createHotel(dti: \"grafo\", input: { object: { externalId: \"example01\", stars: 4, published: true, label: { value: null, lang: null }, hotelSpecialty: { uri: null }, hasPriceClass: { uri: null }, offersMealPlan: [{ uri: null }, { uri: null }, { uri: null }, { uri: null }], offersAdditionalAccommodationService: [{ uri: null }, { uri: null }], hasDescription: { object: { shortDescription: null, longDescription: null, keyword: [] } }, offersRoom: { object: { numberOfRooms: null, maximumCapacity: null } } } }) { uri }\n            }\n        "
+    },
+    "headers": {}
+  },
+  {
+    "type": "raw",
+    "topic": "smc_sgtr_http_processed",
+    "key": null,
+    "value": {
+      "query": "\n            mutation {\n                createHotel(dti: \"grafo\", input: { object: { externalId: \"example01\", stars: 4, published: true, label: { value: null, lang: null }, hotelSpecialty: { uri: null }, hasPriceClass: { uri: null }, offersMealPlan: [{ uri: null }, { uri: null }, { uri: null }, { uri: null }], offersAdditionalAccommodationService: [{ uri: null }, { uri: null }], hasDescription: { object: { shortDescription: null, longDescription: null, keyword: [] } }, offersRoom: { object: { numberOfRooms: null, maximumCapacity: null } } } }) { uri }\n            }\n        "
+    },
+    "headers": {}
+  },
+  {
+    "type": "raw",
+    "topic": "smc_sgtr_http_processed",
+    "key": null,
+    "value": {
+      "query": "\n            mutation {\n                createHotel(dti: \"grafo\", input: { object: { externalId: \"example01\", stars: 4, published: true, label: { value: null, lang: null }, hotelSpecialty: { uri: null }, hasPriceClass: { uri: null }, offersMealPlan: [{ uri: null }, { uri: null }, { uri: null }, { uri: null }], offersAdditionalAccommodationService: [{ uri: null }, { uri: null }], hasDescription: { uri: \"http://datos.segittur.es/grafo/resource/Description:001\" }, offersRoom: { object: { numberOfRooms: null, maximumCapacity: null } } } }) { uri }\n            }\n        "
+    },
+    "headers": {}
+  },
+  {
+    "type": "raw",
+    "topic": "smc_sgtr_http_processed",
+    "key": null,
+    "value": {
+      "query": "\n            mutation {\n                createHotel(dti: \"grafo\", input: { object: { externalId: \"example01\", name: \"example01\", registrationNumber: \"example01\", hasAdditionalType: \"example01\", autonomousCheckIn: true, chainOrGroup: \"example01\", checkInHours: \"example01\", checkOutHours: \"example01\", numberOfBeds: 9, numberOfAccommodationUnits: 9, parador: true, hasLocation: { object: { autonomousCommunity: \"Location:001\", country: \"Location:001\", locality: \"Location:001\", postalCode: \"Location:001\", province: \"Location:001\", streetAddress: \"Location:001\", asWkt: \"POINT(12.4964 41.9028)\", lat: 12.4, long: 41.9 } }, hasDescription: { object: { shortDescription: \"Description:001\", longDescription: \"Description:001\", keyword: [] } } } }) { uri }\n            }\n        "
+    },
+    "headers": {}
+  }
+]

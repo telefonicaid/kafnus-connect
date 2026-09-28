@@ -1,1 +1,1 @@
-Minimal test case for PostGIS persistence.
+Minimal test case to verify full integration. Ensures that the three main flows (historic, lastdata, and mutable) are working correctly without errors.

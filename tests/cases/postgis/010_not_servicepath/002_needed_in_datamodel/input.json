@@ -1,0 +1,704 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "entitytype": "Device",
+        "fiwareservicepath": "/",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:18:35.784Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": null,
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "device",
+      "entityId": "device1",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "entitytype": "Device",
+        "fiwareservicepath": "/",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 26,
+        "recvtime": "2026-09-28T09:18:35.785Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": null,
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "device",
+      "entityId": "device1",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "timeinstant": "2025-06-26T11:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "entitytype": "Device",
+        "fiwareservicepath": "/",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:18:35.786Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": null,
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "device",
+      "entityId": "device1",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "timeinstant": "2025-06-26T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "entitytype": "Device",
+        "fiwareservicepath": "/",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 26,
+        "recvtime": "2026-09-28T09:18:35.786Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": null,
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "device",
+      "entityId": "device1",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "timeinstant": "2025-06-26T11:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "entitytype": "Device",
+        "fiwareservicepath": "/",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 25,
+        "recvtime": "2026-09-28T09:18:35.789Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": null,
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "device",
+      "entityId": "device1",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "timeinstant": "2025-06-26T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device1",
+        "entitytype": "Device",
+        "fiwareservicepath": "/",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 26,
+        "recvtime": "2026-09-28T09:18:35.790Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": null,
+      "fiware-datamodel": "dm-by-entity-type-database-schema",
+      "entityType": "device",
+      "entityId": "device1",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:18:35.801Z",
+        "error": "Required header missing or empty: fiware-servicepath",
+        "query": "INSERT INTO \"test\".\"unknown_table\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"temperature\",\"recvtime\") VALUES ('Device1','Device','/','2025-06-26T11:00:00.000Z',25,'2026-09-28T09:18:35.784Z')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:18:35.802Z",
+        "error": "Required header missing or empty: fiware-servicepath",
+        "query": "INSERT INTO \"test\".\"unknown_table\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"temperature\",\"recvtime\") VALUES ('Device1','Device','/','2025-06-26T12:00:00.000Z',26,'2026-09-28T09:18:35.785Z')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:18:35.803Z",
+        "error": "Required header missing or empty: fiware-servicepath",
+        "query": "INSERT INTO \"test\".\"unknown_table\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"temperature\",\"recvtime\") VALUES ('Device1','Device','/','2025-06-26T11:00:00.000Z',25,'2026-09-28T09:18:35.786Z')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:18:35.804Z",
+        "error": "Required header missing or empty: fiware-servicepath",
+        "query": "INSERT INTO \"test\".\"unknown_table\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"temperature\",\"recvtime\") VALUES ('Device1','Device','/','2025-06-26T12:00:00.000Z',26,'2026-09-28T09:18:35.786Z')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:18:35.805Z",
+        "error": "Required header missing or empty: fiware-servicepath",
+        "query": "INSERT INTO \"test\".\"unknown_table\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"temperature\",\"recvtime\") VALUES ('Device1','Device','/','2025-06-26T11:00:00.000Z',25,'2026-09-28T09:18:35.789Z')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:18:35.806Z",
+        "error": "Required header missing or empty: fiware-servicepath",
+        "query": "INSERT INTO \"test\".\"unknown_table\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"temperature\",\"recvtime\") VALUES ('Device1','Device','/','2025-06-26T12:00:00.000Z',26,'2026-09-28T09:18:35.790Z')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  }
+]

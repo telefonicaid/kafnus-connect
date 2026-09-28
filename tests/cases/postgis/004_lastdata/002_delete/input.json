@@ -1,52 +1,178 @@
 [
   {
-    "type": "postgis",
+    "type": "raw",
     "topic": "smc_test_lastdata_processed",
-    "record": {
-      "entityid": "Sensor1",
-      "entitytype": "Sensor",
-      "timeinstant": "2025-06-26T11:00:00.000Z",
-      "temperature": 21.0,
-      "fiwareservicepath": "/delete"
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/delete",
+        "timeinstant": "2025-06-26T11:00:00.000Z",
+        "temperature": 21,
+        "recvtime": "2026-09-28T09:17:49.668Z"
+      }
     },
     "headers": {
       "fiware-service": "test",
       "fiware-servicepath": "delete",
+      "fiware-datamodel": null,
       "entityType": "sensor",
-      "entityId": "Sensor1",
+      "entityId": "sensor1",
       "suffix": "_lastdata"
     }
   },
   {
-    "type": "postgis",
+    "type": "raw",
     "topic": "smc_test_lastdata_processed",
-    "record": {
-      "entityid": "Sensor2",
-      "entitytype": "Sensor",
-      "timeinstant": "2025-06-26T12:00:00.000Z",
-      "temperature": 22.0,
-      "fiwareservicepath": "/delete"
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor2"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor2",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/delete",
+        "timeinstant": "2025-06-26T12:00:00.000Z",
+        "temperature": 22,
+        "recvtime": "2026-09-28T09:17:49.669Z"
+      }
     },
     "headers": {
       "fiware-service": "test",
       "fiware-servicepath": "delete",
+      "fiware-datamodel": null,
       "entityType": "sensor",
-      "entityId": "Sensor2",
+      "entityId": "sensor2",
       "suffix": "_lastdata"
     }
   },
   {
-    "type": "postgis",
+    "type": "raw",
     "topic": "smc_test_lastdata_processed",
-    "delete": true,
-    "record": {
-      "entityid": "Sensor1"
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Sensor1"
+      }
     },
+    "value": null,
     "headers": {
       "fiware-service": "test",
       "fiware-servicepath": "delete",
+      "fiware-datamodel": null,
       "entityType": "sensor",
-      "entityId": "Sensor1",
+      "entityId": "sensor1",
       "suffix": "_lastdata"
     }
   }

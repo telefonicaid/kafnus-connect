@@ -53,6 +53,31 @@ def read_files(file_path: Path):
     except FileNotFoundError as exc:
         raise Exception(f"the file {file_path} does not exist") from exc
 
+def prepare_coverage_dir():
+    """
+    Prepares the directory mounted in Kafnus Connect for JaCoCo coverage.
+
+    Downloads the JaCoCo agent if missing and removes execution data from
+    previous runs. The directory is made world-writable because the container
+    runs with a different user than the host.
+    """
+    coverage_dir = Path(__file__).resolve().parent / "coverage"
+    coverage_dir.mkdir(exist_ok=True)
+    coverage_dir.chmod(0o777)
+
+    agent_jar = coverage_dir / "jacocoagent.jar"
+    if not agent_jar.exists():
+        version = os.getenv("KAFNUS_TESTS_JACOCO_VERSION", "0.8.12")
+        url = f"https://repo1.maven.org/maven2/org/jacoco/org.jacoco.agent/{version}/org.jacoco.agent-{version}-runtime.jar"
+        logger.info(f"📥 Downloading JaCoCo agent {version}")
+        response = requests.get(url, timeout=60)
+        response.raise_for_status()
+        agent_jar.write_bytes(response.content)
+
+    exec_file = coverage_dir / "jacoco-e2e.exec"
+    if exec_file.exists():
+        exec_file.unlink()
+
 # ──────────────────────────────
 # Data classes
 # ──────────────────────────────
@@ -157,6 +182,11 @@ def multiservice_stack():
         "docker-compose.yml"
     ]
 
+    # If KAFNUS_TESTS_COVERAGE is "true", attach the JaCoCo agent to Kafnus Connect
+    if os.getenv("KAFNUS_TESTS_COVERAGE", "false").lower() == "true":
+        prepare_coverage_dir()
+        compose_files.append("docker-compose.coverage.yml")
+
     with DockerCompose(str(docker_dir), compose_file_name=compose_files) as compose:
         kafka_host = compose.get_service_host("kafka", 9092)
         kafka_port = compose.get_service_port("kafka", 9092)
@@ -193,3 +223,10 @@ def multiservice_stack():
             time.sleep(3600)
     
     logger.info("✅ Tests have finished")
+
+    if "docker-compose.coverage.yml" in compose_files:
+        exec_file = Path(__file__).resolve().parent / "coverage" / "jacoco-e2e.exec"
+        if exec_file.exists():
+            logger.info(f"📊 E2E coverage data written to {exec_file}")
+        else:
+            logger.warning("⚠️ E2E coverage data was not written, Kafnus Connect may not have stopped gracefully")

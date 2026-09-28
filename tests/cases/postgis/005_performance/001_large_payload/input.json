@@ -1,0 +1,974 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "timeinstant": "2025-06-26T16:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "pressure",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "light_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "battery_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "data_payload",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/performance",
+        "timeinstant": "2025-06-26T16:00:00.000Z",
+        "temperature": 23.4,
+        "humidity": 67.8,
+        "pressure": 1013.25,
+        "light_level": 450,
+        "battery_level": 85,
+        "data_payload": "{\"measurements\":[{\"timestamp\":\"2025-06-26T15:55:00Z\",\"temp\":23.1,\"hum\":68.2},{\"timestamp\":\"2025-06-26T15:56:00Z\",\"temp\":23.2,\"hum\":68},{\"timestamp\":\"2025-06-26T15:57:00Z\",\"temp\":23.3,\"hum\":67.9},{\"timestamp\":\"2025-06-26T15:58:00Z\",\"temp\":23.3,\"hum\":67.8},{\"timestamp\":\"2025-06-26T15:59:00Z\",\"temp\":23.4,\"hum\":67.8}],\"calibration\":{\"temp_offset\":-0.1,\"hum_offset\":0.5,\"last_calibrated\":\"2025-01-15\"},\"diagnostics\":{\"cpu_usage\":12.5,\"memory_usage\":45.8,\"uptime_seconds\":2592000,\"error_count\":0}}",
+        "recvtime": "2026-09-28T09:17:59.715Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "performance",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "perfsensor001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor002",
+        "timeinstant": "2025-06-26T16:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "pressure",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "light_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "battery_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "data_payload",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor002",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/performance",
+        "timeinstant": "2025-06-26T16:00:00.000Z",
+        "temperature": 24.1,
+        "humidity": 65.3,
+        "pressure": 1012.8,
+        "light_level": 520,
+        "battery_level": 92,
+        "data_payload": "{\"measurements\":[{\"timestamp\":\"2025-06-26T15:55:00Z\",\"temp\":23.8,\"hum\":65.7},{\"timestamp\":\"2025-06-26T15:56:00Z\",\"temp\":23.9,\"hum\":65.6},{\"timestamp\":\"2025-06-26T15:57:00Z\",\"temp\":24,\"hum\":65.4},{\"timestamp\":\"2025-06-26T15:58:00Z\",\"temp\":24,\"hum\":65.3},{\"timestamp\":\"2025-06-26T15:59:00Z\",\"temp\":24.1,\"hum\":65.3}],\"calibration\":{\"temp_offset\":0,\"hum_offset\":-0.2,\"last_calibrated\":\"2025-01-20\"},\"diagnostics\":{\"cpu_usage\":8.2,\"memory_usage\":38.1,\"uptime_seconds\":2419200,\"error_count\":1}}",
+        "recvtime": "2026-09-28T09:17:59.717Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "performance",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "perfsensor002",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "timeinstant": "2025-06-26T16:05:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "pressure",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "light_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "battery_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "data_payload",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/performance",
+        "timeinstant": "2025-06-26T16:05:00.000Z",
+        "temperature": 23.6,
+        "humidity": 67.4,
+        "pressure": 1013.18,
+        "light_level": 475,
+        "battery_level": 84,
+        "data_payload": "{\"measurements\":[{\"timestamp\":\"2025-06-26T16:00:00Z\",\"temp\":23.4,\"hum\":67.8},{\"timestamp\":\"2025-06-26T16:01:00Z\",\"temp\":23.5,\"hum\":67.7},{\"timestamp\":\"2025-06-26T16:02:00Z\",\"temp\":23.5,\"hum\":67.6},{\"timestamp\":\"2025-06-26T16:03:00Z\",\"temp\":23.6,\"hum\":67.5},{\"timestamp\":\"2025-06-26T16:04:00Z\",\"temp\":23.6,\"hum\":67.4}],\"calibration\":{\"temp_offset\":-0.1,\"hum_offset\":0.5,\"last_calibrated\":\"2025-01-15\"},\"diagnostics\":{\"cpu_usage\":13.2,\"memory_usage\":46.3,\"uptime_seconds\":2592300,\"error_count\":0}}",
+        "recvtime": "2026-09-28T09:17:59.717Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "performance",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "perfsensor001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "pressure",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "light_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "battery_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "data_payload",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/performance",
+        "timeinstant": "2025-06-26T16:00:00.000Z",
+        "temperature": 23.4,
+        "humidity": 67.8,
+        "pressure": 1013.25,
+        "light_level": 450,
+        "battery_level": 85,
+        "data_payload": "{\"measurements\":[{\"timestamp\":\"2025-06-26T15:55:00Z\",\"temp\":23.1,\"hum\":68.2},{\"timestamp\":\"2025-06-26T15:56:00Z\",\"temp\":23.2,\"hum\":68},{\"timestamp\":\"2025-06-26T15:57:00Z\",\"temp\":23.3,\"hum\":67.9},{\"timestamp\":\"2025-06-26T15:58:00Z\",\"temp\":23.3,\"hum\":67.8},{\"timestamp\":\"2025-06-26T15:59:00Z\",\"temp\":23.4,\"hum\":67.8}],\"calibration\":{\"temp_offset\":-0.1,\"hum_offset\":0.5,\"last_calibrated\":\"2025-01-15\"},\"diagnostics\":{\"cpu_usage\":12.5,\"memory_usage\":45.8,\"uptime_seconds\":2592000,\"error_count\":0}}",
+        "recvtime": "2026-09-28T09:18:00.171Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "performance",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "perfsensor001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor002"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "pressure",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "light_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "battery_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "data_payload",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor002",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/performance",
+        "timeinstant": "2025-06-26T16:00:00.000Z",
+        "temperature": 24.1,
+        "humidity": 65.3,
+        "pressure": 1012.8,
+        "light_level": 520,
+        "battery_level": 92,
+        "data_payload": "{\"measurements\":[{\"timestamp\":\"2025-06-26T15:55:00Z\",\"temp\":23.8,\"hum\":65.7},{\"timestamp\":\"2025-06-26T15:56:00Z\",\"temp\":23.9,\"hum\":65.6},{\"timestamp\":\"2025-06-26T15:57:00Z\",\"temp\":24,\"hum\":65.4},{\"timestamp\":\"2025-06-26T15:58:00Z\",\"temp\":24,\"hum\":65.3},{\"timestamp\":\"2025-06-26T15:59:00Z\",\"temp\":24.1,\"hum\":65.3}],\"calibration\":{\"temp_offset\":0,\"hum_offset\":-0.2,\"last_calibrated\":\"2025-01-20\"},\"diagnostics\":{\"cpu_usage\":8.2,\"memory_usage\":38.1,\"uptime_seconds\":2419200,\"error_count\":1}}",
+        "recvtime": "2026-09-28T09:18:00.172Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "performance",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "perfsensor002",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "pressure",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "light_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "battery_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "data_payload",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/performance",
+        "timeinstant": "2025-06-26T16:05:00.000Z",
+        "temperature": 23.6,
+        "humidity": 67.4,
+        "pressure": 1013.18,
+        "light_level": 475,
+        "battery_level": 84,
+        "data_payload": "{\"measurements\":[{\"timestamp\":\"2025-06-26T16:00:00Z\",\"temp\":23.4,\"hum\":67.8},{\"timestamp\":\"2025-06-26T16:01:00Z\",\"temp\":23.5,\"hum\":67.7},{\"timestamp\":\"2025-06-26T16:02:00Z\",\"temp\":23.5,\"hum\":67.6},{\"timestamp\":\"2025-06-26T16:03:00Z\",\"temp\":23.6,\"hum\":67.5},{\"timestamp\":\"2025-06-26T16:04:00Z\",\"temp\":23.6,\"hum\":67.4}],\"calibration\":{\"temp_offset\":-0.1,\"hum_offset\":0.5,\"last_calibrated\":\"2025-01-15\"},\"diagnostics\":{\"cpu_usage\":13.2,\"memory_usage\":46.3,\"uptime_seconds\":2592300,\"error_count\":0}}",
+        "recvtime": "2026-09-28T09:18:00.173Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "performance",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "perfsensor001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "timeinstant": "2025-06-26T16:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "pressure",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "light_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "battery_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "data_payload",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/performance",
+        "timeinstant": "2025-06-26T16:00:00.000Z",
+        "temperature": 23.4,
+        "humidity": 67.8,
+        "pressure": 1013.25,
+        "light_level": 450,
+        "battery_level": 85,
+        "data_payload": "{\"measurements\":[{\"timestamp\":\"2025-06-26T15:55:00Z\",\"temp\":23.1,\"hum\":68.2},{\"timestamp\":\"2025-06-26T15:56:00Z\",\"temp\":23.2,\"hum\":68},{\"timestamp\":\"2025-06-26T15:57:00Z\",\"temp\":23.3,\"hum\":67.9},{\"timestamp\":\"2025-06-26T15:58:00Z\",\"temp\":23.3,\"hum\":67.8},{\"timestamp\":\"2025-06-26T15:59:00Z\",\"temp\":23.4,\"hum\":67.8}],\"calibration\":{\"temp_offset\":-0.1,\"hum_offset\":0.5,\"last_calibrated\":\"2025-01-15\"},\"diagnostics\":{\"cpu_usage\":12.5,\"memory_usage\":45.8,\"uptime_seconds\":2592000,\"error_count\":0}}",
+        "recvtime": "2026-09-28T09:18:00.191Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "performance",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "perfsensor001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor002",
+        "timeinstant": "2025-06-26T16:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "pressure",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "light_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "battery_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "data_payload",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor002",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/performance",
+        "timeinstant": "2025-06-26T16:00:00.000Z",
+        "temperature": 24.1,
+        "humidity": 65.3,
+        "pressure": 1012.8,
+        "light_level": 520,
+        "battery_level": 92,
+        "data_payload": "{\"measurements\":[{\"timestamp\":\"2025-06-26T15:55:00Z\",\"temp\":23.8,\"hum\":65.7},{\"timestamp\":\"2025-06-26T15:56:00Z\",\"temp\":23.9,\"hum\":65.6},{\"timestamp\":\"2025-06-26T15:57:00Z\",\"temp\":24,\"hum\":65.4},{\"timestamp\":\"2025-06-26T15:58:00Z\",\"temp\":24,\"hum\":65.3},{\"timestamp\":\"2025-06-26T15:59:00Z\",\"temp\":24.1,\"hum\":65.3}],\"calibration\":{\"temp_offset\":0,\"hum_offset\":-0.2,\"last_calibrated\":\"2025-01-20\"},\"diagnostics\":{\"cpu_usage\":8.2,\"memory_usage\":38.1,\"uptime_seconds\":2419200,\"error_count\":1}}",
+        "recvtime": "2026-09-28T09:18:00.192Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "performance",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "perfsensor002",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "timeinstant": "2025-06-26T16:05:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "pressure",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "light_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "battery_level",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "data_payload",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "PerfSensor001",
+        "entitytype": "Sensor",
+        "fiwareservicepath": "/performance",
+        "timeinstant": "2025-06-26T16:05:00.000Z",
+        "temperature": 23.6,
+        "humidity": 67.4,
+        "pressure": 1013.18,
+        "light_level": 475,
+        "battery_level": 84,
+        "data_payload": "{\"measurements\":[{\"timestamp\":\"2025-06-26T16:00:00Z\",\"temp\":23.4,\"hum\":67.8},{\"timestamp\":\"2025-06-26T16:01:00Z\",\"temp\":23.5,\"hum\":67.7},{\"timestamp\":\"2025-06-26T16:02:00Z\",\"temp\":23.5,\"hum\":67.6},{\"timestamp\":\"2025-06-26T16:03:00Z\",\"temp\":23.6,\"hum\":67.5},{\"timestamp\":\"2025-06-26T16:04:00Z\",\"temp\":23.6,\"hum\":67.4}],\"calibration\":{\"temp_offset\":-0.1,\"hum_offset\":0.5,\"last_calibrated\":\"2025-01-15\"},\"diagnostics\":{\"cpu_usage\":13.2,\"memory_usage\":46.3,\"uptime_seconds\":2592300,\"error_count\":0}}",
+        "recvtime": "2026-09-28T09:18:00.193Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "performance",
+      "fiware-datamodel": null,
+      "entityType": "sensor",
+      "entityId": "perfsensor001",
+      "suffix": "_mutable"
+    }
+  }
+]

@@ -1,372 +1,3580 @@
 [
   {
-    "type": "postgis",
+    "type": "raw",
     "topic": "smc_test_historic_processed",
-    "record": {
-      "entityid": "Zone-Point",
-      "entitytype": "Zone",
-      "timeinstant": "2025-05-15T12:00:00.000Z",
-      "recvtime": "2025-05-15T12:00:00.000Z",
-      "name": "Zone Point",
-      "location": {
-        "value": {
-          "type": "Point",
-          "coordinates": [
-            -1.7038,
-            1.4168
-          ]
-        },
-        "type": "geo:json"
-      },
-      "zone": "Zone-Point",
-      "zip": "12345",
-      "fiwareservicepath": "/parking"
-    },
-    "headers": {
-      "fiware-service": "test",
-      "fiware-servicepath": "parking",
-      "entityType": "zone",
-      "entityId": "Zone-point",
-      "suffix": ""
-    }
-  },
-  {
-    "type": "postgis",
-    "topic": "smc_test_historic_processed",
-    "record": {
-      "entityid": "Zone-Polygon",
-      "entitytype": "Zone",
-      "timeinstant": "2025-05-15T13:00:00.000Z",
-      "recvtime": "2025-05-15T13:00:00.000Z",
-      "name": "Zone Polygon",
-      "polygon": {
-        "type": "geo:json",
-        "value": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                -1.704,
-                1.4168
-              ],
-              [
-                -1.703,
-                1.4175
-              ],
-              [
-                -1.702,
-                1.4162
-              ],
-              [
-                -1.704,
-                1.4168
-              ]
-            ]
-          ]
-        }
-      },
-      "zone": "Zone-Polygon",
-      "zip": "12345",
-      "fiwareservicepath": "/parking"
-    },
-    "headers": {
-      "fiware-service": "test",
-      "fiware-servicepath": "parking",
-      "entityType": "zone",
-      "entityId": "Zone-polygon",
-      "suffix": ""
-    }
-  },
-  {
-    "type": "postgis",
-    "topic": "smc_test_historic_processed",
-    "record": {
-      "entityid": "Zone-LineString",
-      "entitytype": "Zone",
-      "timeinstant": "2025-05-15T14:00:00.000Z",
-      "recvtime": "2025-05-15T14:00:00.000Z",
-      "name": "Zone LineString",
-      "linestring": {
-        "value": {
-          "type": "LineString",
-          "coordinates": [
-            [
-              -1.7038,
-              1.4168
-            ],
-            [
-              -1.7028,
-              1.4178
-            ]
-          ]
-        },
-        "type": "geo:json"
-      },
-      "zone": "Zone-LineString",
-      "zip": "12345",
-      "fiwareservicepath": "/parking"
-    },
-    "headers": {
-      "fiware-service": "test",
-      "fiware-servicepath": "parking",
-      "entityType": "zone",
-      "entityId": "Zone-linestring",
-      "suffix": ""
-    }
-  },
-  {
-    "type": "postgis",
-    "topic": "smc_test_historic_processed",
-    "record": {
-      "entityid": "Zone-MultiPoint",
-      "entitytype": "Zone",
-      "timeinstant": "2025-05-15T15:00:00.000Z",
-      "recvtime": "2025-05-15T15:00:00.000Z",
-      "name": "Zone MultiPoint",
-      "multipoint": {
-        "value": {
-          "type": "MultiPoint",
-          "coordinates": [
-            [
-              -1.7038,
-              1.4168
-            ],
-            [
-              -1.7028,
-              1.4178
-            ]
-          ]
-        },
-        "type": "geo:json"
-      },
-      "zone": "Zone-MultiPoint",
-      "zip": "12345",
-      "fiwareservicepath": "/parking"
-    },
-    "headers": {
-      "fiware-service": "test",
-      "fiware-servicepath": "parking",
-      "entityType": "zone",
-      "entityId": "Zone-multipoint",
-      "suffix": ""
-    }
-  },
-  {
-    "type": "postgis",
-    "topic": "smc_test_historic_processed",
-    "record": {
-      "entityid": "Zone-MultiLineString",
-      "entitytype": "Zone",
-      "timeinstant": "2025-05-15T16:00:00.000Z",
-      "recvtime": "2025-05-15T16:00:00.000Z",
-      "name": "Zone MultiLineString",
-      "multilinestring": {
-        "value": {
-          "type": "MultiLineString",
-          "coordinates": [
-            [
-              [
-                -2.7038,
-                2.4168
-              ],
-              [
-                -2.7028,
-                2.4178
-              ]
-            ],
-            [
-              [
-                -2.7018,
-                2.4188
-              ],
-              [
-                -2.7008,
-                2.4198
-              ]
-            ]
-          ]
-        },
-        "type": "geo:json"
-      },
-      "zone": "Zone-MultiLineString",
-      "zip": "12345",
-      "fiwareservicepath": "/parking"
-    },
-    "headers": {
-      "fiware-service": "test",
-      "fiware-servicepath": "parking",
-      "entityType": "zone",
-      "entityId": "Zone-multilinestring",
-      "suffix": ""
-    }
-  },
-  {
-    "type": "postgis",
-    "topic": "smc_test_historic_processed",
-    "record": {
-      "entityid": "Zone-MultiPolygon",
-      "entitytype": "Zone",
-      "timeinstant": "2025-05-15T17:00:00.000Z",
-      "recvtime": "2025-05-15T17:00:00.000Z",
-      "name": "Zone MultiPolygon",
-      "multipolygon": {
-        "value": {
-          "type": "MultiPolygon",
-          "coordinates": [
-            [
-              [
-                [
-                  -2.704,
-                  -2.4168
-                ],
-                [
-                  -2.703,
-                  -2.4175
-                ],
-                [
-                  -2.702,
-                  -2.4162
-                ],
-                [
-                  -2.704,
-                  -2.4168
-                ]
-              ]
-            ],
-            [
-              [
-                [
-                  -2.714,
-                  -2.4268
-                ],
-                [
-                  -2.713,
-                  -2.4275
-                ],
-                [
-                  -2.712,
-                  -2.4262
-                ],
-                [
-                  -2.714,
-                  -2.4268
-                ]
-              ]
-            ]
-          ]
-        },
-        "type": "geo:json"
-      },
-      "zone": "Zone-MultiPolygon",
-      "zip": "12345",
-      "fiwareservicepath": "/parking"
-    },
-    "headers": {
-      "fiware-service": "test",
-      "fiware-servicepath": "parking",
-      "entityType": "zone",
-      "entityId": "Zone-multipolygon",
-      "suffix": ""
-    }
-  },
-  {
-    "type": "postgis",
-    "topic": "smc_test_historic_processed",
-    "record": {
-      "entityid": "Zone-Feature",
-      "entitytype": "Zone",
-      "timeinstant": "2025-05-15T18:00:00.000Z",
-      "recvtime": "2025-05-15T18:00:00.000Z",
-      "name": "Zone Feature",
-      "feature": {
-        "value": {
-          "type": "Feature",
-          "geometry": {
-            "type": "Point",
-            "coordinates": [
-              -3.7038,
-              3.4168
-            ]
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
           },
-          "properties": {
-            "info": "main point"
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
           }
-        },
-        "type": "geo:json"
+        ],
+        "optional": false
       },
-      "zone": "Zone-Feature",
-      "zip": "12345",
-      "fiwareservicepath": "/parking"
+      "payload": {
+        "entityid": "Zone-Point",
+        "timeinstant": "2025-05-15T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Point",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Point",
+        "timeinstant": "2025-05-15T12:00:00.000Z",
+        "location": {
+          "wkb": "AQEAAAD7y+7Jw0L7v5eQD3o2q/Y/",
+          "srid": 4326
+        },
+        "zone": "Zone-Point",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.125Z"
+      }
     },
     "headers": {
       "fiware-service": "test",
       "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
       "entityType": "zone",
-      "entityId": "Zone-feature",
-      "suffix": ""
+      "entityId": "zone_point",
+      "suffix": null
     }
   },
   {
-    "type": "postgis",
+    "type": "raw",
     "topic": "smc_test_historic_processed",
-    "record": {
-      "entityid": "Zone-Ignored",
-      "entitytype": "Zone",
-      "timeinstant": "2025-05-15T20:00:00.000Z",
-      "recvtime": "2025-05-15T20:00:00.000Z",
-      "name": "Zone Ignored",
-      "location": {
-        "value": {
-          "type": "Point",
-          "coordinates": [
-            -4.7038,
-            4.4168
-          ]
-        },
-        "type": "geo:json"
-      },
-      "zoneignored": {
-        "value": {
-          "type": "Polygon",
-          "coordinates": [
-            [
-              [
-                -4.704,
-                4.4168
-              ],
-              [
-                -4.703,
-                4.4175
-              ],
-              [
-                -4.702,
-                4.4162
-              ],
-              [
-                -4.704,
-                4.4168
-              ]
-            ]
-          ]
-        },
-        "type": "geo:json",
-        "metadata": {
-          "ignoreType": {
-            "value": true,
-            "type": "Boolean"
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
           }
-        }
+        ],
+        "optional": false
       },
-      "zone": "Zone-Ignored",
-      "zip": "12345",
-      "fiwareservicepath": "/parking"
+      "payload": {
+        "entityid": "Zone-Polygon",
+        "timeinstant": "2025-05-15T13:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "polygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Polygon",
+        "timeinstant": "2025-05-15T13:00:00.000Z",
+        "polygon": {
+          "wkb": "AQMAAAABAAAABAAAAN0kBoGVQ/u/l5APejar9j9zaJHtfD/7v65H4XoUrvY/CKwcWmQ7+7/whclUwaj2P90kBoGVQ/u/l5APejar9j8=",
+          "srid": 4326
+        },
+        "zone": "Zone-Polygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.126Z"
+      }
     },
     "headers": {
       "fiware-service": "test",
       "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
       "entityType": "zone",
-      "entityId": "Zone-ignored",
-      "suffix": ""
+      "entityId": "zone_polygon",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon",
+        "timeinstant": "2025-05-15T13:00:01.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "polygon",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Polygon",
+        "timeinstant": "2025-05-15T13:00:01.000Z",
+        "polygon": "{\"type\":\"Polygon\",\"coordinates\":[[[-1.704,1.4168],[-1.703,1.4175],[-1.702,1.4162],[-1.704,1.4168]]]}",
+        "zone": "Zone-Polygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.129Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_polygon",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-LineString",
+        "timeinstant": "2025-05-15T14:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "linestring",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-LineString",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone LineString",
+        "timeinstant": "2025-05-15T14:00:00.000Z",
+        "linestring": {
+          "wkb": "AQIAAAACAAAA+8vuycNC+7+XkA96Nqv2P5EPejarPvu/AU2EDU+v9j8=",
+          "srid": 4326
+        },
+        "zone": "Zone-LineString",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.130Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_linestring",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPoint",
+        "timeinstant": "2025-05-15T15:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multipoint",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPoint",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiPoint",
+        "timeinstant": "2025-05-15T15:00:00.000Z",
+        "multipoint": {
+          "wkb": "AQQAAAACAAAAAQEAAAD7y+7Jw0L7v5eQD3o2q/Y/AQEAAACRD3o2qz77vwFNhA1Pr/Y/",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiPoint",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.133Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multipoint",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiLineString",
+        "timeinstant": "2025-05-15T16:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multilinestring",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiLineString",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiLineString",
+        "timeinstant": "2025-05-15T16:00:00.000Z",
+        "multilinestring": {
+          "wkb": "AQUAAAACAAAAAQIAAAACAAAA+8vuycNC+7+XkA96Nqv2P5EPejarPvu/AU2EDU+v9j8BAgAAAAIAAAAmUwWjkjr7v2wJ+aBns/Y/vJaQD3o2+7/WxW00gLf2Pw==",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiLineString",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.135Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multilinestring",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPolygon",
+        "timeinstant": "2025-05-15T17:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multipolygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPolygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiPolygon",
+        "timeinstant": "2025-05-15T17:00:00.000Z",
+        "multipolygon": {
+          "wkb": "AQYAAAACAAAAAQMAAAABAAAABAAAAN0kBoGVQ/u/l5APejar9j9zaJHtfD/7v65H4XoUrvY/CKwcWmQ7+7/whclUwaj2P90kBoGVQ/u/l5APejar9j8BAwAAAAEAAAAEAAAABoGVQ4ts+7/A7J48LNT2P5zEILByaPu/16NwPQrX9j8xCKwcWmT7vxniWBe30fY/BoGVQ4ts+7/A7J48LNT2Pw==",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiPolygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.140Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multipolygon",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Point",
+        "timeinstant": "2025-05-15T12:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Point",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Point",
+        "timeinstant": "2025-05-15T12:30:00.000Z",
+        "location": {
+          "wkb": "AQEAAAD+ZffkYaEFwEvIBz2bVQNA",
+          "srid": 4326
+        },
+        "zone": "Zone-Point",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.141Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_point",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon",
+        "timeinstant": "2025-05-15T13:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "polygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Polygon",
+        "timeinstant": "2025-05-15T13:30:00.000Z",
+        "polygon": {
+          "wkb": "AQMAAAABAAAABAAAAG8Sg8DKoQXAS8gHPZtVA0A5tMh2vp8FwNejcD0KVwNABFYOLbKdBcD4wmSqYFQDQG8Sg8DKoQXAS8gHPZtVA0A=",
+          "srid": 4326
+        },
+        "zone": "Zone-Polygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.147Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_polygon",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-LineString",
+        "timeinstant": "2025-05-15T14:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "linestring",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-LineString",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone LineString",
+        "timeinstant": "2025-05-15T14:30:00.000Z",
+        "linestring": {
+          "wkb": "AQIAAAACAAAA/mX35GGhBcBLyAc9m1UDQMgHPZtVnwXAgSbChqdXA0A=",
+          "srid": 4326
+        },
+        "zone": "Zone-LineString",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.148Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_linestring",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPoint",
+        "timeinstant": "2025-05-15T15:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multipoint",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPoint",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiPoint",
+        "timeinstant": "2025-05-15T15:30:00.000Z",
+        "multipoint": {
+          "wkb": "AQQAAAACAAAAAQEAAAD+ZffkYaEFwEvIBz2bVQNAAQEAAADIBz2bVZ8FwIEmwoanVwNA",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiPoint",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.149Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multipoint",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiLineString",
+        "timeinstant": "2025-05-15T16:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multilinestring",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiLineString",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiLineString",
+        "timeinstant": "2025-05-15T16:30:00.000Z",
+        "multilinestring": {
+          "wkb": "AQUAAAACAAAAAQIAAAACAAAA/mX35GGhBcBLyAc9m1UDQMgHPZtVnwXAgSbChqdXA0ABAgAAAAIAAACTqYJRSZ0FwLaEfNCzWQNAXkvIBz2bBcDr4jYawFsDQA==",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiLineString",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.150Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multilinestring",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPolygon",
+        "timeinstant": "2025-05-15T17:30:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multipolygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPolygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiPolygon",
+        "timeinstant": "2025-05-15T17:30:00.000Z",
+        "multipolygon": {
+          "wkb": "AQYAAAACAAAAAQMAAAABAAAABAAAAG8Sg8DKoQXAS8gHPZtVA8A5tMh2vp8FwNejcD0KVwPABFYOLbKdBcD4wmSqYFQDwG8Sg8DKoQXAS8gHPZtVA8ABAwAAAAEAAAAEAAAAg8DKoUW2BcBgdk8eFmoDwE5iEFg5tAXA7FG4HoVrA8AZBFYOLbIFwA1xrIvbaAPAg8DKoUW2BcBgdk8eFmoDwA==",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiPolygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.151Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multipolygon",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Feature",
+        "timeinstant": "2025-05-15T18:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "feature",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Feature",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Feature",
+        "timeinstant": "2025-05-15T18:00:00.000Z",
+        "feature": {
+          "wkb": "AQEAAAD+ZffkYaENwEvIBz2bVQtA",
+          "srid": 4326
+        },
+        "zone": "Zone-Feature",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.153Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_feature",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-FeatureCollection",
+        "timeinstant": "2025-05-15T19:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "featurecollection",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-FeatureCollection",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone FeatureCollection",
+        "timeinstant": "2025-05-15T19:00:00.000Z",
+        "featurecollection": {
+          "wkb": "AQMAAAABAAAABAAAAG8Sg8DKoQ3AS8gHPZtVC0A5tMh2vp8NwNejcD0KVwtABFYOLbKdDcD4wmSqYFQLQG8Sg8DKoQ3AS8gHPZtVC0A=",
+          "srid": 4326
+        },
+        "zone": "Zone-FeatureCollection",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.154Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_featurecollection",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Ignored",
+        "timeinstant": "2025-05-15T20:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zoneignored",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Ignored",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Ignored",
+        "timeinstant": "2025-05-15T20:00:00.000Z",
+        "location": {
+          "wkb": "AQEAAAD/snvysNASwCbkg57NqhFA",
+          "srid": 4326
+        },
+        "zoneignored": {
+          "wkb": "AQMAAAABAAAABAAAADeJQWDl0BLAJuSDns2qEUAdWmQ7388SwOxRuB6FqxFAAiuHFtnOEsB8YTJVMKoRQDeJQWDl0BLAJuSDns2qEUA=",
+          "srid": 4326
+        },
+        "zone": "Zone-Ignored",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.155Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_ignored",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Point"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Point",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Point",
+        "timeinstant": "2025-05-15T12:00:00.000Z",
+        "location": {
+          "wkb": "AQEAAAD7y+7Jw0L7v5eQD3o2q/Y/",
+          "srid": 4326
+        },
+        "zone": "Zone-Point",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.157Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_point",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "polygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Polygon",
+        "timeinstant": "2025-05-15T13:00:00.000Z",
+        "polygon": {
+          "wkb": "AQMAAAABAAAABAAAAN0kBoGVQ/u/l5APejar9j9zaJHtfD/7v65H4XoUrvY/CKwcWmQ7+7/whclUwaj2P90kBoGVQ/u/l5APejar9j8=",
+          "srid": 4326
+        },
+        "zone": "Zone-Polygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.158Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_polygon",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "polygon",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Polygon",
+        "timeinstant": "2025-05-15T13:00:01.000Z",
+        "polygon": "{\"type\":\"Polygon\",\"coordinates\":[[[-1.704,1.4168],[-1.703,1.4175],[-1.702,1.4162],[-1.704,1.4168]]]}",
+        "zone": "Zone-Polygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.159Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_polygon",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-LineString"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "linestring",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-LineString",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone LineString",
+        "timeinstant": "2025-05-15T14:00:00.000Z",
+        "linestring": {
+          "wkb": "AQIAAAACAAAA+8vuycNC+7+XkA96Nqv2P5EPejarPvu/AU2EDU+v9j8=",
+          "srid": 4326
+        },
+        "zone": "Zone-LineString",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.159Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_linestring",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPoint"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multipoint",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPoint",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiPoint",
+        "timeinstant": "2025-05-15T15:00:00.000Z",
+        "multipoint": {
+          "wkb": "AQQAAAACAAAAAQEAAAD7y+7Jw0L7v5eQD3o2q/Y/AQEAAACRD3o2qz77vwFNhA1Pr/Y/",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiPoint",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.160Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multipoint",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiLineString"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multilinestring",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiLineString",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiLineString",
+        "timeinstant": "2025-05-15T16:00:00.000Z",
+        "multilinestring": {
+          "wkb": "AQUAAAACAAAAAQIAAAACAAAA+8vuycNC+7+XkA96Nqv2P5EPejarPvu/AU2EDU+v9j8BAgAAAAIAAAAmUwWjkjr7v2wJ+aBns/Y/vJaQD3o2+7/WxW00gLf2Pw==",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiLineString",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.161Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multilinestring",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPolygon"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multipolygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPolygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiPolygon",
+        "timeinstant": "2025-05-15T17:00:00.000Z",
+        "multipolygon": {
+          "wkb": "AQYAAAACAAAAAQMAAAABAAAABAAAAN0kBoGVQ/u/l5APejar9j9zaJHtfD/7v65H4XoUrvY/CKwcWmQ7+7/whclUwaj2P90kBoGVQ/u/l5APejar9j8BAwAAAAEAAAAEAAAABoGVQ4ts+7/A7J48LNT2P5zEILByaPu/16NwPQrX9j8xCKwcWmT7vxniWBe30fY/BoGVQ4ts+7/A7J48LNT2Pw==",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiPolygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.166Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multipolygon",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Point"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Point",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Point",
+        "timeinstant": "2025-05-15T12:30:00.000Z",
+        "location": {
+          "wkb": "AQEAAAD+ZffkYaEFwEvIBz2bVQNA",
+          "srid": 4326
+        },
+        "zone": "Zone-Point",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.167Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_point",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "polygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Polygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Polygon",
+        "timeinstant": "2025-05-15T13:30:00.000Z",
+        "polygon": {
+          "wkb": "AQMAAAABAAAABAAAAG8Sg8DKoQXAS8gHPZtVA0A5tMh2vp8FwNejcD0KVwNABFYOLbKdBcD4wmSqYFQDQG8Sg8DKoQXAS8gHPZtVA0A=",
+          "srid": 4326
+        },
+        "zone": "Zone-Polygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.169Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_polygon",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-LineString"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "linestring",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-LineString",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone LineString",
+        "timeinstant": "2025-05-15T14:30:00.000Z",
+        "linestring": {
+          "wkb": "AQIAAAACAAAA/mX35GGhBcBLyAc9m1UDQMgHPZtVnwXAgSbChqdXA0A=",
+          "srid": 4326
+        },
+        "zone": "Zone-LineString",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.170Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_linestring",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPoint"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multipoint",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPoint",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiPoint",
+        "timeinstant": "2025-05-15T15:30:00.000Z",
+        "multipoint": {
+          "wkb": "AQQAAAACAAAAAQEAAAD+ZffkYaEFwEvIBz2bVQNAAQEAAADIBz2bVZ8FwIEmwoanVwNA",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiPoint",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.172Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multipoint",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiLineString"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multilinestring",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiLineString",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiLineString",
+        "timeinstant": "2025-05-15T16:30:00.000Z",
+        "multilinestring": {
+          "wkb": "AQUAAAACAAAAAQIAAAACAAAA/mX35GGhBcBLyAc9m1UDQMgHPZtVnwXAgSbChqdXA0ABAgAAAAIAAACTqYJRSZ0FwLaEfNCzWQNAXkvIBz2bBcDr4jYawFsDQA==",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiLineString",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.173Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multilinestring",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPolygon"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "multipolygon",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-MultiPolygon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone MultiPolygon",
+        "timeinstant": "2025-05-15T17:30:00.000Z",
+        "multipolygon": {
+          "wkb": "AQYAAAACAAAAAQMAAAABAAAABAAAAG8Sg8DKoQXAS8gHPZtVA8A5tMh2vp8FwNejcD0KVwPABFYOLbKdBcD4wmSqYFQDwG8Sg8DKoQXAS8gHPZtVA8ABAwAAAAEAAAAEAAAAg8DKoUW2BcBgdk8eFmoDwE5iEFg5tAXA7FG4HoVrA8AZBFYOLbIFwA1xrIvbaAPAg8DKoUW2BcBgdk8eFmoDwA==",
+          "srid": 4326
+        },
+        "zone": "Zone-MultiPolygon",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.175Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_multipolygon",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Feature"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "feature",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Feature",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Feature",
+        "timeinstant": "2025-05-15T18:00:00.000Z",
+        "feature": {
+          "wkb": "AQEAAAD+ZffkYaENwEvIBz2bVQtA",
+          "srid": 4326
+        },
+        "zone": "Zone-Feature",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.177Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_feature",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-FeatureCollection"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "featurecollection",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-FeatureCollection",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone FeatureCollection",
+        "timeinstant": "2025-05-15T19:00:00.000Z",
+        "featurecollection": {
+          "wkb": "AQMAAAABAAAABAAAAG8Sg8DKoQ3AS8gHPZtVC0A5tMh2vp8NwNejcD0KVwtABFYOLbKdDcD4wmSqYFQLQG8Sg8DKoQ3AS8gHPZtVC0A=",
+          "srid": 4326
+        },
+        "zone": "Zone-FeatureCollection",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.177Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_featurecollection",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Ignored"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "location",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zoneignored",
+            "type": "struct",
+            "name": "io.confluent.connect.jdbc.data.geometry.Geometry",
+            "fields": [
+              {
+                "field": "wkb",
+                "type": "bytes"
+              },
+              {
+                "field": "srid",
+                "type": "int32"
+              }
+            ],
+            "optional": false
+          },
+          {
+            "field": "zone",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "zip",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-Ignored",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/parking",
+        "name": "Zone Ignored",
+        "timeinstant": "2025-05-15T20:00:00.000Z",
+        "location": {
+          "wkb": "AQEAAAD/snvysNASwCbkg57NqhFA",
+          "srid": 4326
+        },
+        "zoneignored": {
+          "wkb": "AQMAAAABAAAABAAAADeJQWDl0BLAJuSDns2qEUAdWmQ7388SwOxRuB6FqxFAAiuHFtnOEsB8YTJVMKoRQDeJQWDl0BLAJuSDns2qEUA=",
+          "srid": 4326
+        },
+        "zone": "Zone-Ignored",
+        "zip": "12345",
+        "recvtime": "2026-09-28T09:17:06.179Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "parking",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_ignored",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:06.820Z",
+        "error": "ERROR: column \"polygon\" is of type geometry but expression is of type character varying",
+        "query": "INSERT INTO \"tests\".\"test\".\"parking_zone\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"name\",\"timeinstant\",\"polygon\",\"zone\",\"zip\",\"recvtime\") VALUES (('Zone-Polygon')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:06.821Z",
+        "error": "ERROR: column \"polygon\" is of type geometry but expression is of type character varying",
+        "query": "INSERT INTO \"tests\".\"test\".\"parking_zone_lastdata\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"name\",\"timeinstant\",\"polygon\",\"zone\",\"zip\",\"recvtime\") VALUES (('Zone-Polygon')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
     }
   }
 ]

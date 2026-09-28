@@ -1,0 +1,2243 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_sgtr_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:10.423Z",
+        "error": "java.net.http.HttpConnectTimeoutException: HTTP connect timed out",
+        "query": "{\"query\":\"\\n            mutation {\\n                createHotel(dti: \\\"grafo\\\", input: { object: { externalId: \\\"Hotel:Creado\\\", stars: 4, published: true, label: { value: \\\"Hotel Creado\\\", lang: \\\"es\\\" }, hotelSpecialty: { uri: \\\"https://ontologia.segittur.es/turismo/kos/hotelspecialty/BusinessHotel\\\" }, hasPriceClass: { uri: \\\"https://ontologia.segittur.es/turismo/kos/priceclass/HighRange\\\" }, offersMealPlan: [{ uri: \\\"https://ontologia.segittur.es/turismo/kos/mealplan/AccommodationOnly\\\" }, { uri: \\\"https://ontologia.segittur.es/turismo/kos/mealplan/Breakfast\\\" }, { uri: \\\"https://ontologia.segittur.es/turismo/kos/mealplan/HalfBoard\\\" }, { uri: \\\"https://ontologia.segittur.es/turismo/kos/mealplan/FullBoard\\\" }], offersAdditionalAccommodationService: [{ uri: \\\"https://ontologia.segittur.es/turismo/kos/accommodationservice/Restaurant\\\" }, { uri: \\\"https://ontologia.segittur.es/turismo/kos/accommodationservice/Pool\\\" }], hasDescription: { object: { shortDescription: \\\"Un hotel moderno con todos los servicios para negocios y ocio\\\", longDescription: \\\"blablabla \\\", keyword: [] } }, offersRoom: { object: { numberOfRooms: 8, maximumCapacity: 2 } } } }) { uri }\\n            }\\n        \"}"
+      }
+    },
+    "headers": {
+      "fiware-service": "sgtr",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "sgtr",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateOnly"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateOnly",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T00:00:00.000Z",
+        "timeinstant_tz": 1747267200000,
+        "timeinstant_no_tz": 1747267200000,
+        "timeinstant_wo_tz": 1747267200000,
+        "recvtime": "2026-09-28T09:17:10.626Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_dateonly",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoTz"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoTz",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:00:01.000Z",
+        "timeinstant_tz": 1747310401000,
+        "timeinstant_no_tz": 1747310401000,
+        "timeinstant_wo_tz": 1747310401000,
+        "recvtime": "2026-09-28T09:17:10.630Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimenotz",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeMillisZ"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeMillisZ",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:00:02.123Z",
+        "timeinstant_tz": 1747310402123,
+        "timeinstant_no_tz": 1747310402123,
+        "timeinstant_wo_tz": 1747310402123,
+        "recvtime": "2026-09-28T09:17:10.631Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimemillisz",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeMillisOffset"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeMillisOffset",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T10:00:03.123Z",
+        "timeinstant_tz": 1747303203123,
+        "timeinstant_no_tz": 1747303203123,
+        "timeinstant_wo_tz": 1747303203123,
+        "recvtime": "2026-09-28T09:17:10.633Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimemillisoffset",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateOnly",
+        "timeinstant": "2025-05-15T00:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateOnly",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T00:00:00.000Z",
+        "timeinstant_tz": 1747267200000,
+        "timeinstant_no_tz": 1747267200000,
+        "timeinstant_wo_tz": 1747267200000,
+        "recvtime": "2026-09-28T09:17:10.635Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_dateonly",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoTz",
+        "timeinstant": "2025-05-15T12:00:01.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoTz",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:00:01.000Z",
+        "timeinstant_tz": 1747310401000,
+        "timeinstant_no_tz": 1747310401000,
+        "timeinstant_wo_tz": 1747310401000,
+        "recvtime": "2026-09-28T09:17:10.636Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimenotz",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeMillisZ",
+        "timeinstant": "2025-05-15T12:00:02.123Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeMillisZ",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:00:02.123Z",
+        "timeinstant_tz": 1747310402123,
+        "timeinstant_no_tz": 1747310402123,
+        "timeinstant_wo_tz": 1747310402123,
+        "recvtime": "2026-09-28T09:17:10.637Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimemillisz",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeMillisOffset",
+        "timeinstant": "2025-05-15T10:00:03.123Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeMillisOffset",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T10:00:03.123Z",
+        "timeinstant_tz": 1747303203123,
+        "timeinstant_no_tz": 1747303203123,
+        "timeinstant_wo_tz": 1747303203123,
+        "recvtime": "2026-09-28T09:17:10.639Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimemillisoffset",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeShortTz",
+        "timeinstant": "2025-05-15T10:00:04.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeShortTz",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T10:00:04.000Z",
+        "timeinstant_tz": 1747303204000,
+        "timeinstant_no_tz": 1747303204000,
+        "timeinstant_wo_tz": 1747303204000,
+        "recvtime": "2026-09-28T09:17:10.640Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimeshorttz",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeShortTzNoColon",
+        "timeinstant": "2025-05-15T10:00:05.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeShortTzNoColon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T10:00:05.000Z",
+        "timeinstant_tz": 1747303205000,
+        "timeinstant_no_tz": 1747303205000,
+        "timeinstant_wo_tz": 1747303205000,
+        "recvtime": "2026-09-28T09:17:10.641Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimeshorttznocolon",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoSeconds",
+        "timeinstant": "2025-05-15T12:01:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoSeconds",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:01:00.000Z",
+        "timeinstant_tz": 1747310460000,
+        "timeinstant_no_tz": 1747310460000,
+        "timeinstant_wo_tz": 1747310460000,
+        "recvtime": "2026-09-28T09:17:10.642Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimenoseconds",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoSecondsNoTz",
+        "timeinstant": "2025-05-15T12:02:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoSecondsNoTz",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:02:00.000Z",
+        "timeinstant_tz": 1747310520000,
+        "timeinstant_no_tz": 1747310520000,
+        "timeinstant_wo_tz": 1747310520000,
+        "recvtime": "2026-09-28T09:17:10.643Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimenosecondsnotz",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeHourOnly",
+        "timeinstant": "2025-05-15T13:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeHourOnly",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T13:00:00.000Z",
+        "timeinstant_tz": 1747314000000,
+        "timeinstant_no_tz": 1747314000000,
+        "timeinstant_wo_tz": 1747314000000,
+        "recvtime": "2026-09-28T09:17:10.644Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimehouronly",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeISO8601Type",
+        "timeinstant": "2025-05-15T14:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeISO8601Type",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T14:00:00.000Z",
+        "timeinstant_tz": 1747317600000,
+        "timeinstant_no_tz": 1747317600000,
+        "timeinstant_wo_tz": 1747317600000,
+        "recvtime": "2026-09-28T09:17:10.645Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimeiso8601type",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNull",
+        "timeinstant": "2025-05-15T15:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNull",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T15:00:00.000Z",
+        "timeinstant_tz": null,
+        "timeinstant_no_tz": null,
+        "timeinstant_wo_tz": null,
+        "recvtime": "2026-09-28T09:17:10.646Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimenull",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTime",
+        "timeinstant": "2025-05-15T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTime",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:00:00.000Z",
+        "timeinstant_tz": 1747310400000,
+        "timeinstant_no_tz": 1747310400000,
+        "timeinstant_wo_tz": 1747310400000,
+        "recvtime": "2026-09-28T09:17:10.647Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetime",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeShortTz"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeShortTz",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T10:00:04.000Z",
+        "timeinstant_tz": 1747303204000,
+        "timeinstant_no_tz": 1747303204000,
+        "timeinstant_wo_tz": 1747303204000,
+        "recvtime": "2026-09-28T09:17:10.648Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimeshorttz",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeShortTzNoColon"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeShortTzNoColon",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T10:00:05.000Z",
+        "timeinstant_tz": 1747303205000,
+        "timeinstant_no_tz": 1747303205000,
+        "timeinstant_wo_tz": 1747303205000,
+        "recvtime": "2026-09-28T09:17:10.649Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimeshorttznocolon",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoSeconds"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoSeconds",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:01:00.000Z",
+        "timeinstant_tz": 1747310460000,
+        "timeinstant_no_tz": 1747310460000,
+        "timeinstant_wo_tz": 1747310460000,
+        "recvtime": "2026-09-28T09:17:10.650Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimenoseconds",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoSecondsNoTz"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNoSecondsNoTz",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:02:00.000Z",
+        "timeinstant_tz": 1747310520000,
+        "timeinstant_no_tz": 1747310520000,
+        "timeinstant_wo_tz": 1747310520000,
+        "recvtime": "2026-09-28T09:17:10.651Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimenosecondsnotz",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeHourOnly"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeHourOnly",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T13:00:00.000Z",
+        "timeinstant_tz": 1747314000000,
+        "timeinstant_no_tz": 1747314000000,
+        "timeinstant_wo_tz": 1747314000000,
+        "recvtime": "2026-09-28T09:17:10.653Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimehouronly",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeISO8601Type"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeISO8601Type",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T14:00:00.000Z",
+        "timeinstant_tz": 1747317600000,
+        "timeinstant_no_tz": 1747317600000,
+        "timeinstant_wo_tz": 1747317600000,
+        "recvtime": "2026-09-28T09:17:10.655Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimeiso8601type",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNull"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTimeNull",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T15:00:00.000Z",
+        "timeinstant_tz": null,
+        "timeinstant_no_tz": null,
+        "timeinstant_wo_tz": null,
+        "recvtime": "2026-09-28T09:17:10.656Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetimenull",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTime"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_no_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "timeinstant_wo_tz",
+            "type": "int64",
+            "name": "org.apache.kafka.connect.data.Timestamp",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Zone-DateTime",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/date",
+        "timeinstant": "2025-05-15T12:00:00.000Z",
+        "timeinstant_tz": 1747310400000,
+        "timeinstant_no_tz": 1747310400000,
+        "timeinstant_wo_tz": 1747310400000,
+        "recvtime": "2026-09-28T09:17:10.657Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "date",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zone_datetime",
+      "suffix": "_lastdata"
+    }
+  }
+]

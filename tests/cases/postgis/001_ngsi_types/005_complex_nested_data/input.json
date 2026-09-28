@@ -1,0 +1,578 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "timeinstant": "2025-06-26T14:15:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "configuration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "measurements",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "metadata",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "tags",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "entitytype": "Device",
+        "fiwareservicepath": "/complexdata",
+        "timeinstant": "2025-06-26T14:15:00.000Z",
+        "configuration": "{\"sensors\":[{\"type\":\"temperature\",\"interval\":300,\"precision\":0.1},{\"type\":\"humidity\",\"interval\":600,\"precision\":1}],\"network\":{\"protocol\":\"LoRaWAN\",\"frequency\":868.1,\"power\":14},\"enabled\":true}",
+        "measurements": "{\"temperature\":25.3,\"humidity\":62.8,\"battery\":87,\"signal_strength\":-85}",
+        "metadata": "{\"location\":{\"latitude\":40.4168,\"longitude\":-3.7038,\"altitude\":650},\"installation_date\":\"2025-01-15\",\"firmware_version\":\"1.2.3\"}",
+        "tags": "[\"outdoor\",\"temperature\",\"humidity\",\"lora\"]",
+        "recvtime": "2026-09-28T09:17:17.667Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "complexdata",
+      "fiware-datamodel": null,
+      "entityType": "device",
+      "entityId": "device001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "timeinstant": "2025-06-26T14:20:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "configuration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "measurements",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "metadata",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "tags",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "entitytype": "Device",
+        "fiwareservicepath": "/complexdata",
+        "timeinstant": "2025-06-26T14:20:00.000Z",
+        "configuration": "{\"sensors\":[{\"type\":\"temperature\",\"interval\":300,\"precision\":0.1},{\"type\":\"humidity\",\"interval\":600,\"precision\":1}],\"network\":{\"protocol\":\"LoRaWAN\",\"frequency\":868.1,\"power\":14},\"enabled\":true}",
+        "measurements": "{\"temperature\":25.8,\"humidity\":61.2,\"battery\":86,\"signal_strength\":-82}",
+        "metadata": "{\"location\":{\"latitude\":40.4168,\"longitude\":-3.7038,\"altitude\":650},\"installation_date\":\"2025-01-15\",\"firmware_version\":\"1.2.3\"}",
+        "tags": "[\"outdoor\",\"temperature\",\"humidity\",\"lora\"]",
+        "recvtime": "2026-09-28T09:17:17.668Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "complexdata",
+      "fiware-datamodel": null,
+      "entityType": "device",
+      "entityId": "device001",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "timeinstant": "2025-06-26T14:15:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "configuration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "measurements",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "metadata",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "tags",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "entitytype": "Device",
+        "fiwareservicepath": "/complexdata",
+        "timeinstant": "2025-06-26T14:15:00.000Z",
+        "configuration": "{\"sensors\":[{\"type\":\"temperature\",\"interval\":300,\"precision\":0.1},{\"type\":\"humidity\",\"interval\":600,\"precision\":1}],\"network\":{\"protocol\":\"LoRaWAN\",\"frequency\":868.1,\"power\":14},\"enabled\":true}",
+        "measurements": "{\"temperature\":25.3,\"humidity\":62.8,\"battery\":87,\"signal_strength\":-85}",
+        "metadata": "{\"location\":{\"latitude\":40.4168,\"longitude\":-3.7038,\"altitude\":650},\"installation_date\":\"2025-01-15\",\"firmware_version\":\"1.2.3\"}",
+        "tags": "[\"outdoor\",\"temperature\",\"humidity\",\"lora\"]",
+        "recvtime": "2026-09-28T09:17:18.127Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "complexdata",
+      "fiware-datamodel": null,
+      "entityType": "device",
+      "entityId": "device001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "timeinstant": "2025-06-26T14:20:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "configuration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "measurements",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "metadata",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "tags",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "entitytype": "Device",
+        "fiwareservicepath": "/complexdata",
+        "timeinstant": "2025-06-26T14:20:00.000Z",
+        "configuration": "{\"sensors\":[{\"type\":\"temperature\",\"interval\":300,\"precision\":0.1},{\"type\":\"humidity\",\"interval\":600,\"precision\":1}],\"network\":{\"protocol\":\"LoRaWAN\",\"frequency\":868.1,\"power\":14},\"enabled\":true}",
+        "measurements": "{\"temperature\":25.8,\"humidity\":61.2,\"battery\":86,\"signal_strength\":-82}",
+        "metadata": "{\"location\":{\"latitude\":40.4168,\"longitude\":-3.7038,\"altitude\":650},\"installation_date\":\"2025-01-15\",\"firmware_version\":\"1.2.3\"}",
+        "tags": "[\"outdoor\",\"temperature\",\"humidity\",\"lora\"]",
+        "recvtime": "2026-09-28T09:17:18.129Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "complexdata",
+      "fiware-datamodel": null,
+      "entityType": "device",
+      "entityId": "device001",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "configuration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "measurements",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "metadata",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "tags",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "entitytype": "Device",
+        "fiwareservicepath": "/complexdata",
+        "timeinstant": "2025-06-26T14:15:00.000Z",
+        "configuration": "{\"sensors\":[{\"type\":\"temperature\",\"interval\":300,\"precision\":0.1},{\"type\":\"humidity\",\"interval\":600,\"precision\":1}],\"network\":{\"protocol\":\"LoRaWAN\",\"frequency\":868.1,\"power\":14},\"enabled\":true}",
+        "measurements": "{\"temperature\":25.3,\"humidity\":62.8,\"battery\":87,\"signal_strength\":-85}",
+        "metadata": "{\"location\":{\"latitude\":40.4168,\"longitude\":-3.7038,\"altitude\":650},\"installation_date\":\"2025-01-15\",\"firmware_version\":\"1.2.3\"}",
+        "tags": "[\"outdoor\",\"temperature\",\"humidity\",\"lora\"]",
+        "recvtime": "2026-09-28T09:17:18.130Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "complexdata",
+      "fiware-datamodel": null,
+      "entityType": "device",
+      "entityId": "device001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "configuration",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "measurements",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "metadata",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "tags",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Device001",
+        "entitytype": "Device",
+        "fiwareservicepath": "/complexdata",
+        "timeinstant": "2025-06-26T14:20:00.000Z",
+        "configuration": "{\"sensors\":[{\"type\":\"temperature\",\"interval\":300,\"precision\":0.1},{\"type\":\"humidity\",\"interval\":600,\"precision\":1}],\"network\":{\"protocol\":\"LoRaWAN\",\"frequency\":868.1,\"power\":14},\"enabled\":true}",
+        "measurements": "{\"temperature\":25.8,\"humidity\":61.2,\"battery\":86,\"signal_strength\":-82}",
+        "metadata": "{\"location\":{\"latitude\":40.4168,\"longitude\":-3.7038,\"altitude\":650},\"installation_date\":\"2025-01-15\",\"firmware_version\":\"1.2.3\"}",
+        "tags": "[\"outdoor\",\"temperature\",\"humidity\",\"lora\"]",
+        "recvtime": "2026-09-28T09:17:18.131Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "complexdata",
+      "fiware-datamodel": null,
+      "entityType": "device",
+      "entityId": "device001",
+      "suffix": "_lastdata"
+    }
+  }
+]

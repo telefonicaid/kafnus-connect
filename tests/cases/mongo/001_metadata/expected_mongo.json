@@ -1,0 +1,20 @@
+[
+ {
+    "database": "bigdata_db_test",
+    "collection": "bigdata_col_test_mongo_Device",
+    "documents": [
+      {
+        "entityId": "Device:001",
+        "entityType": "Device",
+        "temperature": 25.3,
+        "temperature_md": {
+          "unit": { "type": "Text", "value": "Celsius" },
+          "accuracy": { "type": "Number", "value": 0.1 }
+        }
+      }
+    ],
+    "absent": [
+      { "entityId": "Device:999" }
+    ]
+  }
+]

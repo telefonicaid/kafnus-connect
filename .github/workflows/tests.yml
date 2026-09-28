@@ -52,19 +52,13 @@ jobs:
           name: jacoco-report
           path: src/kafnus-connect-smt/target/site/jacoco/
 
-      - name: Upload coverage to Coveralls
-        uses: coverallsapp/github-action@v2
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          file: src/kafnus-connect-smt/target/site/jacoco/jacoco.xml
-          format: jacoco
-
   e2e-tests:
     runs-on: ubuntu-24.04
  
     env:
       KAFNUS_TESTS_USE_EXTERNAL_POSTGIS: "false"
       KAFNUS_TESTS_E2E_MANUAL_INSPECTION: "false"
+      KAFNUS_TESTS_COVERAGE: "true"
       KAFNUS_TESTS_LOG_LEVEL: DEBUG
       KAFNUS_DBPATH_POSTGIS: /data/postgis
       KAFNUS_POSTGIS_IMAGE: postgis/postgis:15-3.3
@@ -121,3 +115,71 @@ jobs:
         run: |
           source .venv/bin/activate
           pytest -s test_pipeline.py
+
+      # JaCoCo only matches execution data against identical class files,
+      # so keep the SMT classes compiled inside the image next to the data
+      - name: Extract SMT classes from image
+        if: always()
+        run: |
+          id=$(docker create kafnus-connect)
+          docker cp "$id":/usr/local/share/kafnus-connect/plugins/kafnus-connect-smt/kafnus-connect-smt-1.1.0.jar /tmp/smt.jar
+          docker rm "$id"
+          mkdir -p tests/coverage/classes
+          unzip -o -q /tmp/smt.jar 'com/telefonica/*.class' -d tests/coverage/classes
+
+      - name: Upload E2E coverage data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-e2e
+          path: |
+            tests/coverage/jacoco-e2e.exec
+            tests/coverage/classes/
+          if-no-files-found: warn
+
+  coverage:
+    runs-on: ubuntu-24.04
+    needs: [smt-unit-tests, e2e-tests]
+    # Publish coverage even if E2E tests fail, as long as unit tests passed
+    if: ${{ !cancelled() && needs.smt-unit-tests.result == 'success' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+          cache: maven
+
+      - name: Download E2E coverage data
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: jacoco-e2e
+          path: tests/coverage
+
+      - name: Merge unit and E2E coverage
+        run: mvn -B -f src/kafnus-connect-smt/pom.xml clean verify jacoco:merge@merge-e2e jacoco:report@report-merged
+
+      - name: Check E2E classes match local build
+        if: hashFiles('tests/coverage/jacoco-e2e.exec') != ''
+        run: |
+          if ! diff -r tests/coverage/classes/com/telefonica src/kafnus-connect-smt/target/classes/com/telefonica; then
+            echo "::warning::SMT classes in the image differ from this build (JDK mismatch?), E2E coverage is being ignored"
+          fi
+
+      - name: Upload merged JaCoCo report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report-merged
+          path: src/kafnus-connect-smt/target/site/jacoco-merged/
+
+      - name: Upload coverage to Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          file: src/kafnus-connect-smt/target/site/jacoco-merged/jacoco.xml
+          format: jacoco

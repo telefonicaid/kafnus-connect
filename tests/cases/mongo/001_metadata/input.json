@@ -1,0 +1,27 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_mongo_processed",
+    "key": {
+      "database": "test",
+      "collection": "test_mongo_Device"
+    },
+    "value": {
+      "recvTime": "2026-09-28T09:16:43.376Z",
+      "entityId": "Device:001",
+      "entityType": "Device",
+      "temperature": 25.3,
+      "temperature_md": {
+        "unit": {
+          "type": "Text",
+          "value": "Celsius"
+        },
+        "accuracy": {
+          "type": "Number",
+          "value": 0.1
+        }
+      }
+    },
+    "headers": {}
+  }
+]
