@@ -30,7 +30,7 @@ Kafnus Connect consumes processed NGSI events from Kafka topics (produced by [Ka
   - Official MongoDB Kafka connector for JSON document storage.
 - 🌐 **HTTP**
   - [Aiven Open HTTP Connector](https://github.com/Aiven-Open/http-connector-for-apache-kafka) for forwarding events to REST endpoints.
-  - Forked to handle 200 responses with errors
+  - Forked [here](https://github.com/telefonicaid/http-connector-for-apache-kafka-graphql) to provide basic auth and handle 200 responses with errors
 
 ---
 
