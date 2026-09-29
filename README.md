@@ -24,7 +24,7 @@ Kafnus Connect consumes processed NGSI events from Kafka topics (produced by [Ka
 
 ### Supported sinks
 
-- 🗺️ **PostGIS (via custom JDBC connector)**
+- 🗺️ **PostGIS (via [custom JDBC connector](https://github.com/telefonicaid/kafka-connect-jdbc-postgis))**
   - Forked and extended to handle GeoJSON geometries and NGSI-specific data structures.
 - 📦 **MongoDB**
   - Official MongoDB Kafka connector for JSON document storage.
