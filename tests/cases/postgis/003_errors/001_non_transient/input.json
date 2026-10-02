@@ -1,0 +1,1035 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "timeinstant": "2025-05-05T11:35:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "not_null_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "double_not_null",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "averagestay",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "entitytype": "Errors",
+        "fiwareservicepath": "/access",
+        "timeinstant": "2025-05-05T11:35:00.000Z",
+        "not_null_col": "not_null",
+        "double_not_null": 1.1,
+        "averagestay": 15,
+        "recvtime": "2026-09-28T09:17:34.675Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "access",
+      "fiware-datamodel": null,
+      "entityType": "errors",
+      "entityId": "npo_test",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "timeinstant": "2025-05-05T11:40:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "bool_col",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "not_null_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "double_not_null",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "averagestay",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "entitytype": "Errors",
+        "fiwareservicepath": "/access",
+        "timeinstant": "2025-05-05T11:40:00.000Z",
+        "bool_col": 67,
+        "not_null_col": "not_null",
+        "double_not_null": 1.1,
+        "averagestay": 15,
+        "recvtime": "2026-09-28T09:17:34.675Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "access",
+      "fiware-datamodel": null,
+      "entityType": "errors",
+      "entityId": "npo_test",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "timeinstant": "2025-05-05T11:45:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "bool_col",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "text_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "not_null_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "double_not_null",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "averagestay",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "entitytype": "Errors",
+        "fiwareservicepath": "/access",
+        "timeinstant": "2025-05-05T11:45:00.000Z",
+        "bool_col": true,
+        "text_col": "{\"a\":1,\"b\":2}",
+        "not_null_col": "not_null",
+        "double_not_null": 1.1,
+        "averagestay": 15,
+        "recvtime": "2026-09-28T09:17:34.676Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "access",
+      "fiware-datamodel": null,
+      "entityType": "errors",
+      "entityId": "npo_test",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "timeinstant": "2025-05-05T11:50:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "bool_col",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "text_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "not_null_col",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "field": "double_not_null",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "averagestay",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "entitytype": "Errors",
+        "fiwareservicepath": "/access",
+        "timeinstant": "2025-05-05T11:50:00.000Z",
+        "bool_col": true,
+        "text_col": "text",
+        "not_null_col": null,
+        "double_not_null": 1.1,
+        "averagestay": 15,
+        "recvtime": "2026-09-28T09:17:34.677Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "access",
+      "fiware-datamodel": null,
+      "entityType": "errors",
+      "entityId": "npo_test",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "timeinstant": "2025-05-05T11:55:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "bool_col",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "text_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "not_null_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "int_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "double_not_null",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "averagestay",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "entitytype": "Errors",
+        "fiwareservicepath": "/access",
+        "timeinstant": "2025-05-05T11:55:00.000Z",
+        "bool_col": true,
+        "text_col": "text",
+        "not_null_col": "not_null",
+        "int_col": "abierto",
+        "double_not_null": 1.1,
+        "averagestay": 15,
+        "recvtime": "2026-09-28T09:17:34.678Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "access",
+      "fiware-datamodel": null,
+      "entityType": "errors",
+      "entityId": "npo_test",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "timeinstant": "2025-05-05T11:56:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "bool_col",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "text_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "not_null_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "int_col",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "double_not_null",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "field": "averagestay",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "entitytype": "Errors",
+        "fiwareservicepath": "/access",
+        "timeinstant": "2025-05-05T11:56:00.000Z",
+        "bool_col": true,
+        "text_col": "text",
+        "not_null_col": "not_null",
+        "int_col": 1,
+        "double_not_null": null,
+        "averagestay": 15,
+        "recvtime": "2026-09-28T09:17:34.679Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "access",
+      "fiware-datamodel": null,
+      "entityType": "errors",
+      "entityId": "npo_test",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "timeinstant": "2025-05-05T12:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "bool_col",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "text_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "not_null_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "int_col",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "double_not_null",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "averagestay",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "entitytype": "Errors",
+        "fiwareservicepath": "/access",
+        "timeinstant": "2025-05-05T12:00:00.000Z",
+        "bool_col": true,
+        "text_col": "text",
+        "not_null_col": "not_null",
+        "int_col": 1,
+        "double_not_null": 1.1,
+        "averagestay": 17,
+        "recvtime": "2026-09-28T09:17:34.681Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "access",
+      "fiware-datamodel": null,
+      "entityType": "errors",
+      "entityId": "npo_test",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "timeinstant": "2025-05-05T11:35:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "bool_col",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "text_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "not_null_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "int_col",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "double_not_null",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "averagestay",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "NPO-test",
+        "entitytype": "Errors",
+        "fiwareservicepath": "/access",
+        "timeinstant": "2025-05-05T11:35:00.000Z",
+        "bool_col": true,
+        "text_col": "text",
+        "not_null_col": "not_null",
+        "int_col": 1,
+        "double_not_null": 1.1,
+        "averagestay": 16,
+        "recvtime": "2026-09-28T09:17:34.681Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "access",
+      "fiware-datamodel": null,
+      "entityType": "errors",
+      "entityId": "npo_test",
+      "suffix": null
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:34.958Z",
+        "error": "ERROR: column \"bool_col\" is of type boolean but expression is of type double precision",
+        "query": "INSERT INTO \"tests\".\"test\".\"access_errors\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"bool_col\",\"not_null_col\",\"double_not_null\",\"averagestay\",\"recvtime\") VALUES (('NPO-test')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:34.960Z",
+        "error": "ERROR: null value in column \"not_null_col\" of relation \"access_errors\" violates not-null constraint - Detail: Failing row contains (2026-09-28 09:17:34.677+00, /access, NPO-test, Errors, 2025-05-05 11:50:00+00, t, text, null, null, 1.1, 15).  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"access_errors\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"bool_col\",\"text_col\",\"not_null_col\",\"double_not_null\",\"averagestay\",\"recvtime\") VALUES (('NPO-test')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:34.961Z",
+        "error": "ERROR: column \"int_col\" is of type integer but expression is of type character varying",
+        "query": "INSERT INTO \"tests\".\"test\".\"access_errors\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"bool_col\",\"text_col\",\"not_null_col\",\"int_col\",\"double_not_null\",\"averagestay\",\"recvtime\") VALUES (('NPO-test')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:34.962Z",
+        "error": "ERROR: null value in column \"double_not_null\" of relation \"access_errors\" violates not-null constraint - Detail: Failing row contains (2026-09-28 09:17:34.679+00, /access, NPO-test, Errors, 2025-05-05 11:56:00+00, t, text, not_null, 1, null, 15).  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"access_errors\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"bool_col\",\"text_col\",\"not_null_col\",\"int_col\",\"double_not_null\",\"averagestay\",\"recvtime\") VALUES (('NPO-test')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_error_log_processed",
+    "key": null,
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "timestamp",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "error",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "query",
+            "type": "string",
+            "optional": true
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "timestamp": "2026-09-28T09:17:35.423Z",
+        "error": "ERROR: duplicate key value violates unique constraint \"access_errors_pkey\" - Detail: Key (timeinstant, entityid)=(2025-05-05 11:35:00+00, NPO-test) already exists.  Call getNextException to see other errors in the batch.",
+        "query": "INSERT INTO \"tests\".\"test\".\"access_errors\" (\"entityid\",\"entitytype\",\"fiwareservicepath\",\"timeinstant\",\"bool_col\",\"text_col\",\"not_null_col\",\"int_col\",\"double_not_null\",\"averagestay\",\"recvtime\") VALUES (('NPO-test')"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-datamodel": "dm-postgis-errors",
+      "fiware-servicepath": "test",
+      "entityType": "_error_log"
+    }
+  }
+]

@@ -1,0 +1,308 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Schema1"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "changecolumn",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "rename_column",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "drop_column",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Schema1",
+        "entitytype": "Schema",
+        "fiwareservicepath": "/change",
+        "timeinstant": "2025-06-26T13:00:00.000Z",
+        "temperature": 27,
+        "humidity": 40,
+        "changecolumn": "initial",
+        "rename_column": "to_be_renamed",
+        "drop_column": "to_be_dropped",
+        "recvtime": "2026-09-28T09:18:15.746Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "change",
+      "fiware-datamodel": null,
+      "entityType": "schema",
+      "entityId": "schema1",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_mutable_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Schema1",
+        "timeinstant": "2025-06-26T13:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "changecolumn",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "rename_column",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "drop_column",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Schema1",
+        "entitytype": "Schema",
+        "fiwareservicepath": "/change",
+        "timeinstant": "2025-06-26T13:00:00.000Z",
+        "temperature": 27,
+        "humidity": 40,
+        "changecolumn": "initial",
+        "rename_column": "to_be_renamed",
+        "drop_column": "to_be_dropped",
+        "recvtime": "2026-09-28T09:18:15.759Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "change",
+      "fiware-datamodel": null,
+      "entityType": "schema",
+      "entityId": "schema1",
+      "suffix": "_mutable"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Schema1",
+        "timeinstant": "2025-06-26T13:00:00.000Z"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "temperature",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "humidity",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "changecolumn",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "rename_column",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "drop_column",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Schema1",
+        "entitytype": "Schema",
+        "fiwareservicepath": "/change",
+        "timeinstant": "2025-06-26T13:00:00.000Z",
+        "temperature": 27,
+        "humidity": 40,
+        "changecolumn": "initial",
+        "rename_column": "to_be_renamed",
+        "drop_column": "to_be_dropped",
+        "recvtime": "2026-09-28T09:18:16.226Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "change",
+      "fiware-datamodel": null,
+      "entityType": "schema",
+      "entityId": "schema1",
+      "suffix": null
+    }
+  }
+]

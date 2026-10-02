@@ -1,0 +1,198 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Accommodation:001"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "accommodationcontainedin",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "hastourismorrelatedfacility",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "offers",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "hasadditionalinformation",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Accommodation:001",
+        "entitytype": "Accommodation",
+        "fiwareservicepath": "/tourism",
+        "timeinstant": "2025-10-03T12:00:12.002Z",
+        "accommodationcontainedin": "[\"Accommodation:001\"]",
+        "hastourismorrelatedfacility": "[\"Hotel:001\"]",
+        "offers": "[\"Event:001\"]",
+        "hasadditionalinformation": "AdditionalInformation:001",
+        "name": "example01",
+        "recvtime": "2026-09-28T09:17:27.132Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "tourism",
+      "fiware-datamodel": null,
+      "entityType": "accommodation",
+      "entityId": "accommodation_001",
+      "suffix": "_lastdata"
+    }
+  },
+  {
+    "type": "raw",
+    "topic": "smc_test_lastdata_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Accommodation:002"
+      }
+    },
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "accommodationcontainedin",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "hastourismorrelatedfacility",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "offers",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "hasadditionalinformation",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "name",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "Accommodation:002",
+        "entitytype": "Accommodation",
+        "fiwareservicepath": "/tourism",
+        "timeinstant": "2025-10-03T12:00:12.002Z",
+        "accommodationcontainedin": "[\"Accommodation:002\"]",
+        "hastourismorrelatedfacility": "[\"Hotel:002\"]",
+        "offers": "[\"Event:002\"]",
+        "hasadditionalinformation": "AdditionalInformation:002",
+        "name": "example02",
+        "recvtime": "2026-09-28T09:17:27.133Z"
+      }
+    },
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "tourism",
+      "fiware-datamodel": null,
+      "entityType": "accommodation",
+      "entityId": "accommodation_002",
+      "suffix": "_lastdata"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_sgtr_http_processed",
+    "key": null,
+    "value": {
+      "query": "\n            mutation {\n                createLocation(dti: \"grafo\", input: { object: { externalId: \"Location:005\", country: \"example01\", province: \"example01\", locality: \"example01\", streetAddress: \"example01\", asWkt: null } }) { uri }\n            }\n        "
+    },
+    "headers": {}
+  },
+  {
+    "type": "raw",
+    "topic": "smc_sgtr_http_processed",
+    "key": null,
+    "value": {
+      "query": "\n            mutation {\n                createLocation(dti: \"grafo\", input: { object: { externalId: \"Location:005\", country: \"example01\", province: \"example01\", locality: \"example01\", streetAddress: \"example01\", asWkt: null } }) { uri }\n            }\n        "
+    },
+    "headers": {}
+  }
+]

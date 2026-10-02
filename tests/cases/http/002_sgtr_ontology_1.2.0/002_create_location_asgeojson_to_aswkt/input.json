@@ -1,0 +1,11 @@
+[
+  {
+    "type": "raw",
+    "topic": "smc_sgtr_http_processed",
+    "key": null,
+    "value": {
+      "query": "\n            mutation {\n                createLocation(dti: \"grafo\", input: { object: { externalId: \"Location:001\", country: \"example01\", province: \"example01\", locality: \"example01\", streetAddress: \"example01\", asWkt: \"POINT (34.5555 -3.67778)\" } }) { uri }\n            }\n        "
+    },
+    "headers": {}
+  }
+]

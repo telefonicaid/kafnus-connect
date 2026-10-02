@@ -41,6 +41,17 @@ def test_e2e_pipeline(scenario_name, expected_list, input_json, setup, multiserv
     if setup:
         execute_sql_file(setup, db_config=DEFAULT_DB_CONFIG)
 
+    # Step 0.7: Start HTTP mocks before producing, so the HTTP sink finds them
+    http_validators = {}
+    for expected_type, expected_json in expected_list:
+        if expected_type != "http":
+            continue
+        for req in load_scenario(expected_json, as_expected=True):
+            url = req["url"]
+            response = req.get("response", {}) or {}
+            if url not in http_validators:
+                http_validators[url] = HttpValidator(url, response.get("status", 200), response.get("body"))
+
     # Step 1: produce messages to Kafka
     input_data = load_input(input_json)
     produce_messages(kafka_cfg, input_data)
@@ -69,9 +80,10 @@ def test_e2e_pipeline(scenario_name, expected_list, input_json, setup, multiserv
                             errors.append(f"❌ PG forbidden rows in table {table}")
 
         elif expected_type == "mongo":
-                validator = MongoValidator()
-                try:
-                    for coll_data in expected_data:
+                for coll_data in expected_data:
+                    # Cases recorded from Kafnus name the database, local ones use the default
+                    validator = MongoValidator(db_name=coll_data.get("database", "bigdata_db_test"))
+                    try:
                         coll = coll_data["collection"]
                         if "documents" in coll_data:
                             if not validator.validate(coll, coll_data["documents"]):
@@ -81,14 +93,16 @@ def test_e2e_pipeline(scenario_name, expected_list, input_json, setup, multiserv
                             if not validator.validate_absent(coll, coll_data["absent"]):
                                 all_valid = False
                                 errors.append(f"❌ Mongo forbidden docs in {coll}")
-                finally:
-                    validator.close()
+                    finally:
+                        validator.close()
 
         elif expected_type == "http":
-            validator = HttpValidator()
             for req in expected_data:
-                if not validator.validate(req):
+                if not http_validators[req["url"]].validate(req.get("headers"), req.get("body"), timeout=30):
                     all_valid = False
                     errors.append(f"❌ HTTP validation failed: {req['url']}")
+
+    for validator in http_validators.values():
+        validator.stop()
 
     assert all_valid, "\n".join(errors)

@@ -1,34 +1,112 @@
-{
-  "type": "postgis",
-  "topic": "smc_test_historic_processed",
-  "record": {
-    "entityid": "ZoneJsonTypes",
-    "entitytype": "Zone",
-    "timeinstant": "2025-07-23T14:00:00.000Z",
-    "recvtime": "2025-07-23T14:00:00.000Z",
-    "str_col": "hello world",
-    "number_col": 123.456,
-    "bool_col": true,
-    "null_col": {
-      "value": null,
-      "optional": true
+[
+  {
+    "type": "raw",
+    "topic": "smc_test_historic_processed",
+    "key": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ZoneJsonTypes",
+        "timeinstant": "2025-07-23T14:00:00.000Z"
+      }
     },
-    "obj_col": {
-      "a": 1,
-      "b": "two"
+    "value": {
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "field": "entityid",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "entitytype",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "fiwareservicepath",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "timeinstant",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "str_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "number_col",
+            "type": "double",
+            "optional": false
+          },
+          {
+            "field": "bool_col",
+            "type": "boolean",
+            "optional": false
+          },
+          {
+            "field": "null_col",
+            "type": "string",
+            "optional": true
+          },
+          {
+            "field": "obj_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "array_col",
+            "type": "string",
+            "optional": false
+          },
+          {
+            "field": "recvtime",
+            "type": "string",
+            "optional": false
+          }
+        ],
+        "optional": false
+      },
+      "payload": {
+        "entityid": "ZoneJsonTypes",
+        "entitytype": "Zone",
+        "fiwareservicepath": "/types",
+        "timeinstant": "2025-07-23T14:00:00.000Z",
+        "str_col": "hello world",
+        "number_col": 123.456,
+        "bool_col": true,
+        "null_col": null,
+        "obj_col": "{\"a\":1,\"b\":\"two\"}",
+        "array_col": "[1,\"two\",false]",
+        "recvtime": "2026-09-28T09:17:03.120Z"
+      }
     },
-    "array_col": [
-      1,
-      "two",
-      false
-    ],
-    "fiwareservicepath": "/types"
-  },
-  "headers": {
-    "fiware-service": "test",
-    "fiware-servicepath": "types",
-    "entityType": "zone",
-    "entityId": "Zonejsontypes",
-    "suffix": ""
+    "headers": {
+      "fiware-service": "test",
+      "fiware-servicepath": "types",
+      "fiware-datamodel": null,
+      "entityType": "zone",
+      "entityId": "zonejsontypes",
+      "suffix": null
+    }
   }
-}
+]

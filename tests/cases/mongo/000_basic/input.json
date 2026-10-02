@@ -1,14 +1,18 @@
 [
   {
-    "type": "mongo",
+    "type": "raw",
     "topic": "smc_test_mongo_processed",
-    "database": "test",
-    "collection": "/mongo",
-    "record": {
+    "key": {
+      "database": "test",
+      "collection": "test_mongo_Device"
+    },
+    "value": {
+      "recvTime": "2026-09-28T09:16:39.868Z",
       "entityId": "Device:001",
       "entityType": "Device",
       "TimeInstant": "2025-06-26T11:00:00.000Z",
       "temperature": 25.3
-    }
+    },
+    "headers": {}
   }
 ]
