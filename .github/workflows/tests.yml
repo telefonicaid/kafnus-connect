@@ -30,7 +30,7 @@ on:
 
 jobs:
   smt-unit-tests:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout code
@@ -53,7 +53,7 @@ jobs:
           path: src/kafnus-connect-smt/target/site/jacoco/
 
   e2e-tests:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
  
     env:
       KAFNUS_TESTS_USE_EXTERNAL_POSTGIS: "false"
@@ -138,7 +138,7 @@ jobs:
           if-no-files-found: warn
 
   coverage:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     needs: [smt-unit-tests, e2e-tests]
     # Publish coverage even if E2E tests fail, as long as unit tests passed
     if: ${{ !cancelled() && needs.smt-unit-tests.result == 'success' }}
